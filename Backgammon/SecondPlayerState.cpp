@@ -37,6 +37,7 @@ void SecondPlayerState::LeaveState()
 void SecondPlayerState::Draw(Window* window)
 {
 	GameBoard->Draw(window);
+	PlayerSecond->Draw(window);
 	window->Draw(_turnText);
 	Dice::Draw(window);
 }

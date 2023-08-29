@@ -45,6 +45,7 @@ void FirstPlayerEndState::LeaveState()
 void FirstPlayerEndState::Draw(Window* window)
 {
 	GameBoard->Draw(window);
+	PlayerFirst->Draw(window);
 	window->Draw(_turnText);
 	Dice::Draw(window);
 }

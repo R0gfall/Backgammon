@@ -7,16 +7,6 @@ Board::Board()
 
 	_leftOffset = sf::Vector2f(317.f, 64.f + 325.f);
 
-	_font.loadFromFile(FONT_PATH);
-	
-	_firstPlayerChecksOutText.setFont(_font);
-	_firstPlayerChecksOutText.setCharacterSize(20);
-	_firstPlayerChecksOutText.setColor(sf::Color::Cyan);
-	_firstPlayerChecksOutText.setString(CHECKS_OUT_PLACEHOLDER + std::to_string(_firstPlayerChecksOut));
-
-	_firstPlayerChecksOutText.setPosition(sf::Vector2f(0.f, 0.f));
-	
-
 	_possibleTurns = new PossibleTurns;
 }
 
@@ -84,12 +74,6 @@ void Board::Initialize()
 		Check* secondCheck = new Check(CheckType::SecondPlayer);
 		_cells[SECOND_PLAYER_HEAD_CELL_ID]->AddCheck(secondCheck);
 	}
-}
-
-void Board::Update()
-{
-	_firstPlayerChecksOutText.setString(CHECKS_OUT_PLACEHOLDER + std::to_string(_firstPlayerChecksOut));
-	_secondPlayerChecksOutText.setString(CHECKS_OUT_PLACEHOLDER + std::to_string(_secondPlayerChecksOut));
 }
 
 void Board::Draw(Window* window)
@@ -244,10 +228,10 @@ bool Board::IsMoveCheckPossible(short idFrom, short idTo)
 	return true;
 }
 
-void Board::RemoveCheck(short idFrom)
+bool Board::TryRemoveCheck(short idFrom)
 {
 	if (!IsRemoveCheckPossible(idFrom))
-		return;
+		return false;
 
 	auto cell = _cells[idFrom];
 	auto cellStatus = cell->GetStatus();
@@ -267,6 +251,7 @@ void Board::RemoveCheck(short idFrom)
 	{
 	case CellStatus::FirstPlayer:
 		//TODO мб не все условия учитываются
+
 		if (IsTurnOverlaping(PlayerOrderType::FirstPlayer, idFrom, CalculateCellId(idFrom, minDiceValue)))
 		{
 			_lastPerformedTurn = minDiceValue;
@@ -293,6 +278,8 @@ void Board::RemoveCheck(short idFrom)
 	}
 
 	cell->RemoveCheck();
+
+	return true;
 }
 
 bool Board::IsRemoveCheckPossible(short idFrom)
@@ -324,8 +311,16 @@ bool Board::IsRemoveCheckPossible(short idFrom)
 			return false;
 		}
 
-		firstDiceTurnPossible = IsTurnOverlaping(PlayerOrderType::FirstPlayer, idFrom, CalculateCellId(idFrom, dices.x)) && dices.x != _lastPerformedTurn;
-		secondDiceTurnPossible = IsTurnOverlaping(PlayerOrderType::FirstPlayer, idFrom, CalculateCellId(idFrom, dices.y)) && dices.y != _lastPerformedTurn;
+		if (Dice::IsDouble())
+		{
+			firstDiceTurnPossible = IsTurnOverlaping(PlayerOrderType::FirstPlayer, idFrom, CalculateCellId(idFrom, dices.x));
+			secondDiceTurnPossible = firstDiceTurnPossible;
+		}
+		else
+		{
+			firstDiceTurnPossible = IsTurnOverlaping(PlayerOrderType::FirstPlayer, idFrom, CalculateCellId(idFrom, dices.x)) && dices.x != _lastPerformedTurn;
+			secondDiceTurnPossible = IsTurnOverlaping(PlayerOrderType::FirstPlayer, idFrom, CalculateCellId(idFrom, dices.y)) && dices.y != _lastPerformedTurn;
+		}
 
 		if (!firstDiceTurnPossible && !secondDiceTurnPossible)
 		{
@@ -491,6 +486,21 @@ bool Board::IsOnEndStage(PlayerOrderType orderType)
 	return false;
 }
 
+char Board::GetChecksOut(PlayerOrderType orderType)
+{
+	switch (orderType)
+	{
+	case PlayerOrderType::FirstPlayer:
+		return _firstPlayerChecksOut;
+		break;
+	case PlayerOrderType::SecondPlayer:
+		return _secondPlayerChecksOut;
+		break;
+	}
+
+	return -1;
+}
+
 bool Board::IsTurnOverlaping(PlayerOrderType orderType, short fromId, short toId)
 {
 	if (!IsCorrectId(fromId))
@@ -508,10 +518,10 @@ bool Board::IsTurnOverlaping(PlayerOrderType orderType, short fromId, short toId
 	switch (orderType)
 	{
 	case PlayerOrderType::FirstPlayer:
-		return (fromId < CELLS_AMOUNT && fromId > 17) && (toId > 0 && toId < 6);
+		return (fromId < CELLS_AMOUNT && fromId > 17) && (toId >= 0 && toId < 6);
 		break;
 	case PlayerOrderType::SecondPlayer:
-		return (fromId < 12 && fromId > 5) && (toId > 11 && toId < 18);
+		return (fromId < 12 && fromId >= 6) && (toId >= 12 && toId < 18);
 		break;
 	}
 

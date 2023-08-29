@@ -56,6 +56,14 @@ void HumanPlayer::OnTurnExit()
 	_performedTurns = 0;
 }
 
+void HumanPlayer::Draw(Window* window)
+{
+	UpdateChosenCellText();
+	window->Draw(_chosenCellText);
+
+	IPlayer::Draw(window);
+}
+
 void HumanPlayer::HandleMouseClick()
 {
 	auto targetCell = GameBoard->GetCellByPosition(Mouse::GetRelativePosition());
@@ -128,7 +136,10 @@ void HumanPlayer::RemoveCheck()
 		return;
 	}
 
-	GameBoard->RemoveCheck(_chosenCell->GetId());
+	if (GameBoard->TryRemoveCheck(_chosenCell->GetId()))
+	{
+		_performedTurns++;
+	}
 }
 
 
@@ -219,4 +230,17 @@ void HumanPlayer::HandleInput()
 		CancelCellChoise();
 		Dice::Roll();
 	}
+}
+
+void HumanPlayer::UpdateChosenCellText()
+{
+	if (IsCellChosen())
+	{
+		_chosenCellText.setString(CHOSEN_CELL_PLACEHOLDER + std::to_string(_chosenCell->GetId()));
+	}
+	else
+	{
+		_chosenCellText.setString(NOT_CHOSEN_CELL_PLACEHOLDER);
+	}
+
 }

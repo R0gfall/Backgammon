@@ -23,6 +23,8 @@ public:
 	virtual void OnEndUpdate() {}
 	virtual void OnTurnExit() {}
 
+	virtual void Draw(Window* window);
+
 	void NextTurn();
 
 	bool IsFirstTurnMade() { return GameBoard->IsFirstTurnMade(OrderType); }
@@ -37,12 +39,17 @@ public:
 	PossibleTurns CalculatePossibleTurns();
 	bool IsAnyTurnsPossible() { return !CalculatePossibleTurns().empty(); }
 
+	char GetChecksOut() { return GameBoard->GetChecksOut(OrderType); }
+
 protected:
 	Board* GameBoard;
 	PlayerOrderType OrderType;
 	IGameStateMachine* StateMachine;
 
 private:
+	void UpdateChecksOutText();
 
+	sf::Font _font;
+	sf::Text _checksOutText;
 };
 

@@ -37,6 +37,7 @@ void FirstPlayerState::LeaveState()
 void FirstPlayerState::Draw(Window* window)
 {
 	GameBoard->Draw(window);
+	PlayerFirst->Draw(window);
 	window->Draw(_turnText);
 	Dice::Draw(window);
 }

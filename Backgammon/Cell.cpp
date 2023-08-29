@@ -23,6 +23,16 @@ Cell::Cell(CellType type) : _id(_idCounter++), _type(type)
 	_hintCheck = new Check(CheckType::Hint);
 }
 
+Cell::~Cell()
+{
+	for (auto check : _checks)
+	{
+		delete check;
+	}
+
+	delete _hintCheck;
+}
+
 void Cell::SetPosition(sf::Vector2f position)
 {
 	_debugRect.setPosition(position);

@@ -5,6 +5,7 @@
 
 using Keyboard = sf::Keyboard;
 
+//Класс для обработки ввода
 class Input
 {
 public:
@@ -54,13 +55,19 @@ public:
 
 	};
 
+	//Обновление каждый кадр
 	static void Update();
 
+	//Проверка, зажата ли клавиша
 	static bool IsKeyPressed(Key keycode);
+	//Проверка, нажата ли клавиша
 	static bool IsKeyDown(Key keycode);
+	//Проверка, отпущена ли клавиша
 	static bool IsKeyUp(Key keycode);
 
 private:
+	//Битовая маска на текущие клавиши
 	static Bitmask _thisFrameKeys;
+	//Битовая маска на клавиши прошлого кадра
 	static Bitmask _lastFrameKeys;
 };

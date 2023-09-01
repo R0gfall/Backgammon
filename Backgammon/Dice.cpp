@@ -37,7 +37,7 @@ void Dice::Roll()
 
 short Dice::GetPossibleTurnsAmount()
 {
-	if (_instance->_dices.x == _instance->_dices.y)
+	if (_instance->IsDouble())
 		return 4;
 	return 2;
 }

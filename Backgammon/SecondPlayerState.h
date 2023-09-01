@@ -2,6 +2,7 @@
 
 #include "GameBaseState.h"
 
+//’од второго игрока, когда не все шашки в доме
 class SecondPlayerState : public GameBaseState
 {
 public:

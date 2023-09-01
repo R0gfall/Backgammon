@@ -12,6 +12,11 @@ Window::Window(const std::string& windowName) : _window(sf::VideoMode(WINDOW_WID
 	static_assert("Only one instance of window possible");
 }
 
+Window::~Window()
+{
+	delete _instance;
+}
+
 void Window::Update()
 {
 	sf::Event event;

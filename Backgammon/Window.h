@@ -5,10 +5,15 @@
 #include <SFML/Graphics.hpp>
 #include "GlobalDefinitions.h"
 
+//Класс обертка для SFML окна
+//Нужен для отрисовки объектов
 class Window
 {
 public:
+	//Конструктор
 	Window(const std::string& window);
+	//Деструктор
+	~Window();
 
 	void Update();
 

@@ -2,7 +2,7 @@
 
 #include "GameBaseState.h"
 
-
+//’од первого игрока, когда не все шашки в доме
 class FirstPlayerState : public GameBaseState
 {
 public:

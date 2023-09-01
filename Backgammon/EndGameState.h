@@ -2,6 +2,8 @@
 
 #include "GameBaseState.h"
 
+//Конечное состояние
+//Выводит финальный экран
 class EndGameState : public GameBaseState
 {
 public:

@@ -10,6 +10,8 @@
 const std::string FIRST_PLAYER_TEXT_PLACEHOLDER = "First Player is: ";
 const std::string SECOND_PLAYER_TEXT_PLACEHOLDER = "Second Player is: ";
 
+//Начальное состояние
+//Содержит в себе логику выбора противников
 class InitialState : public GameBaseState
 {
 public:

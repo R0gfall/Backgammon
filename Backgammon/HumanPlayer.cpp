@@ -1,7 +1,17 @@
 #include "HumanPlayer.h"
 
-void HumanPlayer::MoveCheck()
+HumanPlayer::HumanPlayer(PlayerOrderType orderType, IGameStateMachine* stateMachine, Board* board) : IPlayer(orderType, stateMachine, board)
 {
+	Debug::LogInfo("Human player was created");
+
+	_font.loadFromFile(FONT_PATH);
+
+	_chosenCellText.setFont(_font);
+	_chosenCellText.setCharacterSize(20);
+	_chosenCellText.setFillColor(sf::Color::Black);
+	UpdateChosenCellText();
+
+	_chosenCellText.setPosition(sf::Vector2f(1200.f, 100.f));
 }
 
 void HumanPlayer::OnTurnEnter()

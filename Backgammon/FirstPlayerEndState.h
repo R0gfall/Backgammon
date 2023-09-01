@@ -2,6 +2,7 @@
 
 #include "GameBaseState.h"
 
+//Ход первого игрока, когда все шашки в доме
 class FirstPlayerEndState : public GameBaseState
 {
 public:
@@ -21,6 +22,6 @@ private:
 	sf::Text _hintText;
 
 	const std::string _turnTextString = "FIRST Player turn END";
-	const std::string _hintTextString = "Choose check to remove";
+	const std::string _hintTextString = "Choose and Press 'C' to remove Check";
 };
 

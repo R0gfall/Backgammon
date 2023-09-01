@@ -10,15 +10,20 @@
 const short CHECK_WIDTH = 60;
 const short CHECK_HEIGHT = 60;
 
+//Класс шашки
+//Хранит в себе спрайт и тип шашки
 class Check
 {
 public:
+	//Конструктор
 	Check(CheckType type);
 
+	//Установка позиции шашки в координатах окна
 	void SetPosition(sf::Vector2f position);
 
 	void Draw(Window* window);
 
+	//Возвращает тип шашки
 	CheckType GetType() { return _type; }
 private:
 	sf::Texture _texture;

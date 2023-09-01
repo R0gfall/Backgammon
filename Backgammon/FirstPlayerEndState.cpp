@@ -14,7 +14,7 @@ FirstPlayerEndState::FirstPlayerEndState(Board* board, IGameStateMachine* stateM
 
 	_hintText.setCharacterSize(30);
 	_hintText.setFillColor(sf::Color::White);
-	_hintText.setPosition(sf::Vector2f(480.f, 720.f));
+	_hintText.setPosition(sf::Vector2f(380.f, 720.f));
 	_hintText.setString(_hintTextString);
 }
 
@@ -47,5 +47,6 @@ void FirstPlayerEndState::Draw(Window* window)
 	GameBoard->Draw(window);
 	PlayerFirst->Draw(window);
 	window->Draw(_turnText);
+	window->Draw(_hintText);
 	Dice::Draw(window);
 }

@@ -1,5 +1,23 @@
 #include "Game.h"
 
+Game::Game()
+{
+	_window = new Window(GAME_NAME);
+
+	_board = new Board();
+	_dice = new Dice();
+
+	_stateMachine = new GameStateMachine(_board);
+}
+
+Game::~Game()
+{
+	delete _dice;
+	delete _window;
+	delete _board;
+	delete _stateMachine;
+}
+
 void Game::Initialize()
 {
 	_board->Initialize();

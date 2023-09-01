@@ -5,6 +5,7 @@
 
 #include "Bitmask.h"
 
+//Класс ввода для мыши
 class Mouse
 {
 public:

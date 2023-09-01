@@ -10,10 +10,10 @@ Cell::Cell(CellType type) : _id(_idCounter++), _type(type)
 	
 	_font.loadFromFile(FONT_PATH);
 
-	_turnText.setFont(_font);
-	_turnText.setString(std::to_string(_id));
-	_turnText.setFillColor(sf::Color::Red);
-	_turnText.setCharacterSize(20);
+	_idText.setFont(_font);
+	_idText.setString(std::to_string(_id));
+	_idText.setFillColor(sf::Color::Red);
+	_idText.setCharacterSize(20);
 
 	_debugRect.setOutlineColor(sf::Color::Green);
 	_debugRect.setOutlineThickness(1.f);
@@ -36,7 +36,7 @@ Cell::~Cell()
 void Cell::SetPosition(sf::Vector2f position)
 {
 	_debugRect.setPosition(position);
-	_turnText.setPosition(position + _textOffset);
+	_idText.setPosition(position + _textOffset);
 }
 
 sf::Vector2f Cell::GetPosition()
@@ -47,7 +47,7 @@ sf::Vector2f Cell::GetPosition()
 void Cell::Draw(Window* window)
 {
 	window->Draw(_debugRect);
-	window->Draw(_turnText);
+	window->Draw(_idText);
 
 	for(auto check : _checks)
 	{

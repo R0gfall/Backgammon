@@ -13,9 +13,9 @@ SecondPlayerEndState::SecondPlayerEndState(Board* board, IGameStateMachine* stat
 	_hintText.setFont(_font);
 
 	_hintText.setCharacterSize(30);
-	_hintText.setFillColor(sf::Color::Black);
-	_hintText.setPosition(sf::Vector2f(550.f, 600.f));
-	_hintText.setString(_turnTextString);
+	_hintText.setFillColor(sf::Color::White);
+	_hintText.setPosition(sf::Vector2f(380.f, 720.f));
+	_hintText.setString(_hintTextString);
 }
 
 void SecondPlayerEndState::Initialize()
@@ -47,5 +47,6 @@ void SecondPlayerEndState::Draw(Window* window)
 	GameBoard->Draw(window);
 	PlayerSecond->Draw(window);
 	window->Draw(_turnText);
+	window->Draw(_hintText);
 	Dice::Draw(window);
 }

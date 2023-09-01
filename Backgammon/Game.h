@@ -12,26 +12,16 @@
 #include "GameStateMachine.h"
 #include "GameBaseState.h"
 
-
+//Класс игры
+//Содержит методы для основного игрового цикла: инициализация, обновление и отрисовка
+//Создает все управляющие личности
 class Game
 {
 public:
-	Game()
-	{
-		_window = new Window(GAME_NAME);
-
-		_board = new Board();
-		_dice = new Dice();
-
-		_stateMachine = new GameStateMachine(_board);
-	}
-	~Game()
-	{
-		delete _dice;
-		delete _window;
-		delete _board;
-		delete _stateMachine;
-	}
+	//Конструктор
+	Game();
+	//Деструктор
+	~Game();
 
 	void Initialize();
 	void Update();

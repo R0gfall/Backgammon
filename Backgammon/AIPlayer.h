@@ -4,19 +4,18 @@
 
 #include "Debug.h"
 
+//Конкретный класс игрока
 class AIPlayer : public IPlayer
 {
 public:
-	AIPlayer(PlayerOrderType orderType, IGameStateMachine* stateMachine, Board* board) : IPlayer(orderType, stateMachine, board)
-	{
-		Debug::LogInfo("AI player was created");
-	}
-
-	void MoveCheck() override;
+	//Конструктор
+	AIPlayer(PlayerOrderType orderType, IGameStateMachine* stateMachine, Board* board);
 
 	void OnTurnEnter() override;
-
 	void OnEndTurnEnter() override;
+	void OnUpdate() override;
+	void OnEndUpdate() override;
+	void OnTurnExit() override;
 
 private:
 

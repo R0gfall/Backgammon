@@ -17,6 +17,7 @@ Board::~Board()
 
 void Board::Initialize()
 {
+	//Создаются клетки и устанавливается их тип и позиция
 	for (size_t i = 0; i < CELLS_AMOUNT; i++)
 	{
 		CellType newCellType;
@@ -58,16 +59,14 @@ void Board::Initialize()
 		}
 
 		offset.y = cell->GetSize().y * (-1) * (i / (CELLS_AMOUNT / 2));
-
-		//Debug::Log("offset " + std::to_string(offset.x) + ":" + std::to_string(offset.y));
 		cell->SetPosition(_leftOffset + offset);
 
 		auto cellPosition = cell->GetPosition();
-		//Debug::Log("cellPos " + std::to_string(cellPosition.x) + ":" + std::to_string(cellPosition.y));
 		_cells[i] = cell;
 	}
 
-	for (size_t i = 0; i < 15; i++)
+	//Доска заполняется клетками
+	for (size_t i = 0; i < START_CHECKS_AMOUNT; i++)
 	{
 		Check* firstCheck = new Check(CheckType::FirstPlayer);
 		_cells[FIRST_PLAYER_HEAD_CELL_ID]->AddCheck(firstCheck);
@@ -87,19 +86,13 @@ void Board::Draw(Window* window)
 
 Cell* Board::GetCellByPosition(sf::Vector2f position)
 {
-	//TODO возвращать клетку относительно позиции или nullptr
-
 	sf::FloatRect cellsBounds(_cells[23]->GetBounds().left, _cells[23]->GetBounds().top, _cells[23]->GetSize().x * 12, _cells[23]->GetSize().y * 2);
 
 	if (cellsBounds.contains(position))
 	{
-		//Debug::Log("Contains");
-
 		sf::Vector2f localPosition;
 		localPosition.x = position.x - cellsBounds.left;
 		localPosition.y = position.y - cellsBounds.top;
-
-		//Debug::Log("Local position: " + std::to_string(localPosition.x) + " | " + std::to_string(localPosition.y));
 
 		return _cells[GetCellIdByLocalPosition(localPosition)];
 	}
@@ -183,7 +176,6 @@ bool Board::IsMoveCheckPossible(short idFrom, short idTo)
 				return false;
 			}
 		}
-
 		break;
 	case CellType::SecondPlayerHead:
 		if (!IsFirstTurnPossible(PlayerOrderType::SecondPlayer, _secondPlayerFromHeadTurns))
@@ -275,6 +267,11 @@ bool Board::TryRemoveCheck(short idFrom)
 
 		_secondPlayerChecksOut++;
 		break;
+	}
+
+	if (IsGameEnded())
+	{
+		SetWinner();
 	}
 
 	cell->RemoveCheck();
@@ -384,6 +381,11 @@ void Board::ResetTurns()
 	_lastPerformedTurn = -1;
 	_firstPlayerFromHeadTurns = 0;
 	_secondPlayerFromHeadTurns = 0;
+  
+	if (IsGameEnded())
+	{
+		SetWinner();
+	}
 }
 
 PossibleTurns Board::GetAllPossibleTurns(PlayerOrderType orderType)
@@ -499,6 +501,49 @@ char Board::GetChecksOut(PlayerOrderType orderType)
 	}
 
 	return -1;
+}
+
+bool Board::IsGameEnded()
+{
+	return _firstPlayerChecksOut >= START_CHECKS_AMOUNT || _secondPlayerChecksOut >= START_CHECKS_AMOUNT;
+}
+
+PlayerOrderType Board::GetWinner()
+{
+	return _gameWinner;
+}
+
+void Board::SetMaxChecksOut(PlayerOrderType orderType)
+{
+	switch (orderType)
+	{
+	case PlayerOrderType::FirstPlayer:
+		_firstPlayerChecksOut = START_CHECKS_AMOUNT;
+		break;
+	case PlayerOrderType::SecondPlayer:
+		_secondPlayerChecksOut = START_CHECKS_AMOUNT;
+		break;
+	default:
+		Debug::LogError("Cannot set max checks out amount. None player order type given");
+		break;
+	}
+}
+
+void Board::SetWinner()
+{
+	if (_firstPlayerChecksOut >= START_CHECKS_AMOUNT)
+	{
+		SetWinner(PlayerOrderType::FirstPlayer);
+	}
+	else
+	{
+		SetWinner(PlayerOrderType::SecondPlayer);
+	}
+}
+
+void Board::SetWinner(PlayerOrderType orderType)
+{
+	_gameWinner = orderType;
 }
 
 bool Board::IsTurnOverlaping(PlayerOrderType orderType, short fromId, short toId)

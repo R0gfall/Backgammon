@@ -2,15 +2,14 @@
 
 #include "GameBaseState.h"
 
+const std::string WINNER_TEXT_PLACEHOLDER = "Game winner is: ";
+
 //Конечное состояние
 //Выводит финальный экран
 class EndGameState : public GameBaseState
 {
 public:
-	EndGameState(Board* board, IGameStateMachine* stateMachine) : GameBaseState(board, stateMachine, GameStateType::EndGame)
-	{
-
-	}
+	EndGameState(Board* board, IGameStateMachine* stateMachine);
 
 	void Initialize() override;
 
@@ -19,5 +18,12 @@ public:
 	void LeaveState() override;
 
 	void Draw(Window* window) override;
+
+private:
+	void UpdateWinnerText();
+
+	sf::Font _font;
+
+	sf::Text _winnerText;
 };
 

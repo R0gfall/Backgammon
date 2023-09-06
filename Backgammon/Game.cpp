@@ -13,9 +13,11 @@ Game::Game()
 Game::~Game()
 {
 	delete _dice;
-	delete _window;
+
 	delete _board;
 	delete _stateMachine;
+
+	delete _window;
 }
 
 void Game::Initialize()

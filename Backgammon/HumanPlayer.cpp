@@ -240,6 +240,17 @@ void HumanPlayer::HandleInput()
 		CancelCellChoise();
 		Dice::Roll();
 	}
+
+	if (Input::IsKeyDown(Input::Key::Z))
+	{
+		Debug::LogWarning("First player max checks out set");
+		GameBoard->SetMaxChecksOut(PlayerOrderType::FirstPlayer);
+	}
+	if (Input::IsKeyDown(Input::Key::X))
+	{
+		Debug::LogWarning("Second player max checks out set");
+		GameBoard->SetMaxChecksOut(PlayerOrderType::SecondPlayer);
+	}
 }
 
 void HumanPlayer::UpdateChosenCellText()

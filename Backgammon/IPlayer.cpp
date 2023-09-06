@@ -29,6 +29,12 @@ void IPlayer::NextTurn()
 		GameBoard->SetFirstTurnMade(OrderType);
 	}
 
+	if (GameBoard->IsGameEnded())
+	{
+		StateMachine->SwitchState(GameStateType::EndGame);
+		return;
+	}
+
 	switch (OrderType)
 	{
 	case PlayerOrderType::FirstPlayer:

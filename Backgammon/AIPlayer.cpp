@@ -1,6 +1,6 @@
 #include "AIPlayer.h"
 
-AIPlayer::AIPlayer(PlayerOrderType orderType, IGameStateMachine* stateMachine, Board* board) : IPlayer(orderType, stateMachine, board)
+AIPlayer::AIPlayer(PlayerOrderType orderType, AiDifficulty difficulty, IGameStateMachine* stateMachine, Board* board) : IPlayer(orderType, stateMachine, board), _difficulty(difficulty)
 {
 	Debug::LogInfo("AI player was created");
 }

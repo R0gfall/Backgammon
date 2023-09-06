@@ -14,7 +14,7 @@ Window::Window(const std::string& windowName) : _window(sf::VideoMode(WINDOW_WID
 
 Window::~Window()
 {
-	delete _instance;
+
 }
 
 void Window::Update()

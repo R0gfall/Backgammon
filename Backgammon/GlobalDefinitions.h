@@ -29,14 +29,32 @@ enum class GameStateType
 	EndGame
 };
 
+//Массив строк, соответствующий перечислению GameStateType
+const std::string GAME_STATE_STRINGS[6] = { "INITIAL_STATE", "FIRST_PLAYER_STATE", "FIRST_PLAYER_END_STATE", "SECOND_PLAYER_STATE", "SECOND_PLAYER_END_STATE", "END_GAME_STATE" };
+
 //Перечисление типов очередности ходов
 enum class PlayerOrderType
 {
 	//Первый игрок
 	FirstPlayer,
 	//Второй игрок
-	SecondPlayer
+	SecondPlayer,
+	None,
 };
+
+//Массив строк, соответствующий перечислению PlayerOrderType
+const std::string PLAYER_ORDER_TYPE_STRINGS[3] = { "NONE", "FIRST PLAYER", "SECOND PLAYER" };
+
+//Перечисление сложности ИИ
+enum class AiDifficulty
+{
+	Easy,
+	Medium,
+	Hard
+};
+
+//Массив строк, соответствующий перечислению AiDifficulty
+const std::string AI_DIFFICULTY_STRINGS[3] = { "EASY", "MEDIUM", "HARD" };
 
 //Перечисление состояний клетки
 enum class CellStatus
@@ -73,9 +91,6 @@ enum class CheckType
 	//Серая шашка подсказка возмодного хода
 	Hint
 };
-
-//Массив строк, соответствующий перечислению GameStateType
-const std::string GAME_STATE_STRINGS[6] = { "INITIAL_STATE", "FIRST_PLAYER_STATE", "FIRST_PLAYER_END_STATE", "SECOND_PLAYER_STATE", "SECOND_PLAYER_END_STATE", "END_GAME_STATE" };
 
 //Начальное состояние которое будет активно в начале
 const GameStateType GAME_INITIAL_STATE = GameStateType::Initial;

@@ -9,7 +9,7 @@ class AIPlayer : public IPlayer
 {
 public:
 	//Конструктор
-	AIPlayer(PlayerOrderType orderType, IGameStateMachine* stateMachine, Board* board);
+	AIPlayer(PlayerOrderType orderType, AiDifficulty difficulty, IGameStateMachine* stateMachine, Board* board);
 
 	void OnTurnEnter() override;
 	void OnEndTurnEnter() override;
@@ -18,6 +18,6 @@ public:
 	void OnTurnExit() override;
 
 private:
-
+	AiDifficulty _difficulty;
 };
 

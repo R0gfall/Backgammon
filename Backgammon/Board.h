@@ -11,6 +11,7 @@
 #include "Dice.h"
 
 const int CELLS_AMOUNT = 24;
+const int START_CHECKS_AMOUNT = 15;
 
 const short FIRST_PLAYER_HEAD_CELL_ID = 0;
 const short SECOND_PLAYER_HEAD_CELL_ID = 12;
@@ -80,7 +81,20 @@ public:
 	//Возвращает количество сьрошенных со стола фишек
 	char GetChecksOut(PlayerOrderType orderType);
 
+	//Проверка закончена ли игра (нужно для переключения состояний)
+	bool IsGameEnded();
+	//Возвращает игрока, который победил или None
+	PlayerOrderType GetWinner();
+
+	//Для тестов
+	void SetMaxChecksOut(PlayerOrderType orderType);
+
 private:
+	//Устанавливает победителя игры
+	void SetWinner();
+	//Устанавливает победителя игры
+	void SetWinner(PlayerOrderType orderType);
+
 	//Проверка выходит ли ход за пределы дома
 	bool IsTurnOverlaping(PlayerOrderType orderType, short fromId, short toId);
 	//Проверка возможен ли первый ход (снять 2 шашки с головы)
@@ -128,5 +142,8 @@ private:
 	char _firstPlayerChecksOut = 0;
 	//Количество сброшенных с доски шашек у второго игрока
 	char _secondPlayerChecksOut = 0;
+
+	//Победитель игры
+	PlayerOrderType _gameWinner = PlayerOrderType::None;
 };
 

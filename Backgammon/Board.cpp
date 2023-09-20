@@ -225,6 +225,8 @@ bool Board::TryRemoveCheck(short idFrom)
 	if (!IsRemoveCheckPossible(idFrom))
 		return false;
 
+	//TODO проверять на состояние конечной игры
+
 	auto cell = _cells[idFrom];
 	auto cellStatus = cell->GetStatus();
 
@@ -243,6 +245,7 @@ bool Board::TryRemoveCheck(short idFrom)
 	{
 	case CellStatus::FirstPlayer:
 		//TODO мб не все условия учитываются
+		//TODO надо учитывать предыдущий сделанный ход
 
 		if (IsTurnOverlaping(PlayerOrderType::FirstPlayer, idFrom, CalculateCellId(idFrom, minDiceValue)))
 		{

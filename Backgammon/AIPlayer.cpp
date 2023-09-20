@@ -124,7 +124,7 @@ void AIPlayer::OnEndTurnEnter()
         short k = 0, _i = 0, flag = 0;
         auto dices = Dice::GetDices();
         for (int i = dices.x; i >= 0; i--) {
-            if (GameBoard->TryRemoveCheck(i)) {
+            if (GameBoard->TryRemoveCheck(6 + i)) {
                 printf("Removed check from cell id: %d\n", i);
                 k++;
                 flag = 1;

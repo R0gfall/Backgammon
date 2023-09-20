@@ -148,7 +148,13 @@ void HumanPlayer::RemoveCheck()
 
 	if (GameBoard->TryRemoveCheck(_chosenCell->GetId()))
 	{
+		// добавлено
 		_performedTurns++;
+		if (_performedTurns >= Dice::GetPossibleTurnsAmount())
+		{
+			NextTurn();
+			return;
+		}
 	}
 }
 

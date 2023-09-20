@@ -19,11 +19,13 @@ void AIPlayer::OnTurnEnter()
     //printf("3123123123");
     if (!IsAnyTurnsPossible()) {
         NextTurn();
+        return;
     }
     else if (Dice::IsDouble()) {
         for (int i = 0; i < 4; i++) {
             if (!IsAnyTurnsPossible()) {
                 NextTurn();
+                return;
             }
             auto possibleTurns = CalculatePossibleTurns();
             int rand_cell = rand() % 24;
@@ -51,6 +53,7 @@ void AIPlayer::OnTurnEnter()
         for (int i = 0; i < 2; i++) {
             if (!IsAnyTurnsPossible()) {
                 NextTurn();
+                return;
             }
             /*auto possibleTurns1 = CalculatePossibleTurns();
             for (int j = 0; j < 24; j++) {
@@ -89,6 +92,7 @@ void AIPlayer::OnTurnEnter()
         }
     }
     NextTurn();
+    return;
     //// получить все возможные ходы
     //// auto possibleTurns = GameBoard->GetAllPossibleTurns(OrderType);
     //auto possibleTurns = CalculatePossibleTurns();
@@ -119,13 +123,13 @@ void AIPlayer::OnTurnEnter()
 void AIPlayer::OnEndTurnEnter()
 {
 
-    //printf("3123123123");
+    printf("3123123123");
     if (Dice::IsDouble()) {
         short k = 0, _i = 0, flag = 0;
         auto dices = Dice::GetDices();
         for (int i = dices.x; i >= 0; i--) {
-            if (GameBoard->TryRemoveCheck(6 + i)) {
-                printf("Removed check from cell id: %d\n", i);
+            if (GameBoard->TryRemoveCheck(11 - i)) {
+                printf("Removed check from cell id: %d\n", 11 - i);
                 k++;
                 flag = 1;
                 break;
@@ -140,8 +144,8 @@ void AIPlayer::OnEndTurnEnter()
         }
         if (flag == 1) {
             for (int i = dices.x; i >= 0; i--) {
-                if (GameBoard->TryRemoveCheck(i)) {
-                    printf("Removed check from cell id: %d\n", i);
+                if (GameBoard->TryRemoveCheck(11- i)) {
+                    printf("Removed check from cell id: %d\n", 11 - i);
                     k++;
                     break;
                 }
@@ -155,8 +159,8 @@ void AIPlayer::OnEndTurnEnter()
         }
         flag = 0;
         for (int i = dices.y; i >= 0; i--) {
-            if (GameBoard->TryRemoveCheck(i)) {
-                printf("Removed check from cell id: %d\n", i);
+            if (GameBoard->TryRemoveCheck(11 - i)) {
+                printf("Removed check from cell id: %d\n", 11 - i);
                 k++;
                 flag = 1;
                 break;
@@ -171,8 +175,8 @@ void AIPlayer::OnEndTurnEnter()
         }
         if (flag == 1) {
             for (int i = dices.y; i >= 0; i--) {
-                if (GameBoard->TryRemoveCheck(i)) {
-                    printf("Removed check from cell id: %d\n", i);
+                if (GameBoard->TryRemoveCheck(11 - i)) {
+                    printf("Removed check from cell id: %d\n", 11 - i);
                     k++;
                     break;
                 }
@@ -187,6 +191,7 @@ void AIPlayer::OnEndTurnEnter()
         for (int i = 0; i < 4 - k; i++) {
             if (!IsAnyTurnsPossible()) {
                 NextTurn();
+                return;
             }
             auto possibleTurns = CalculatePossibleTurns();
             int rand_cell = rand() % 24;
@@ -220,8 +225,8 @@ void AIPlayer::OnEndTurnEnter()
         short k = 0, _i = 0;
         auto dices = Dice::GetDices();
         for (int i = dices.x; i >= 0; i--) {
-            if (GameBoard->TryRemoveCheck(i)) {
-                printf("Removed check from cell id: %d\n", i);
+            if (GameBoard->TryRemoveCheck(11 - i)) {
+                printf("Removed check from cell id: %d\n", 11 - i);
                 k++;
                 break;
             }
@@ -233,8 +238,8 @@ void AIPlayer::OnEndTurnEnter()
             }
         }
         for (int i = dices.y; i >= 0; i--) {
-            if (GameBoard->TryRemoveCheck(i)) {
-                printf("Removed check from cell id: %d\n", i);
+            if (GameBoard->TryRemoveCheck(11 - i)) {
+                printf("Removed check from cell id: %d\n", 11 - i);
                 k++;
                 break;
             }
@@ -248,6 +253,7 @@ void AIPlayer::OnEndTurnEnter()
         for (int i = 0; i < 2 - k; i++) {
             if (!IsAnyTurnsPossible()) {
                 NextTurn();
+                return;
             }
             auto possibleTurns = CalculatePossibleTurns();
             int rand_cell = rand() % 24;
@@ -278,6 +284,7 @@ void AIPlayer::OnEndTurnEnter()
         }
     }
     NextTurn();
+    return;
 
     //auto slov = GameBoard->GetAllPossibleTurns(OrderType);
     //

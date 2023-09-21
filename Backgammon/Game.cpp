@@ -27,7 +27,7 @@ Game::~Game()
 
 void Game::Initialize()
 {
-	_board->Initialize();
+	_board->Initialize(_stateMachine);
 	_dice->Initialize();
 
 	_stateMachine->Initialize(GAME_INITIAL_STATE);

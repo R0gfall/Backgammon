@@ -158,6 +158,12 @@ void HumanPlayer::RemoveCheck()
 			return;
 		}
 	}
+
+	if (GameBoard->IsGameEnded())
+	{
+		NextTurn();
+		return;
+	}
 }
 
 

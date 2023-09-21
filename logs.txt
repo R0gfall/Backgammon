@@ -3,89 +3,29 @@ INFO: Entered INITIAL_STATE
 INFO: Human player was created
 INFO: AI player was created
 INFO: Entered FIRST_PLAYER_STATE
-LOG: rolled dices: 5 / 3
+LOG: rolled dices: 6 / 3
 LOG: Checking for possible turns...
 LOG: Possible turns for FIRST PLAYER:
 --------------------
-From cell id: 17 -> to : 22 20 
+From cell id: 17 -> to : 23 20 
 --------------------
 LOG: Chosen cell is: 17
 LOG: Possible turns for FIRST PLAYER:
 --------------------
-From cell id: 17 -> to : 22 20 
+From cell id: 17 -> to : 23 20 
 --------------------
 LOG: Show hint from chosen cell with id: 17
-LOG: Possible turn to id: 22
-LOG: Possible turn to id: 20
-LOG: Hiding hints
-LOG: Trying to move check from: 17 to: 22
-LOG: ++ Increaced first player checks in home
-LOG: Successfully to move check from: 17 to: 22 by: FirstPlayer
-LOG: Checking for possible turns...
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 20 
-From cell id: 22 -> to : 
---------------------
-LOG: Choise cancelled
-LOG: Hiding hints
-LOG: Chosen cell is: 17
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 20 
-From cell id: 22 -> to : 
---------------------
-LOG: Show hint from chosen cell with id: 17
+LOG: Possible turn to id: 23
 LOG: Possible turn to id: 20
 LOG: Hiding hints
 LOG: Trying to move check from: 17 to: 20
 LOG: ++ Increaced first player checks in home
 LOG: Successfully to move check from: 17 to: 20 by: FirstPlayer
-INFO: Leaved FIRST_PLAYER_STATE
-LOG: Game board turns resetted
-LOG: Choise cancelled
-LOG: Hiding hints
-INFO: Entered SECOND_PLAYER_STATE
-LOG: rolled dices: 2 / 6
-LOG: Trying to move check from: 5 to: 7
-LOG: ++ Increaced second player checks in home
-LOG: Successfully to move check from: 5 to: 7 by: SecondPlayer
-LOG: Trying to move check from: 5 to: 11
-LOG: ++ Increaced second player checks in home
-LOG: Successfully to move check from: 5 to: 11 by: SecondPlayer
-LOG: Game board turns resetted
-INFO: Entered FIRST_PLAYER_STATE
-LOG: rolled dices: 1 / 6
-LOG: Checking for possible turns...
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 18 23 
-From cell id: 20 -> to : 21 
-From cell id: 22 -> to : 23 
---------------------
-LOG: Choise cancelled
-LOG: Hiding hints
-LOG: Chosen cell is: 17
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 18 23 
-From cell id: 20 -> to : 21 
-From cell id: 22 -> to : 23 
---------------------
-LOG: Show hint from chosen cell with id: 17
-LOG: Possible turn to id: 18
-LOG: Possible turn to id: 23
-LOG: Hiding hints
-LOG: Trying to move check from: 17 to: 18
-LOG: ++ Increaced first player checks in home
-LOG: Successfully to move check from: 17 to: 18 by: FirstPlayer
 LOG: Checking for possible turns...
 LOG: Possible turns for FIRST PLAYER:
 --------------------
 From cell id: 17 -> to : 23 
-From cell id: 18 -> to : 
 From cell id: 20 -> to : 
-From cell id: 22 -> to : 
 --------------------
 LOG: Choise cancelled
 LOG: Hiding hints
@@ -93,22 +33,19 @@ LOG: Chosen cell is: 17
 LOG: Possible turns for FIRST PLAYER:
 --------------------
 From cell id: 17 -> to : 23 
-From cell id: 18 -> to : 
 From cell id: 20 -> to : 
-From cell id: 22 -> to : 
 --------------------
 LOG: Show hint from chosen cell with id: 17
 LOG: Possible turn to id: 23
+LOG: Hiding hints
 LOG: Choise cancelled
 LOG: Hiding hints
-WARNING: Cannot chose free cell
+WARNING: Cannot move check. Impossible variant was chosen
 LOG: Chosen cell is: 17
 LOG: Possible turns for FIRST PLAYER:
 --------------------
 From cell id: 17 -> to : 23 
-From cell id: 18 -> to : 
 From cell id: 20 -> to : 
-From cell id: 22 -> to : 
 --------------------
 LOG: Show hint from chosen cell with id: 17
 LOG: Possible turn to id: 23
@@ -121,189 +58,21 @@ LOG: Game board turns resetted
 LOG: Choise cancelled
 LOG: Hiding hints
 INFO: Entered SECOND_PLAYER_STATE
-LOG: rolled dices: 3 / 4
-LOG: Trying to move check from: 5 to: 8
-LOG: ++ Increaced second player checks in home
-LOG: Successfully to move check from: 5 to: 8 by: SecondPlayer
-LOG: Trying to move check from: 5 to: 9
-LOG: ++ Increaced second player checks in home
-LOG: Successfully to move check from: 5 to: 9 by: SecondPlayer
-LOG: Game board turns resetted
-INFO: Entered FIRST_PLAYER_STATE
-LOG: rolled dices: 1 / 3
-LOG: Checking for possible turns...
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 18 20 
-From cell id: 18 -> to : 19 21 
-From cell id: 20 -> to : 21 23 
-From cell id: 22 -> to : 23 
-From cell id: 23 -> to : 
---------------------
-LOG: Choise cancelled
-LOG: Hiding hints
-LOG: Chosen cell is: 17
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 18 20 
-From cell id: 18 -> to : 19 21 
-From cell id: 20 -> to : 21 23 
-From cell id: 22 -> to : 23 
-From cell id: 23 -> to : 
---------------------
-LOG: Show hint from chosen cell with id: 17
-LOG: Possible turn to id: 18
-LOG: Possible turn to id: 20
-LOG: Hiding hints
-LOG: Trying to move check from: 17 to: 18
-LOG: ++ Increaced first player checks in home
-LOG: Successfully to move check from: 17 to: 18 by: FirstPlayer
-LOG: Checking for possible turns...
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 20 
-From cell id: 18 -> to : 21 
-From cell id: 20 -> to : 23 
-From cell id: 22 -> to : 
-From cell id: 23 -> to : 
---------------------
-LOG: Choise cancelled
-LOG: Hiding hints
-LOG: Chosen cell is: 17
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 20 
-From cell id: 18 -> to : 21 
-From cell id: 20 -> to : 23 
-From cell id: 22 -> to : 
-From cell id: 23 -> to : 
---------------------
-LOG: Show hint from chosen cell with id: 17
-LOG: Possible turn to id: 20
-LOG: Hiding hints
-LOG: Trying to move check from: 17 to: 20
-LOG: ++ Increaced first player checks in home
-LOG: Successfully to move check from: 17 to: 20 by: FirstPlayer
-INFO: Leaved FIRST_PLAYER_STATE
-LOG: Game board turns resetted
-LOG: Choise cancelled
-LOG: Hiding hints
-INFO: Entered SECOND_PLAYER_STATE
-LOG: rolled dices: 6 / 3
-LOG: Trying to move check from: 5 to: 8
-LOG: ++ Increaced second player checks in home
-LOG: Successfully to move check from: 5 to: 8 by: SecondPlayer
+LOG: rolled dices: 6 / 2
 LOG: Trying to move check from: 5 to: 11
 LOG: ++ Increaced second player checks in home
 LOG: Successfully to move check from: 5 to: 11 by: SecondPlayer
+LOG: Trying to move check from: 5 to: 7
+LOG: ++ Increaced second player checks in home
+LOG: Successfully to move check from: 5 to: 7 by: SecondPlayer
 LOG: Game board turns resetted
 INFO: Entered FIRST_PLAYER_STATE
-LOG: rolled dices: 5 / 2
+LOG: rolled dices: 6 / 3
 LOG: Checking for possible turns...
 LOG: Possible turns for FIRST PLAYER:
 --------------------
-From cell id: 17 -> to : 22 19 
-From cell id: 18 -> to : 23 20 
-From cell id: 20 -> to : 22 
-From cell id: 22 -> to : 
-From cell id: 23 -> to : 
---------------------
-LOG: Choise cancelled
-LOG: Hiding hints
-LOG: Chosen cell is: 17
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 22 19 
-From cell id: 18 -> to : 23 20 
-From cell id: 20 -> to : 22 
-From cell id: 22 -> to : 
-From cell id: 23 -> to : 
---------------------
-LOG: Show hint from chosen cell with id: 17
-LOG: Possible turn to id: 22
-LOG: Possible turn to id: 19
-LOG: Hiding hints
-LOG: Trying to move check from: 17 to: 19
-LOG: ++ Increaced first player checks in home
-LOG: Successfully to move check from: 17 to: 19 by: FirstPlayer
-LOG: Checking for possible turns...
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 22 
-From cell id: 18 -> to : 23 
-From cell id: 19 -> to : 
-From cell id: 20 -> to : 
-From cell id: 22 -> to : 
-From cell id: 23 -> to : 
---------------------
-LOG: Choise cancelled
-LOG: Hiding hints
-LOG: Chosen cell is: 17
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 22 
-From cell id: 18 -> to : 23 
-From cell id: 19 -> to : 
-From cell id: 20 -> to : 
-From cell id: 22 -> to : 
-From cell id: 23 -> to : 
---------------------
-LOG: Show hint from chosen cell with id: 17
-LOG: Possible turn to id: 22
-LOG: Hiding hints
-LOG: Trying to move check from: 17 to: 22
-LOG: ++ Increaced first player checks in home
-LOG: Successfully to move check from: 17 to: 22 by: FirstPlayer
-INFO: Leaved FIRST_PLAYER_STATE
-LOG: Game board turns resetted
-LOG: Choise cancelled
-LOG: Hiding hints
-INFO: Entered SECOND_PLAYER_STATE
-LOG: rolled dices: 3 / 1
-LOG: Trying to move check from: 8 to: 11
-LOG: Successfully to move check from: 8 to: 11 by: SecondPlayer
-LOG: Trying to move check from: 7 to: 8
-LOG: Successfully to move check from: 7 to: 8 by: SecondPlayer
-LOG: Game board turns resetted
-INFO: Entered FIRST_PLAYER_STATE
-LOG: rolled dices: 3 / 2
-LOG: Checking for possible turns...
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 20 19 
-From cell id: 18 -> to : 21 20 
-From cell id: 19 -> to : 22 21 
-From cell id: 20 -> to : 23 22 
-From cell id: 22 -> to : 
-From cell id: 23 -> to : 
---------------------
-LOG: Choise cancelled
-LOG: Hiding hints
-LOG: Chosen cell is: 17
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 20 19 
-From cell id: 18 -> to : 21 20 
-From cell id: 19 -> to : 22 21 
-From cell id: 20 -> to : 23 22 
-From cell id: 22 -> to : 
-From cell id: 23 -> to : 
---------------------
-LOG: Show hint from chosen cell with id: 17
-LOG: Possible turn to id: 20
-LOG: Possible turn to id: 19
-LOG: Hiding hints
-LOG: Trying to move check from: 17 to: 19
-LOG: ++ Increaced first player checks in home
-LOG: Successfully to move check from: 17 to: 19 by: FirstPlayer
-LOG: Checking for possible turns...
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 20 
-From cell id: 18 -> to : 21 
-From cell id: 19 -> to : 22 
+From cell id: 17 -> to : 23 20 
 From cell id: 20 -> to : 23 
-From cell id: 22 -> to : 
 From cell id: 23 -> to : 
 --------------------
 LOG: Choise cancelled
@@ -311,19 +80,39 @@ LOG: Hiding hints
 LOG: Chosen cell is: 17
 LOG: Possible turns for FIRST PLAYER:
 --------------------
-From cell id: 17 -> to : 20 
-From cell id: 18 -> to : 21 
-From cell id: 19 -> to : 22 
+From cell id: 17 -> to : 23 20 
 From cell id: 20 -> to : 23 
-From cell id: 22 -> to : 
 From cell id: 23 -> to : 
 --------------------
 LOG: Show hint from chosen cell with id: 17
+LOG: Possible turn to id: 23
 LOG: Possible turn to id: 20
 LOG: Hiding hints
 LOG: Trying to move check from: 17 to: 20
 LOG: ++ Increaced first player checks in home
 LOG: Successfully to move check from: 17 to: 20 by: FirstPlayer
+LOG: Checking for possible turns...
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 17 -> to : 23 
+From cell id: 20 -> to : 
+From cell id: 23 -> to : 
+--------------------
+LOG: Choise cancelled
+LOG: Hiding hints
+LOG: Chosen cell is: 17
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 17 -> to : 23 
+From cell id: 20 -> to : 
+From cell id: 23 -> to : 
+--------------------
+LOG: Show hint from chosen cell with id: 17
+LOG: Possible turn to id: 23
+LOG: Hiding hints
+LOG: Trying to move check from: 17 to: 23
+LOG: ++ Increaced first player checks in home
+LOG: Successfully to move check from: 17 to: 23 by: FirstPlayer
 INFO: Leaved FIRST_PLAYER_STATE
 LOG: Game board turns resetted
 LOG: Choise cancelled
@@ -344,15 +133,12 @@ LOG: ++ Increaced second player checks in home
 LOG: Successfully to move check from: 5 to: 9 by: SecondPlayer
 LOG: Game board turns resetted
 INFO: Entered FIRST_PLAYER_STATE
-LOG: rolled dices: 5 / 3
+LOG: rolled dices: 3 / 3
 LOG: Checking for possible turns...
 LOG: Possible turns for FIRST PLAYER:
 --------------------
-From cell id: 17 -> to : 22 20 
-From cell id: 18 -> to : 23 21 
-From cell id: 19 -> to : 22 
+From cell id: 17 -> to : 20 
 From cell id: 20 -> to : 23 
-From cell id: 22 -> to : 
 From cell id: 23 -> to : 
 --------------------
 LOG: Choise cancelled
@@ -360,15 +146,11 @@ LOG: Hiding hints
 LOG: Chosen cell is: 17
 LOG: Possible turns for FIRST PLAYER:
 --------------------
-From cell id: 17 -> to : 22 20 
-From cell id: 18 -> to : 23 21 
-From cell id: 19 -> to : 22 
+From cell id: 17 -> to : 20 
 From cell id: 20 -> to : 23 
-From cell id: 22 -> to : 
 From cell id: 23 -> to : 
 --------------------
 LOG: Show hint from chosen cell with id: 17
-LOG: Possible turn to id: 22
 LOG: Possible turn to id: 20
 LOG: Hiding hints
 LOG: Trying to move check from: 17 to: 20
@@ -377,11 +159,8 @@ LOG: Successfully to move check from: 17 to: 20 by: FirstPlayer
 LOG: Checking for possible turns...
 LOG: Possible turns for FIRST PLAYER:
 --------------------
-From cell id: 17 -> to : 22 
-From cell id: 18 -> to : 23 
-From cell id: 19 -> to : 
-From cell id: 20 -> to : 
-From cell id: 22 -> to : 
+From cell id: 17 -> to : 20 
+From cell id: 20 -> to : 23 
 From cell id: 23 -> to : 
 --------------------
 LOG: Choise cancelled
@@ -389,31 +168,228 @@ LOG: Hiding hints
 LOG: Chosen cell is: 17
 LOG: Possible turns for FIRST PLAYER:
 --------------------
-From cell id: 17 -> to : 22 
-From cell id: 18 -> to : 23 
-From cell id: 19 -> to : 
+From cell id: 17 -> to : 20 
+From cell id: 20 -> to : 23 
+From cell id: 23 -> to : 
+--------------------
+LOG: Show hint from chosen cell with id: 17
+LOG: Possible turn to id: 20
+LOG: Hiding hints
+LOG: Trying to move check from: 17 to: 20
+LOG: ++ Increaced first player checks in home
+LOG: Successfully to move check from: 17 to: 20 by: FirstPlayer
+LOG: Checking for possible turns...
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 17 -> to : 20 
+From cell id: 20 -> to : 23 
+From cell id: 23 -> to : 
+--------------------
+LOG: Choise cancelled
+LOG: Hiding hints
+LOG: Chosen cell is: 17
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 17 -> to : 20 
+From cell id: 20 -> to : 23 
+From cell id: 23 -> to : 
+--------------------
+LOG: Show hint from chosen cell with id: 17
+LOG: Possible turn to id: 20
+LOG: Hiding hints
+LOG: Trying to move check from: 17 to: 20
+LOG: ++ Increaced first player checks in home
+LOG: Successfully to move check from: 17 to: 20 by: FirstPlayer
+LOG: Checking for possible turns...
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 17 -> to : 20 
+From cell id: 20 -> to : 23 
+From cell id: 23 -> to : 
+--------------------
+LOG: Choise cancelled
+LOG: Hiding hints
+LOG: Chosen cell is: 17
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 17 -> to : 20 
+From cell id: 20 -> to : 23 
+From cell id: 23 -> to : 
+--------------------
+LOG: Show hint from chosen cell with id: 17
+LOG: Possible turn to id: 20
+LOG: Hiding hints
+LOG: Trying to move check from: 17 to: 20
+LOG: ++ Increaced first player checks in home
+LOG: Successfully to move check from: 17 to: 20 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+LOG: Game board turns resetted
+LOG: Choise cancelled
+LOG: Hiding hints
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 5
+LOG: Trying to move check from: 5 to: 10
+LOG: ++ Increaced second player checks in home
+LOG: Successfully to move check from: 5 to: 10 by: SecondPlayer
+LOG: Trying to move check from: 5 to: 10
+LOG: Game board turns resetted
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 3
+LOG: Checking for possible turns...
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 17 -> to : 18 20 
+From cell id: 20 -> to : 21 23 
+From cell id: 23 -> to : 
+--------------------
+LOG: Choise cancelled
+LOG: Hiding hints
+LOG: Chosen cell is: 17
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 17 -> to : 18 20 
+From cell id: 20 -> to : 21 23 
+From cell id: 23 -> to : 
+--------------------
+LOG: Show hint from chosen cell with id: 17
+LOG: Possible turn to id: 18
+LOG: Possible turn to id: 20
+LOG: Hiding hints
+LOG: Trying to move check from: 17 to: 18
+LOG: ++ Increaced first player checks in home
+LOG: Successfully to move check from: 17 to: 18 by: FirstPlayer
+LOG: Checking for possible turns...
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 17 -> to : 20 
+From cell id: 18 -> to : 21 
+From cell id: 20 -> to : 23 
+From cell id: 23 -> to : 
+--------------------
+LOG: Choise cancelled
+LOG: Hiding hints
+LOG: Chosen cell is: 17
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 17 -> to : 20 
+From cell id: 18 -> to : 21 
+From cell id: 20 -> to : 23 
+From cell id: 23 -> to : 
+--------------------
+LOG: Show hint from chosen cell with id: 17
+LOG: Possible turn to id: 20
+LOG: Hiding hints
+LOG: Trying to move check from: 17 to: 20
+LOG: ++ Increaced first player checks in home
+LOG: Successfully to move check from: 17 to: 20 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+LOG: Game board turns resetted
+LOG: Choise cancelled
+LOG: Hiding hints
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 5
+LOG: Trying to move check from: -13108 to: -13108
+LOG: Trying to move check from: -13108 to: -13108
+LOG: Game board turns resetted
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 2
+LOG: Checking for possible turns...
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 17 -> to : 23 19 
+From cell id: 18 -> to : 20 
+From cell id: 20 -> to : 22 
+From cell id: 23 -> to : 
+--------------------
+LOG: Choise cancelled
+LOG: Hiding hints
+LOG: Chosen cell is: 17
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 17 -> to : 23 19 
+From cell id: 18 -> to : 20 
+From cell id: 20 -> to : 22 
+From cell id: 23 -> to : 
+--------------------
+LOG: Show hint from chosen cell with id: 17
+LOG: Possible turn to id: 23
+LOG: Possible turn to id: 19
+LOG: Hiding hints
+LOG: Trying to move check from: 17 to: 23
+LOG: ++ Increaced first player checks in home
+LOG: Successfully to move check from: 17 to: 23 by: FirstPlayer
+LOG: Checking for possible turns...
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 17 -> to : 19 
+From cell id: 18 -> to : 20 
+From cell id: 20 -> to : 22 
+From cell id: 23 -> to : 
+--------------------
+LOG: Choise cancelled
+LOG: Hiding hints
+LOG: Chosen cell is: 17
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 17 -> to : 19 
+From cell id: 18 -> to : 20 
+From cell id: 20 -> to : 22 
+From cell id: 23 -> to : 
+--------------------
+LOG: Show hint from chosen cell with id: 17
+LOG: Possible turn to id: 19
+LOG: Hiding hints
+LOG: Trying to move check from: 17 to: 19
+LOG: ++ Increaced first player checks in home
+LOG: Successfully to move check from: 17 to: 19 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+LOG: Game board turns resetted
+LOG: Choise cancelled
+LOG: Hiding hints
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+LOG: Trying to move check from: -13108 to: -13108
+LOG: Trying to move check from: -13108 to: -13108
+LOG: Game board turns resetted
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 4
+LOG: Checking for possible turns...
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 17 -> to : 22 21 
+From cell id: 18 -> to : 23 22 
+From cell id: 19 -> to : 23 
 From cell id: 20 -> to : 
-From cell id: 22 -> to : 
+From cell id: 23 -> to : 
+--------------------
+LOG: Choise cancelled
+LOG: Hiding hints
+LOG: Chosen cell is: 17
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 17 -> to : 22 21 
+From cell id: 18 -> to : 23 22 
+From cell id: 19 -> to : 23 
+From cell id: 20 -> to : 
 From cell id: 23 -> to : 
 --------------------
 LOG: Show hint from chosen cell with id: 17
 LOG: Possible turn to id: 22
+LOG: Possible turn to id: 21
 LOG: Hiding hints
-LOG: Choise cancelled
-LOG: Hiding hints
-WARNING: Cannot move check. Impossible variant was chosen
-LOG: Chosen cell is: 22
+LOG: Trying to move check from: 17 to: 21
+LOG: ++ Increaced first player checks in home
+LOG: Successfully to move check from: 17 to: 21 by: FirstPlayer
+LOG: Checking for possible turns...
 LOG: Possible turns for FIRST PLAYER:
 --------------------
 From cell id: 17 -> to : 22 
 From cell id: 18 -> to : 23 
 From cell id: 19 -> to : 
 From cell id: 20 -> to : 
-From cell id: 22 -> to : 
+From cell id: 21 -> to : 
 From cell id: 23 -> to : 
 --------------------
-LOG: Show hint from chosen cell with id: 22
-WARNING: No possible turns from this cell
 LOG: Choise cancelled
 LOG: Hiding hints
 LOG: Chosen cell is: 17
@@ -423,7 +399,7 @@ From cell id: 17 -> to : 22
 From cell id: 18 -> to : 23 
 From cell id: 19 -> to : 
 From cell id: 20 -> to : 
-From cell id: 22 -> to : 
+From cell id: 21 -> to : 
 From cell id: 23 -> to : 
 --------------------
 LOG: Show hint from chosen cell with id: 17
@@ -437,469 +413,385 @@ LOG: Game board turns resetted
 LOG: Choise cancelled
 LOG: Hiding hints
 INFO: Entered SECOND_PLAYER_STATE
-LOG: rolled dices: 4 / 3
-LOG: Trying to move check from: 8 to: 11
-LOG: Successfully to move check from: 8 to: 11 by: SecondPlayer
-LOG: Trying to move check from: 5 to: 9
-LOG: ++ Increaced second player checks in home
-LOG: Successfully to move check from: 5 to: 9 by: SecondPlayer
+LOG: rolled dices: 6 / 4
+LOG: Trying to move check from: -13108 to: -13108
+LOG: Trying to move check from: -13108 to: -13108
 LOG: Game board turns resetted
 INFO: Entered FIRST_PLAYER_STATE
-LOG: rolled dices: 1 / 4
+LOG: rolled dices: 6 / 3
 LOG: Checking for possible turns...
 LOG: Possible turns for FIRST PLAYER:
 --------------------
-From cell id: 17 -> to : 18 21 
-From cell id: 18 -> to : 19 22 
-From cell id: 19 -> to : 20 23 
-From cell id: 20 -> to : 21 
-From cell id: 22 -> to : 23 
-From cell id: 23 -> to : 
---------------------
-LOG: Choise cancelled
-LOG: Hiding hints
-LOG: Chosen cell is: 22
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 18 21 
-From cell id: 18 -> to : 19 22 
-From cell id: 19 -> to : 20 23 
-From cell id: 20 -> to : 21 
-From cell id: 22 -> to : 23 
-From cell id: 23 -> to : 
---------------------
-LOG: Show hint from chosen cell with id: 22
-LOG: Possible turn to id: 23
-LOG: Hiding hints
-LOG: Trying to move check from: 22 to: 23
-LOG: Successfully to move check from: 22 to: 23 by: FirstPlayer
-LOG: Checking for possible turns...
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 21 
-From cell id: 18 -> to : 22 
-From cell id: 19 -> to : 23 
-From cell id: 20 -> to : 
+From cell id: 17 -> to : 23 20 
+From cell id: 18 -> to : 21 
+From cell id: 19 -> to : 22 
+From cell id: 20 -> to : 23 
+From cell id: 21 -> to : 
 From cell id: 22 -> to : 
 From cell id: 23 -> to : 
 --------------------
 LOG: Choise cancelled
 LOG: Hiding hints
+LOG: Chosen cell is: 17
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 17 -> to : 23 20 
+From cell id: 18 -> to : 21 
+From cell id: 19 -> to : 22 
+From cell id: 20 -> to : 23 
+From cell id: 21 -> to : 
+From cell id: 22 -> to : 
+From cell id: 23 -> to : 
+--------------------
+LOG: Show hint from chosen cell with id: 17
+LOG: Possible turn to id: 23
+LOG: Possible turn to id: 20
+LOG: Hiding hints
+LOG: Trying to move check from: 17 to: 20
+LOG: ++ Increaced first player checks in home
+LOG: Successfully to move check from: 17 to: 20 by: FirstPlayer
+LOG: Checking for possible turns...
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 18 -> to : 
+From cell id: 19 -> to : 
+From cell id: 20 -> to : 
+From cell id: 21 -> to : 
+From cell id: 22 -> to : 
+From cell id: 23 -> to : 
+--------------------
+INFO: Leaved FIRST_PLAYER_STATE
+LOG: Game board turns resetted
+LOG: Choise cancelled
+LOG: Hiding hints
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 6
+LOG: Trying to move check from: -13108 to: -13108
+LOG: Trying to move check from: -13108 to: -13108
+LOG: Trying to move check from: -13108 to: -13108
+LOG: Trying to move check from: -13108 to: -13108
+LOG: Game board turns resetted
+INFO: Entered FIRST_PLAYER_END_STATE
+LOG: rolled dices: 6 / 3
+LOG: Choise cancelled
+LOG: Hiding hints
 LOG: Chosen cell is: 23
 LOG: Possible turns for FIRST PLAYER:
 --------------------
-From cell id: 17 -> to : 21 
-From cell id: 18 -> to : 22 
-From cell id: 19 -> to : 23 
-From cell id: 20 -> to : 
+From cell id: 18 -> to : 21 
+From cell id: 19 -> to : 22 
+From cell id: 20 -> to : 23 
+From cell id: 21 -> to : 
 From cell id: 22 -> to : 
 From cell id: 23 -> to : 
 --------------------
 LOG: Show hint from chosen cell with id: 23
 WARNING: No possible turns from this cell
+LOG: Hiding hints
 LOG: Choise cancelled
 LOG: Hiding hints
-LOG: Chosen cell is: 22
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 21 
-From cell id: 18 -> to : 22 
-From cell id: 19 -> to : 23 
-From cell id: 20 -> to : 
-From cell id: 22 -> to : 
-From cell id: 23 -> to : 
---------------------
-LOG: Show hint from chosen cell with id: 22
-WARNING: No possible turns from this cell
-LOG: Choise cancelled
-LOG: Hiding hints
-LOG: Chosen cell is: 20
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 21 
-From cell id: 18 -> to : 22 
-From cell id: 19 -> to : 23 
-From cell id: 20 -> to : 
-From cell id: 22 -> to : 
-From cell id: 23 -> to : 
---------------------
-LOG: Show hint from chosen cell with id: 20
-WARNING: No possible turns from this cell
-LOG: Choise cancelled
-LOG: Hiding hints
-LOG: Chosen cell is: 19
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 21 
-From cell id: 18 -> to : 22 
-From cell id: 19 -> to : 23 
-From cell id: 20 -> to : 
-From cell id: 22 -> to : 
-From cell id: 23 -> to : 
---------------------
-LOG: Show hint from chosen cell with id: 19
-LOG: Possible turn to id: 23
-LOG: Hiding hints
-LOG: Trying to move check from: 19 to: 23
-LOG: Successfully to move check from: 19 to: 23 by: FirstPlayer
-INFO: Leaved FIRST_PLAYER_STATE
-LOG: Game board turns resetted
-LOG: Choise cancelled
-LOG: Hiding hints
-INFO: Entered SECOND_PLAYER_STATE
-LOG: rolled dices: 5 / 1
-LOG: Trying to move check from: 5 to: 6
-LOG: ++ Increaced second player checks in home
-LOG: Successfully to move check from: 5 to: 6 by: SecondPlayer
-LOG: Trying to move check from: 6 to: 11
-LOG: Successfully to move check from: 6 to: 11 by: SecondPlayer
-LOG: Game board turns resetted
-INFO: Entered FIRST_PLAYER_STATE
-LOG: rolled dices: 6 / 1
-LOG: Checking for possible turns...
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 23 18 
-From cell id: 18 -> to : 19 
-From cell id: 19 -> to : 20 
-From cell id: 20 -> to : 21 
-From cell id: 22 -> to : 23 
-From cell id: 23 -> to : 
---------------------
-LOG: Choise cancelled
-LOG: Hiding hints
-LOG: Chosen cell is: 19
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 23 18 
-From cell id: 18 -> to : 19 
-From cell id: 19 -> to : 20 
-From cell id: 20 -> to : 21 
-From cell id: 22 -> to : 23 
-From cell id: 23 -> to : 
---------------------
-LOG: Show hint from chosen cell with id: 19
-LOG: Possible turn to id: 20
-LOG: Hiding hints
-LOG: Trying to move check from: 19 to: 20
-LOG: Successfully to move check from: 19 to: 20 by: FirstPlayer
-LOG: Checking for possible turns...
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 23 
-From cell id: 18 -> to : 
-From cell id: 20 -> to : 
-From cell id: 22 -> to : 
-From cell id: 23 -> to : 
---------------------
-LOG: Choise cancelled
-LOG: Hiding hints
+WARNING: Cannot move check. Impossible variant was chosen
 LOG: Chosen cell is: 18
 LOG: Possible turns for FIRST PLAYER:
 --------------------
-From cell id: 17 -> to : 23 
-From cell id: 18 -> to : 
-From cell id: 20 -> to : 
+From cell id: 18 -> to : 21 
+From cell id: 19 -> to : 22 
+From cell id: 20 -> to : 23 
+From cell id: 21 -> to : 
 From cell id: 22 -> to : 
 From cell id: 23 -> to : 
 --------------------
 LOG: Show hint from chosen cell with id: 18
-WARNING: No possible turns from this cell
+LOG: Possible turn to id: 21
+LOG: Trying to remove check from id: 18
+LOG: ++ Increaced first player checks out
+LOG: Successfully removed check from id: 18
+LOG: Hiding hints
+ERROR: Cannot remove check from Cell with id: 18
+Container is empty
 LOG: Choise cancelled
 LOG: Hiding hints
-LOG: Chosen cell is: 20
+WARNING: Cannot move check. Impossible variant was chosen
+LOG: Chosen cell is: 19
 LOG: Possible turns for FIRST PLAYER:
 --------------------
-From cell id: 17 -> to : 23 
-From cell id: 18 -> to : 
-From cell id: 20 -> to : 
+From cell id: 19 -> to : 22 
+From cell id: 20 -> to : 23 
+From cell id: 21 -> to : 
 From cell id: 22 -> to : 
 From cell id: 23 -> to : 
 --------------------
-LOG: Show hint from chosen cell with id: 20
-WARNING: No possible turns from this cell
-LOG: Choise cancelled
-LOG: Hiding hints
-LOG: Chosen cell is: 17
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 23 
-From cell id: 18 -> to : 
-From cell id: 20 -> to : 
-From cell id: 22 -> to : 
-From cell id: 23 -> to : 
---------------------
-LOG: Show hint from chosen cell with id: 17
-LOG: Possible turn to id: 23
-LOG: Hiding hints
-LOG: Trying to move check from: 17 to: 23
-LOG: ++ Increaced first player checks in home
-LOG: Successfully to move check from: 17 to: 23 by: FirstPlayer
-INFO: Leaved FIRST_PLAYER_STATE
-LOG: Game board turns resetted
-LOG: Choise cancelled
-LOG: Hiding hints
-INFO: Entered SECOND_PLAYER_STATE
-LOG: rolled dices: 3 / 6
-LOG: Trying to move check from: 5 to: 11
-LOG: ++ Increaced second player checks in home
-LOG: Successfully to move check from: 5 to: 11 by: SecondPlayer
-LOG: Trying to move check from: 5 to: 8
-LOG: ++ Increaced second player checks in home
-LOG: Successfully to move check from: 5 to: 8 by: SecondPlayer
-LOG: Game board turns resetted
-INFO: Entered FIRST_PLAYER_STATE
-LOG: rolled dices: 2 / 5
-LOG: Checking for possible turns...
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 19 22 
-From cell id: 18 -> to : 20 23 
-From cell id: 20 -> to : 22 
-From cell id: 22 -> to : 
-From cell id: 23 -> to : 
---------------------
-LOG: Choise cancelled
-LOG: Hiding hints
-LOG: Chosen cell is: 17
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 19 22 
-From cell id: 18 -> to : 20 23 
-From cell id: 20 -> to : 22 
-From cell id: 22 -> to : 
-From cell id: 23 -> to : 
---------------------
-LOG: Show hint from chosen cell with id: 17
-LOG: Possible turn to id: 19
+LOG: Show hint from chosen cell with id: 19
 LOG: Possible turn to id: 22
 LOG: Hiding hints
-LOG: Trying to move check from: 17 to: 22
-LOG: ++ Increaced first player checks in home
-LOG: Successfully to move check from: 17 to: 22 by: FirstPlayer
-LOG: Checking for possible turns...
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 19 
-From cell id: 18 -> to : 20 
-From cell id: 20 -> to : 22 
-From cell id: 22 -> to : 
-From cell id: 23 -> to : 
---------------------
-LOG: Choise cancelled
-LOG: Hiding hints
-LOG: Chosen cell is: 22
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 19 
-From cell id: 18 -> to : 20 
-From cell id: 20 -> to : 22 
-From cell id: 22 -> to : 
-From cell id: 23 -> to : 
---------------------
-LOG: Show hint from chosen cell with id: 22
-WARNING: No possible turns from this cell
-LOG: Choise cancelled
-LOG: Hiding hints
-LOG: Chosen cell is: 18
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 19 
-From cell id: 18 -> to : 20 
-From cell id: 20 -> to : 22 
-From cell id: 22 -> to : 
-From cell id: 23 -> to : 
---------------------
-LOG: Show hint from chosen cell with id: 18
-LOG: Possible turn to id: 20
-LOG: Hiding hints
-LOG: Trying to move check from: 18 to: 20
-LOG: Successfully to move check from: 18 to: 20 by: FirstPlayer
-INFO: Leaved FIRST_PLAYER_STATE
+LOG: Trying to move check from: 19 to: 22
+LOG: Successfully to move check from: 19 to: 22 by: FirstPlayer
 LOG: Game board turns resetted
 LOG: Choise cancelled
 LOG: Hiding hints
 INFO: Entered SECOND_PLAYER_STATE
 LOG: rolled dices: 6 / 2
-LOG: Trying to move check from: 5 to: 11
-LOG: ++ Increaced second player checks in home
-LOG: Successfully to move check from: 5 to: 11 by: SecondPlayer
-LOG: Trying to move check from: 9 to: 11
-LOG: Successfully to move check from: 9 to: 11 by: SecondPlayer
-LOG: Game board turns resetted
-INFO: Entered FIRST_PLAYER_STATE
-LOG: rolled dices: 3 / 1
-LOG: Checking for possible turns...
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 20 18 
-From cell id: 18 -> to : 21 19 
-From cell id: 20 -> to : 23 21 
-From cell id: 22 -> to : 23 
-From cell id: 23 -> to : 
---------------------
-LOG: Choise cancelled
-LOG: Hiding hints
-LOG: Chosen cell is: 18
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 20 18 
-From cell id: 18 -> to : 21 19 
-From cell id: 20 -> to : 23 21 
-From cell id: 22 -> to : 23 
-From cell id: 23 -> to : 
---------------------
-LOG: Show hint from chosen cell with id: 18
-LOG: Possible turn to id: 21
-LOG: Possible turn to id: 19
-LOG: Hiding hints
-LOG: Trying to move check from: 18 to: 19
-LOG: Successfully to move check from: 18 to: 19 by: FirstPlayer
-LOG: Checking for possible turns...
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 20 
-From cell id: 19 -> to : 22 
-From cell id: 20 -> to : 23 
-From cell id: 22 -> to : 
-From cell id: 23 -> to : 
---------------------
-LOG: Choise cancelled
-LOG: Hiding hints
-LOG: Chosen cell is: 17
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 17 -> to : 20 
-From cell id: 19 -> to : 22 
-From cell id: 20 -> to : 23 
-From cell id: 22 -> to : 
-From cell id: 23 -> to : 
---------------------
-LOG: Show hint from chosen cell with id: 17
-LOG: Possible turn to id: 20
-LOG: Hiding hints
-LOG: Trying to move check from: 17 to: 20
-LOG: ++ Increaced first player checks in home
-LOG: Successfully to move check from: 17 to: 20 by: FirstPlayer
-INFO: Leaved FIRST_PLAYER_STATE
-LOG: Game board turns resetted
-LOG: Choise cancelled
-LOG: Hiding hints
-INFO: Entered SECOND_PLAYER_END_STATE
-LOG: rolled dices: 6 / 4
-ERROR: Cannot remove check from Cell with id: 6
-Container is empty
-ERROR: Cannot remove check from Cell with id: 17
-Container is empty
-ERROR: Cannot remove check from Cell with id: 5
-Container is empty
-ERROR: Cannot remove check from Cell with id: 18
-Container is empty
-ERROR: Cannot remove check from Cell with id: 4
-Container is empty
-LOG: ++ Increaced first player checks out
-LOG: Successfully removed check from id: 19
-ERROR: Cannot remove check from Cell with id: 4
-Container is empty
-ERROR: Cannot remove check from Cell with id: 19
-Container is empty
-ERROR: Cannot remove check from Cell with id: 3
-Container is empty
-LOG: ++ Increaced first player checks out
-LOG: Successfully removed check from id: 20
+LOG: Trying to move check from: -13108 to: -13108
+LOG: Trying to move check from: -13108 to: -13108
 LOG: Game board turns resetted
 INFO: Entered FIRST_PLAYER_END_STATE
-LOG: rolled dices: 6 / 6
+LOG: rolled dices: 2 / 3
 LOG: Choise cancelled
 LOG: Hiding hints
-LOG: Choise cancelled
-LOG: Hiding hints
-LOG: Choise cancelled
-LOG: Hiding hints
-WARNING: Cannot chose free cell
-LOG: Chosen cell is: 20
+LOG: Chosen cell is: 22
 LOG: Possible turns for FIRST PLAYER:
 --------------------
-From cell id: 20 -> to : 
+From cell id: 20 -> to : 22 23 
+From cell id: 21 -> to : 23 
 From cell id: 22 -> to : 
 From cell id: 23 -> to : 
 --------------------
-LOG: Show hint from chosen cell with id: 20
+LOG: Show hint from chosen cell with id: 22
 WARNING: No possible turns from this cell
-LOG: Trying to remove check from id: 20
-LOG: ++ Increaced first player checks out
-LOG: Successfully removed check from id: 20
-LOG: Trying to remove check from id: 20
-LOG: ++ Increaced first player checks out
-LOG: Successfully removed check from id: 20
-LOG: Trying to remove check from id: 20
-LOG: ++ Increaced first player checks out
-LOG: Successfully removed check from id: 20
-LOG: Trying to remove check from id: 20
-LOG: ++ Increaced first player checks out
-LOG: Successfully removed check from id: 20
-LOG: Game board turns resetted
-LOG: Choise cancelled
-LOG: Hiding hints
-INFO: Entered SECOND_PLAYER_END_STATE
-LOG: rolled dices: 1 / 6
-ERROR: Cannot remove check from Cell with id: 1
-Container is empty
-LOG: ++ Increaced first player checks out
-LOG: Successfully removed check from id: 22
-ERROR: Cannot remove check from Cell with id: 6
-Container is empty
-ERROR: Cannot remove check from Cell with id: 17
-Container is empty
-ERROR: Cannot remove check from Cell with id: 5
-Container is empty
-ERROR: Cannot remove check from Cell with id: 18
-Container is empty
-ERROR: Cannot remove check from Cell with id: 4
-Container is empty
-ERROR: Cannot remove check from Cell with id: 19
-Container is empty
-ERROR: Cannot remove check from Cell with id: 3
-Container is empty
-ERROR: Cannot remove check from Cell with id: 2
-Container is empty
-ERROR: Cannot remove check from Cell with id: 21
-Container is empty
-ERROR: Cannot remove check from Cell with id: 1
-Container is empty
-ERROR: Cannot remove check from Cell with id: 0
-Container is empty
-LOG: ++ Increaced first player checks out
-LOG: Successfully removed check from id: 23
-LOG: Game board turns resetted
-INFO: Entered FIRST_PLAYER_END_STATE
-LOG: rolled dices: 6 / 1
-LOG: Chosen cell is: 20
-LOG: Possible turns for FIRST PLAYER:
---------------------
-From cell id: 20 -> to : 21 
-From cell id: 22 -> to : 23 
-From cell id: 23 -> to : 
---------------------
-LOG: Show hint from chosen cell with id: 20
-LOG: Possible turn to id: 21
-LOG: Trying to remove check from id: 20
-LOG: ++ Increaced first player checks out
-LOG: Successfully removed check from id: 20
-LOG: Trying to remove check from id: 20
-ERROR: Cannot remove check FROM cell. No such turns possible
-LOG: Trying to remove check from id: 20
-ERROR: Cannot remove check FROM cell. No such turns possible
 LOG: Hiding hints
 LOG: Choise cancelled
 LOG: Hiding hints
 WARNING: Cannot move check. Impossible variant was chosen
 ERROR: Cannot remove check. No check chosen
+LOG: Chosen cell is: 21
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 20 -> to : 22 23 
+From cell id: 21 -> to : 23 
+From cell id: 22 -> to : 
+From cell id: 23 -> to : 
+--------------------
+LOG: Show hint from chosen cell with id: 21
+LOG: Possible turn to id: 23
+LOG: Trying to remove check from id: 21
+LOG: ++ Increaced first player checks out
+LOG: Successfully removed check from id: 21
+LOG: Hiding hints
+LOG: Choise cancelled
+LOG: Hiding hints
+WARNING: Cannot move check. Impossible variant was chosen
+LOG: Chosen cell is: 22
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 20 -> to : 22 
+From cell id: 22 -> to : 
+From cell id: 23 -> to : 
+--------------------
+LOG: Show hint from chosen cell with id: 22
+WARNING: No possible turns from this cell
+LOG: Trying to remove check from id: 22
+LOG: ++ Increaced first player checks out
+LOG: Successfully removed check from id: 22
+LOG: Game board turns resetted
+LOG: Choise cancelled
+LOG: Hiding hints
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 6
+LOG: Trying to move check from: -13108 to: -13108
+LOG: Trying to move check from: -13108 to: -13108
+LOG: Game board turns resetted
+INFO: Entered FIRST_PLAYER_END_STATE
+LOG: rolled dices: 2 / 2
+LOG: Chosen cell is: 22
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 20 -> to : 22 
+From cell id: 22 -> to : 
+From cell id: 23 -> to : 
+--------------------
+LOG: Show hint from chosen cell with id: 22
+WARNING: No possible turns from this cell
+LOG: Trying to remove check from id: 22
+LOG: ++ Increaced first player checks out
+LOG: Successfully removed check from id: 22
+LOG: Hiding hints
+LOG: Choise cancelled
+LOG: Hiding hints
+WARNING: Cannot move check. Impossible variant was chosen
 LOG: Chosen cell is: 23
 LOG: Possible turns for FIRST PLAYER:
 --------------------
-From cell id: 20 -> to : 21 
-From cell id: 22 -> to : 23 
+From cell id: 20 -> to : 22 
+From cell id: 23 -> to : 
+--------------------
+LOG: Show hint from chosen cell with id: 23
+WARNING: No possible turns from this cell
+LOG: Trying to remove check from id: 23
+LOG: ++ Increaced first player checks out
+LOG: Successfully removed check from id: 23
+LOG: Trying to remove check from id: 23
+LOG: ++ Increaced first player checks out
+LOG: Successfully removed check from id: 23
+LOG: Trying to remove check from id: 23
+LOG: ++ Increaced first player checks out
+LOG: Successfully removed check from id: 23
+LOG: Game board turns resetted
+LOG: Choise cancelled
+LOG: Hiding hints
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 1
+LOG: Trying to move check from: 5 to: 8
+LOG: ++ Increaced second player checks in home
+LOG: Successfully to move check from: 5 to: 8 by: SecondPlayer
+LOG: Trying to move check from: 5 to: 6
+LOG: ++ Increaced second player checks in home
+LOG: Successfully to move check from: 5 to: 6 by: SecondPlayer
+LOG: Game board turns resetted
+INFO: Entered FIRST_PLAYER_END_STATE
+LOG: rolled dices: 3 / 3
+WARNING: Cannot chose free cell
+LOG: Chosen cell is: 20
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 20 -> to : 23 
+--------------------
+LOG: Show hint from chosen cell with id: 20
+LOG: Possible turn to id: 23
+LOG: Hiding hints
+LOG: Trying to move check from: 20 to: 23
+LOG: Successfully to move check from: 20 to: 23 by: FirstPlayer
+LOG: Checking for possible turns...
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 20 -> to : 23 
+From cell id: 23 -> to : 
+--------------------
+LOG: Choise cancelled
+LOG: Hiding hints
+LOG: Chosen cell is: 20
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 20 -> to : 23 
+From cell id: 23 -> to : 
+--------------------
+LOG: Show hint from chosen cell with id: 20
+LOG: Possible turn to id: 23
+LOG: Hiding hints
+LOG: Trying to move check from: 20 to: 23
+LOG: Successfully to move check from: 20 to: 23 by: FirstPlayer
+LOG: Checking for possible turns...
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 20 -> to : 23 
+From cell id: 23 -> to : 
+--------------------
+LOG: Choise cancelled
+LOG: Hiding hints
+LOG: Chosen cell is: 20
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 20 -> to : 23 
+From cell id: 23 -> to : 
+--------------------
+LOG: Show hint from chosen cell with id: 20
+LOG: Possible turn to id: 23
+LOG: Hiding hints
+LOG: Trying to move check from: 20 to: 23
+LOG: Successfully to move check from: 20 to: 23 by: FirstPlayer
+LOG: Checking for possible turns...
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 20 -> to : 23 
+From cell id: 23 -> to : 
+--------------------
+LOG: Choise cancelled
+LOG: Hiding hints
+LOG: Chosen cell is: 20
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 20 -> to : 23 
+From cell id: 23 -> to : 
+--------------------
+LOG: Show hint from chosen cell with id: 20
+LOG: Possible turn to id: 23
+LOG: Hiding hints
+LOG: Trying to move check from: 20 to: 23
+LOG: Successfully to move check from: 20 to: 23 by: FirstPlayer
+LOG: Game board turns resetted
+LOG: Choise cancelled
+LOG: Hiding hints
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 3
+LOG: Trying to move check from: -13108 to: -13108
+LOG: Trying to move check from: -13108 to: -13108
+LOG: Game board turns resetted
+INFO: Entered FIRST_PLAYER_END_STATE
+LOG: rolled dices: 3 / 3
+LOG: Choise cancelled
+LOG: Hiding hints
+LOG: Chosen cell is: 20
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 20 -> to : 23 
+From cell id: 23 -> to : 
+--------------------
+LOG: Show hint from chosen cell with id: 20
+LOG: Possible turn to id: 23
+LOG: Hiding hints
+LOG: Trying to move check from: 20 to: 23
+LOG: Successfully to move check from: 20 to: 23 by: FirstPlayer
+LOG: Checking for possible turns...
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 20 -> to : 23 
+From cell id: 23 -> to : 
+--------------------
+LOG: Choise cancelled
+LOG: Hiding hints
+LOG: Chosen cell is: 20
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 20 -> to : 23 
+From cell id: 23 -> to : 
+--------------------
+LOG: Show hint from chosen cell with id: 20
+LOG: Possible turn to id: 23
+LOG: Hiding hints
+LOG: Trying to move check from: 20 to: 23
+LOG: Successfully to move check from: 20 to: 23 by: FirstPlayer
+LOG: Checking for possible turns...
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 20 -> to : 23 
+From cell id: 23 -> to : 
+--------------------
+LOG: Choise cancelled
+LOG: Hiding hints
+LOG: Chosen cell is: 20
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 20 -> to : 23 
+From cell id: 23 -> to : 
+--------------------
+LOG: Show hint from chosen cell with id: 20
+LOG: Possible turn to id: 23
+LOG: Hiding hints
+LOG: Trying to move check from: 20 to: 23
+LOG: Successfully to move check from: 20 to: 23 by: FirstPlayer
+LOG: Checking for possible turns...
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 20 -> to : 23 
+From cell id: 23 -> to : 
+--------------------
+LOG: Choise cancelled
+LOG: Hiding hints
+LOG: Chosen cell is: 20
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 20 -> to : 23 
+From cell id: 23 -> to : 
+--------------------
+LOG: Show hint from chosen cell with id: 20
+LOG: Possible turn to id: 23
+LOG: Hiding hints
+LOG: Choise cancelled
+LOG: Hiding hints
+WARNING: Cannot move check. Impossible variant was chosen
+LOG: Chosen cell is: 23
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 20 -> to : 23 
 From cell id: 23 -> to : 
 --------------------
 LOG: Show hint from chosen cell with id: 23
@@ -910,4 +802,128 @@ LOG: Successfully removed check from id: 23
 LOG: Game board turns resetted
 LOG: Choise cancelled
 LOG: Hiding hints
-INFO: Entered SECOND_PLAYER_END_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+LOG: Trying to move check from: -13108 to: -13108
+LOG: Trying to move check from: -13108 to: -13108
+LOG: Game board turns resetted
+INFO: Entered FIRST_PLAYER_END_STATE
+LOG: rolled dices: 6 / 5
+LOG: Choise cancelled
+LOG: Hiding hints
+LOG: Choise cancelled
+LOG: Hiding hints
+LOG: Choise cancelled
+LOG: Hiding hints
+LOG: Chosen cell is: 20
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 20 -> to : 
+From cell id: 23 -> to : 
+--------------------
+LOG: Show hint from chosen cell with id: 20
+WARNING: No possible turns from this cell
+LOG: Hiding hints
+LOG: Choise cancelled
+LOG: Hiding hints
+WARNING: Cannot move check. Impossible variant was chosen
+LOG: Chosen cell is: 20
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 20 -> to : 
+From cell id: 23 -> to : 
+--------------------
+LOG: Show hint from chosen cell with id: 20
+WARNING: No possible turns from this cell
+LOG: Trying to remove check from id: 20
+LOG: ++ Increaced first player checks out
+LOG: Successfully removed check from id: 20
+LOG: Hiding hints
+LOG: Choise cancelled
+LOG: Hiding hints
+WARNING: Cannot move check. Impossible variant was chosen
+LOG: Chosen cell is: 23
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 23 -> to : 
+--------------------
+LOG: Show hint from chosen cell with id: 23
+WARNING: No possible turns from this cell
+LOG: Trying to remove check from id: 23
+LOG: ++ Increaced first player checks out
+LOG: Successfully removed check from id: 23
+LOG: Game board turns resetted
+LOG: Choise cancelled
+LOG: Hiding hints
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 3
+LOG: Trying to move check from: -13108 to: -13108
+LOG: Trying to move check from: -13108 to: -13108
+LOG: Trying to move check from: -13108 to: -13108
+LOG: Trying to move check from: -13108 to: -13108
+LOG: Game board turns resetted
+INFO: Entered FIRST_PLAYER_END_STATE
+LOG: rolled dices: 5 / 3
+WARNING: Cannot chose free cell
+LOG: Chosen cell is: 23
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 23 -> to : 
+--------------------
+LOG: Show hint from chosen cell with id: 23
+WARNING: No possible turns from this cell
+LOG: Trying to remove check from id: 23
+LOG: ++ Increaced first player checks out
+LOG: Successfully removed check from id: 23
+LOG: Trying to remove check from id: 23
+LOG: ++ Increaced first player checks out
+LOG: Successfully removed check from id: 23
+LOG: Game board turns resetted
+LOG: Choise cancelled
+LOG: Hiding hints
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+LOG: Trying to move check from: -13108 to: -13108
+LOG: Trying to move check from: -13108 to: -13108
+LOG: Game board turns resetted
+INFO: Entered FIRST_PLAYER_END_STATE
+LOG: rolled dices: 2 / 4
+WARNING: Cannot chose free cell
+LOG: Chosen cell is: 23
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 23 -> to : 
+--------------------
+LOG: Show hint from chosen cell with id: 23
+WARNING: No possible turns from this cell
+LOG: Trying to remove check from id: 23
+LOG: ++ Increaced first player checks out
+LOG: Successfully removed check from id: 23
+LOG: Trying to remove check from id: 23
+LOG: ++ Increaced first player checks out
+LOG: Successfully removed check from id: 23
+LOG: Game board turns resetted
+LOG: Choise cancelled
+LOG: Hiding hints
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+LOG: Trying to move check from: -13108 to: -13108
+LOG: Trying to move check from: -13108 to: -13108
+LOG: Game board turns resetted
+INFO: Entered FIRST_PLAYER_END_STATE
+LOG: rolled dices: 5 / 1
+LOG: Chosen cell is: 23
+LOG: Possible turns for FIRST PLAYER:
+--------------------
+From cell id: 23 -> to : 
+--------------------
+LOG: Show hint from chosen cell with id: 23
+WARNING: No possible turns from this cell
+LOG: Trying to remove check from id: 23
+LOG: ++ Increaced first player checks out
+LOG: Game board turns resetted
+LOG: Choise cancelled
+LOG: Hiding hints
+INFO: Entered END_GAME_STATE
+WARNING: Destroyed PlayerFirst ptr
+WARNING: Destroyed PlayerSecond ptr

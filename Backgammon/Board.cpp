@@ -15,8 +15,9 @@ Board::~Board()
 	delete _possibleTurns;
 }
 
-void Board::Initialize()
+void Board::Initialize(IGameStateMachine* stateMachine)
 {
+	_stateMachine = stateMachine;
 	//Создаются клетки и устанавливается их тип и позиция
 	for (size_t i = 0; i < CELLS_AMOUNT; i++)
 	{
@@ -369,6 +370,7 @@ bool Board::TryRemoveCheck(short idFrom, bool shouldLog)
 	if (IsGameEnded())
 	{
 		SetWinner();
+		return false;
 	}
 
 	cell->RemoveCheck();
@@ -684,10 +686,13 @@ void Board::SetWinner()
 	if (_firstPlayerChecksOut >= START_CHECKS_AMOUNT)
 	{
 		SetWinner(PlayerOrderType::FirstPlayer);
+		//TODO не работает
+		//_stateMachine->SwitchState(GameStateType::EndGame);
 	}
 	else
 	{
 		SetWinner(PlayerOrderType::SecondPlayer);
+		//_stateMachine->SwitchState(GameStateType::EndGame);
 	}
 }
 

@@ -8,6 +8,8 @@
 
 #include "Debug.h"
 
+#include "IGameStateMachine.h"
+
 #include "Dice.h"
 
 const int CELLS_AMOUNT = 24;
@@ -29,7 +31,7 @@ public:
 	//ƒеструктор
 	~Board();
 
-	void Initialize();
+	void Initialize(IGameStateMachine* stateMachine);
 	void Draw(Window* window);
 
 	// ѕолучение указател€ на клетку по позиции или nullptr 
@@ -108,6 +110,8 @@ private:
 
 	// ѕолучение указател€ на клетку относительно позиции клеток доски или nullptr 
 	short GetCellIdByLocalPosition(sf::Vector2f localPosition);
+
+	IGameStateMachine* _stateMachine;
 
 	sf::Texture _backgroundTexture;
 	sf::Sprite _backgroundSprite;

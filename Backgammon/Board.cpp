@@ -686,13 +686,10 @@ void Board::SetWinner()
 	if (_firstPlayerChecksOut >= START_CHECKS_AMOUNT)
 	{
 		SetWinner(PlayerOrderType::FirstPlayer);
-		//TODO не работает
-		//_stateMachine->SwitchState(GameStateType::EndGame);
 	}
 	else
 	{
 		SetWinner(PlayerOrderType::SecondPlayer);
-		//_stateMachine->SwitchState(GameStateType::EndGame);
 	}
 }
 

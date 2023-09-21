@@ -35,6 +35,7 @@ public:
 
 	//Метод для вывода в консоль при входе в состояние
 	void LogEnter() { Debug::LogInfo("Entered " + GAME_STATE_STRINGS[(int)_stateType]); }
+	void LogLeave() { Debug::LogInfo("Leaved " + GAME_STATE_STRINGS[(int)_stateType]); }
 
 	//Инициализация указателя на первого игрока
 	void SetFirstPlayer(IPlayer* player) { PlayerFirst = player; }

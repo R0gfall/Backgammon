@@ -5,6 +5,7 @@
 #include <iomanip>
 #include <Windows.h>
 #include <iostream>
+#include <fstream>
 #include <string>
 
 #include "Window.h"
@@ -39,7 +40,8 @@ const std::string LOG_ERROR_PREFIX = "ERROR";
 class Debug
 {
 public:
-	static void Initialize(Window* window);
+	static void Initialize(Window* window, const std::string& outputFilename);
+	static void Destroy();
 
 	//Белое сообщение
 	static void Log(const std::string& message);
@@ -58,6 +60,8 @@ private:
 	static void DisplayLog(const std::string& prefix, const std::string& message, ConsoleColor color);
 	static void DisplayLog(const std::string& prefix, const std::string& message, const std::string& from, ConsoleColor color);
 	static HANDLE handle;
+
+	static std::ofstream _outputFile;
 
 	static Window* _window;
 };

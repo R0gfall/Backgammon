@@ -73,7 +73,26 @@ short IPlayer::CalculateCellId(short fromId, short turnValue)
 
 PossibleTurns IPlayer::CalculatePossibleTurns()
 {
-	return GameBoard->GetAllPossibleTurns(OrderType);
+	return CalculatePossibleTurns(false);
+}
+
+PossibleTurns IPlayer::CalculatePossibleTurns(bool shouldLog)
+{
+	return GameBoard->GetAllPossibleTurns(OrderType, shouldLog);
+}
+
+bool IPlayer::IsAnyTurnsPossible()
+{
+	return IsAnyTurnsPossible(false);
+}
+
+bool IPlayer::IsAnyTurnsPossible(bool shouldLog)
+{
+	if (shouldLog)
+	{
+		Debug::Log("Checking for possible turns...");
+	}
+	return !CalculatePossibleTurns(shouldLog).empty();
 }
 
 void IPlayer::UpdateChecksOutText()

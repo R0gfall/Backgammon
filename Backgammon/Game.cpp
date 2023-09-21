@@ -2,7 +2,10 @@
 
 Game::Game()
 {
+	
 	_window = new Window(GAME_NAME);
+
+	Debug::Initialize(_window, LOG_OUTPUT_FILENAME);
 
 	_board = new Board();
 	_dice = new Dice();
@@ -18,6 +21,8 @@ Game::~Game()
 	delete _stateMachine;
 
 	delete _window;
+
+	Debug::Destroy();
 }
 
 void Game::Initialize()

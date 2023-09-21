@@ -41,12 +41,15 @@ public:
 	void MoveCheck(short idFrom, short idTo);
 	// Проверка на возможность пермещения шашки
 	bool IsMoveCheckPossible(short idFrom, short idTo);
+	bool IsMoveCheckPossible(short idFrom, short idTo, bool shouldLog);
 
 	//Скидывание шашки с доски
 	//Возвращает true если операция выполнена
 	bool TryRemoveCheck(short idFrom);
+	bool TryRemoveCheck(short idFrom, bool shouldLog);
 	// Проверка на возможность скидывания шашки с доски
 	bool IsRemoveCheckPossible(short idFrom);
+	bool IsRemoveCheckPossible(short idFrom, bool shouldLog);
 
 	//Проверка на корректность Id
 	bool IsCorrectId(short id);
@@ -63,7 +66,7 @@ public:
 	void ResetTurns();
 
 	//Возвращает словарь всех возможных ходов игрока типа orderType
-	PossibleTurns GetAllPossibleTurns(PlayerOrderType orderType);
+	PossibleTurns GetAllPossibleTurns(PlayerOrderType orderType, bool shouldLog);
 
 	//Вызывается после первого хода игрока единственный раз
 	void SetFirstTurnMade(PlayerOrderType orderType);
@@ -137,6 +140,12 @@ private:
 	bool _firstPlayerOnEndStage = false;
 	//Флаг: все ли шашки второго игрока в доме
 	bool _secondPlayerOnEndStage = false;
+
+	char _firstPlayerChecksInHome = 0;
+	char _secondPlayerChecksInHome = 0;
+
+	bool _firstTurnRemovePossible = false;
+	bool _secondTurnRemovePossible = false;
 
 	//Количество сброшенных с доски шашек у первого игрока
 	char _firstPlayerChecksOut = 0;

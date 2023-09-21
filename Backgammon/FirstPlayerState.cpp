@@ -30,6 +30,7 @@ void FirstPlayerState::UpdateState()
 
 void FirstPlayerState::LeaveState()
 {
+	LogLeave();
 	GameBoard->ResetTurns();
 	PlayerFirst->OnTurnExit();
 }

@@ -2,10 +2,20 @@
 
 HANDLE Debug::handle = GetStdHandle(STD_OUTPUT_HANDLE);
 Window* Debug::_window = nullptr;
+std::ofstream Debug::_outputFile;
 
-void Debug::Initialize(Window* window)
+void Debug::Initialize(Window* window, const std::string& outputFilename)
 {
 	_window = window;
+	_outputFile.open(outputFilename);
+	if (!_outputFile.is_open())
+	{
+		std::cout << "CANNOT OPEN OUTPUT LOG FILE\n";
+	}
+}
+void Debug::Destroy()
+{
+	_outputFile.close();
 }
 
 void Debug::Log(const std::string& message)
@@ -52,6 +62,7 @@ void Debug::DisplayLog(const std::string& prefix, const std::string& message, Co
 {
 	SetConsoleTextAttribute(handle, (int)color);
 	std::cout << prefix << ": " << message << "\n";
+	_outputFile << prefix << ": " << message << "\n";
 	SetConsoleTextAttribute(handle, (int)ConsoleColor::WHITE);
 }
 
@@ -59,5 +70,6 @@ void Debug::DisplayLog(const std::string& prefix, const std::string& message, co
 {
 	SetConsoleTextAttribute(handle, (int)color);
 	std::cout << std::setiosflags(std::ios::left) << std::setw(DEBUG_LEFT_SIZE) << from << std::setiosflags(std::ios::left) << std::setw(DEBUG_TYPE_SIZE) << prefix << ": " << message << "\n";
+	_outputFile << std::setiosflags(std::ios::left) << std::setw(DEBUG_LEFT_SIZE) << from << std::setiosflags(std::ios::left) << std::setw(DEBUG_TYPE_SIZE) << prefix << ": " << message << "\n";
 	SetConsoleTextAttribute(handle, (int)ConsoleColor::WHITE);
 }

@@ -18,6 +18,11 @@
 #define FONT_PATH "../Assets/Montserrat-Black.ttf"
 #define CHECK_IMAGE_PATH "../Assets/checks.png"
 
+#define LOG_OUTPUT_FILENAME "../logs.txt"
+
+const int FIRST_PLAYER_INIT_CELL = 17;
+const int SECOND_PLAYER_INIT_CELL = 5;
+
 //Перечисление типов состояний
 enum class GameStateType
 {
@@ -43,7 +48,7 @@ enum class PlayerOrderType
 };
 
 //Массив строк, соответствующий перечислению PlayerOrderType
-const std::string PLAYER_ORDER_TYPE_STRINGS[3] = { "NONE", "FIRST PLAYER", "SECOND PLAYER" };
+const std::string PLAYER_ORDER_TYPE_STRINGS[3] = { "FIRST PLAYER", "SECOND PLAYER", "NONE"};
 
 //Перечисление сложности ИИ
 enum class AiDifficulty
@@ -66,6 +71,9 @@ enum class CellStatus
 	//Клетка свободна
 	Free,
 };
+
+//Массив строк, соответствующий перечислению CellStatus
+const std::string CELL_STATUS_STRINGS[3] = { "FirstPlayer", "SecondPlayer", "Free" };
 
 //Перечисление типов клетки
 enum class CellType

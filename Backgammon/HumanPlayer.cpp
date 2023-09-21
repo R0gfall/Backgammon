@@ -1,5 +1,7 @@
 #include "HumanPlayer.h"
 
+const bool SHOULD_LOG = true;
+
 HumanPlayer::HumanPlayer(PlayerOrderType orderType, IGameStateMachine* stateMachine, Board* board) : IPlayer(orderType, stateMachine, board)
 {
 	Debug::LogInfo("Human player was created");
@@ -16,7 +18,7 @@ HumanPlayer::HumanPlayer(PlayerOrderType orderType, IGameStateMachine* stateMach
 
 void HumanPlayer::OnTurnEnter()
 {
-	if (!IsAnyTurnsPossible())
+	if (!IsAnyTurnsPossible(SHOULD_LOG))
 	{
 		NextTurn();
 	}
@@ -131,7 +133,7 @@ void HumanPlayer::MoveCheck(short fromId, short toId)
 		return;
 	}	
 
-	if (!IsAnyTurnsPossible())
+	if (!IsAnyTurnsPossible(SHOULD_LOG))
 	{
 		NextTurn();
 		return;
@@ -146,7 +148,7 @@ void HumanPlayer::RemoveCheck()
 		return;
 	}
 
-	if (GameBoard->TryRemoveCheck(_chosenCell->GetId()))
+	if (GameBoard->TryRemoveCheck(_chosenCell->GetId(), SHOULD_LOG))
 	{
 		// добавлено
 		_performedTurns++;
@@ -165,6 +167,7 @@ void HumanPlayer::ChooseCell(Cell* cell)
 		return;
 
 	_chosenCell = cell;
+	Debug::Log("Chosen cell is: " + std::to_string(_chosenCell->GetId()));
 
 	ShowPossibleTurns();
 }
@@ -203,16 +206,18 @@ void HumanPlayer::ShowPossibleTurns()
 {
 	//Debug::Log("Last performed turn: " + std::to_string(_lastPerformedTurn));
 
-	auto possibleTurns = CalculatePossibleTurns();
+	const bool shouldLog = true;
+	auto possibleTurns = CalculatePossibleTurns(shouldLog);
 
 	auto chosenCellId = _chosenCell->GetId();
+	Debug::Log("Show hint from chosen cell with id: " + std::to_string(chosenCellId));
 
 	auto itr = possibleTurns.find(chosenCellId);
 	if (itr != possibleTurns.end())
 	{
 		for (auto turn : possibleTurns.at(chosenCellId))
 		{
-			Debug::Log("Turn to id: " + std::to_string(turn));
+			Debug::Log("Possible turn to id: " + std::to_string(turn));
 			auto targetCell = GameBoard->GetCellById(turn);
 			targetCell->ShowHint();
 		}

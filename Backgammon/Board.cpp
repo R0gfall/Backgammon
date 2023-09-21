@@ -31,11 +31,11 @@ void Board::Initialize()
 			newCellType = CellType::SecondPlayerHead;
 			break;
 		default:
-			if (i < CELLS_AMOUNT && i > 18)
+			if (i < CELLS_AMOUNT && i >= 18)
 			{
 				newCellType = CellType::FirstPlayerHome;
 			}
-			else if (i > 5 && i < 12)
+			else if (i >= 6 && i < 12)
 			{
 				newCellType = CellType::SecondPlayerHome;
 			}
@@ -66,12 +66,17 @@ void Board::Initialize()
 	}
 
 	//ƒоска заполн€етс€ клетками
+	if (FIRST_PLAYER_HEAD_CELL_ID != FIRST_PLAYER_INIT_CELL || SECOND_PLAYER_HEAD_CELL_ID != SECOND_PLAYER_INIT_CELL)
+	{
+		Debug::LogWarning("NOT DEFAULT BOARD INITIALIZATION");
+	}
+
 	for (size_t i = 0; i < START_CHECKS_AMOUNT; i++)
 	{
 		Check* firstCheck = new Check(CheckType::FirstPlayer);
-		_cells[FIRST_PLAYER_HEAD_CELL_ID]->AddCheck(firstCheck);
+		_cells[FIRST_PLAYER_INIT_CELL]->AddCheck(firstCheck);
 		Check* secondCheck = new Check(CheckType::SecondPlayer);
-		_cells[SECOND_PLAYER_HEAD_CELL_ID]->AddCheck(secondCheck);
+		_cells[SECOND_PLAYER_INIT_CELL]->AddCheck(secondCheck);
 	}
 }
 
@@ -111,11 +116,13 @@ Cell* Board::GetCellById(short id)
 
 void Board::MoveCheck(short idFrom, short idTo)
 {
+	Debug::Log("Trying to move check from: " + std::to_string(idFrom) + " to: " + std::to_string(idTo));
 	if (!IsMoveCheckPossible(idFrom, idTo))
 		return;
 
-	auto cell = _cells[idFrom]->RemoveCheck();
-	_cells[idTo]->AddCheck(cell);
+	CellStatus cellFromStatus = _cells[idFrom]->GetStatus();
+	auto check = _cells[idFrom]->RemoveCheck();
+	_cells[idTo]->AddCheck(check);
 
 	auto cellFromType = _cells[idFrom]->GetType();
 	switch (cellFromType)
@@ -126,11 +133,41 @@ void Board::MoveCheck(short idFrom, short idTo)
 		_firstPlayerFromHeadTurns++;
 		break;
 	case CellType::FirstPlayerHome:
+
 		break;
 	case CellType::SecondPlayerHead:
 		_secondPlayerFromHeadTurns++;
 		break;
 	case CellType::SecondPlayerHome:
+
+		break;
+	default:
+		break;
+	}
+
+	auto cellToType = _cells[idTo]->GetType();
+	switch (cellToType)
+	{
+	case CellType::None:
+		break;
+	case CellType::FirstPlayerHead:
+		break;
+	case CellType::FirstPlayerHome:
+		if (cellFromType != CellType::FirstPlayerHome && cellFromStatus == CellStatus::FirstPlayer)
+		{
+			Debug::Log("++ Increaced first player checks in home");
+			++_firstPlayerChecksInHome;
+		}
+		break;
+	case CellType::SecondPlayerHead:
+
+		break;
+	case CellType::SecondPlayerHome:
+		if (cellFromType != CellType::SecondPlayerHome && cellFromStatus == CellStatus::SecondPlayer)
+		{
+			Debug::Log("++ Increaced second player checks in home");
+			++_secondPlayerChecksInHome;
+		}
 		break;
 	default:
 		break;
@@ -138,19 +175,32 @@ void Board::MoveCheck(short idFrom, short idTo)
 
 	if (!Dice::IsDouble())
 		_lastPerformedTurn = CalculateDeltaId(idFrom, idTo);
+
+	Debug::Log("Successfully to move check from: " + std::to_string(idFrom) + " to: " + std::to_string(idTo) + " by: " + CELL_STATUS_STRINGS[(char)cellFromStatus]);
 }
 
 bool Board::IsMoveCheckPossible(short idFrom, short idTo)
 {
+	return IsMoveCheckPossible(idFrom, idTo, false);
+}
+
+bool Board::IsMoveCheckPossible(short idFrom, short idTo, bool shouldLog)
+{
 	if (!IsCorrectId(idFrom))
 	{
-		Debug::LogError("Cannot move check FROM cell. Incorrect id given: " + std::to_string(idFrom));
+		if (shouldLog)
+		{
+			Debug::LogError("Cannot move check FROM cell. Incorrect id given: " + std::to_string(idFrom));
+		}
 		return false;
 	}
 
 	if (!IsCorrectId(idTo))
 	{
-		Debug::LogError("Cannot move check TO cell. Incorrect id given: " + std::to_string(idTo));
+		if (shouldLog)
+		{
+			Debug::LogError("Cannot move check TO cell. Incorrect id given: " + std::to_string(idTo));
+		}
 		return false;
 	}
 
@@ -172,7 +222,10 @@ bool Board::IsMoveCheckPossible(short idFrom, short idTo)
 		{
 			if (IsTurnOverlaping(PlayerOrderType::FirstPlayer, idFrom, idTo))
 			{
-				Debug::LogError("Cannot move check. No such turn possible from home");
+				if (shouldLog)
+				{
+					Debug::LogError("Cannot move check. No such turn possible from home");
+				}
 				return false;
 			}
 		}
@@ -186,7 +239,10 @@ bool Board::IsMoveCheckPossible(short idFrom, short idTo)
 		{
 			if (IsTurnOverlaping(PlayerOrderType::SecondPlayer, idFrom, idTo))
 			{
-				Debug::LogError("Cannot move check. No such turn possible from home");
+				if (shouldLog)
+				{
+					Debug::LogError("Cannot move check. No such turn possible from home");
+				}
 				return false;
 			}
 		}
@@ -197,9 +253,12 @@ bool Board::IsMoveCheckPossible(short idFrom, short idTo)
 
 	auto deltaId = CalculateDeltaId(idFrom, idTo);
 
-	if (deltaId == _lastPerformedTurn)
+	if (deltaId == _lastPerformedTurn && !Dice::IsDouble())
 	{
-		Debug::LogError("Cannot move check TO cell. Such turn was just performed");
+		if (shouldLog)
+		{
+			Debug::LogError("Cannot move check TO cell. Such turn was just performed");
+		}
 		return false;
 	}
 
@@ -207,7 +266,10 @@ bool Board::IsMoveCheckPossible(short idFrom, short idTo)
 
 	if (deltaId != dices.x && deltaId != dices.y)
 	{
-		Debug::LogError("Cannot move check TO cell. There's no such turn possible due to dices values");
+		if (shouldLog)
+		{
+			Debug::LogError("Cannot move check TO cell. There's no such turn possible due to dices values");
+		}
 		return false;
 	}
 
@@ -222,7 +284,17 @@ bool Board::IsMoveCheckPossible(short idFrom, short idTo)
 
 bool Board::TryRemoveCheck(short idFrom)
 {
-	if (!IsRemoveCheckPossible(idFrom))
+	return TryRemoveCheck(idFrom, false);
+}
+
+bool Board::TryRemoveCheck(short idFrom, bool shouldLog)
+{
+	if (shouldLog)
+	{
+		Debug::Log("Trying to remove check from id: " + std::to_string(idFrom));
+	}
+
+	if (!IsRemoveCheckPossible(idFrom, shouldLog))
 		return false;
 
 	//TODO провер€ть на состо€ние конечной игры
@@ -232,43 +304,65 @@ bool Board::TryRemoveCheck(short idFrom)
 
 	auto dices = Dice::GetDices();
 
-	auto minDiceValue = dices.x;
-	auto maxDiceValue = dices.y;
-
-	if (dices.x > dices.y)
-	{
-		minDiceValue = dices.y;
-		maxDiceValue = dices.x;
-	}
+	auto firstTurnValue = dices.x;
+	auto secondTurnValue = dices.y;
 
 	switch (cellStatus)
 	{
 	case CellStatus::FirstPlayer:
 		//TODO мб не все услови€ учитываютс€
 		//TODO надо учитывать предыдущий сделанный ход
-
-		if (IsTurnOverlaping(PlayerOrderType::FirstPlayer, idFrom, CalculateCellId(idFrom, minDiceValue)))
+		if (IsOnEndStage(PlayerOrderType::FirstPlayer))
 		{
-			_lastPerformedTurn = minDiceValue;
-		}
-		else if (IsTurnOverlaping(PlayerOrderType::FirstPlayer, idFrom, CalculateCellId(idFrom, maxDiceValue)))
-		{
-			_lastPerformedTurn = maxDiceValue;
+			auto firstTurnId = CalculateCellId(idFrom, firstTurnValue);
+			auto secondTurnId = CalculateCellId(idFrom, secondTurnValue);
+
+			bool isRemoved = false;
+
+			if (_firstTurnRemovePossible)
+			{
+				_lastPerformedTurn = firstTurnValue;
+				isRemoved = true;
+			}
+			else if (_secondTurnRemovePossible)
+			{
+				_lastPerformedTurn = secondTurnValue;
+				isRemoved = true;
+			}
+
+			if (isRemoved)
+			{
+				Debug::Log("++ Increaced first player checks out");
+				_firstPlayerChecksOut++;
+			}
 		}
 
-		_firstPlayerChecksOut++;
 		break;
 	case CellStatus::SecondPlayer:
-		if (IsTurnOverlaping(PlayerOrderType::SecondPlayer, idFrom, CalculateCellId(idFrom, minDiceValue)))
+		if (IsOnEndStage(PlayerOrderType::SecondPlayer))
 		{
-			_lastPerformedTurn = minDiceValue;
-		}
-		else if (IsTurnOverlaping(PlayerOrderType::SecondPlayer, idFrom, CalculateCellId(idFrom, maxDiceValue)))
-		{
-			_lastPerformedTurn = maxDiceValue;
-		}
+			auto firstTurnId = CalculateCellId(idFrom, firstTurnValue);
+			auto secondTurnId = CalculateCellId(idFrom, secondTurnValue);
 
-		_secondPlayerChecksOut++;
+			bool isRemoved = false;
+
+			if (_firstTurnRemovePossible)
+			{
+				_lastPerformedTurn = firstTurnValue;
+				isRemoved = true;
+			}
+			else if (_secondTurnRemovePossible)
+			{
+				_lastPerformedTurn = secondTurnValue;
+				isRemoved = true;
+			}
+
+			if (isRemoved)
+			{
+				Debug::Log("++ Increaced second player checks out");
+				_secondPlayerChecksOut++;
+			}
+		}
 		break;
 	}
 
@@ -279,14 +373,27 @@ bool Board::TryRemoveCheck(short idFrom)
 
 	cell->RemoveCheck();
 
+	//if (shouldLog)
+	//{
+		Debug::Log("Successfully removed check from id: " + std::to_string(idFrom));
+	//}
+
 	return true;
 }
 
 bool Board::IsRemoveCheckPossible(short idFrom)
 {
+	return IsRemoveCheckPossible(idFrom, false);
+}
+
+bool Board::IsRemoveCheckPossible(short idFrom, bool shouldLog)
+{
 	if (!IsCorrectId(idFrom))
 	{
-		Debug::LogError("Cannot remove check FROM cell. Incorrect id given: " + std::to_string(idFrom));
+		if (shouldLog)
+		{
+			Debug::LogError("Cannot remove check FROM cell. Incorrect id given: " + std::to_string(idFrom));
+		}	
 		return false;
 	}
 
@@ -299,53 +406,69 @@ bool Board::IsRemoveCheckPossible(short idFrom)
 	auto cellType = cell->GetType();
 
 	auto dices = Dice::GetDices();
-	bool firstDiceTurnPossible;
-	bool secondDiceTurnPossible;
+
+	_firstTurnRemovePossible = false;
+	_secondTurnRemovePossible = false;
 
 	switch (cellType)
 	{
 	case CellType::FirstPlayerHome:
 		if (cellStatus != CellStatus::FirstPlayer)
 		{
-			Debug::LogError("Cannot remove check FROM cell. You can only remove your cell");
+			if (shouldLog)
+			{
+				Debug::LogError("Cannot remove check FROM cell. You can only remove your cell");
+			}
 			return false;
 		}
 
 		if (Dice::IsDouble())
 		{
-			firstDiceTurnPossible = IsTurnOverlaping(PlayerOrderType::FirstPlayer, idFrom, CalculateCellId(idFrom, dices.x));
-			secondDiceTurnPossible = firstDiceTurnPossible;
+			_firstTurnRemovePossible = IsTurnOverlaping(PlayerOrderType::FirstPlayer, idFrom, CalculateCellId(idFrom, dices.x));
+			_secondTurnRemovePossible = _firstTurnRemovePossible;
 		}
 		else
 		{
-			firstDiceTurnPossible = IsTurnOverlaping(PlayerOrderType::FirstPlayer, idFrom, CalculateCellId(idFrom, dices.x)) && dices.x != _lastPerformedTurn;
-			secondDiceTurnPossible = IsTurnOverlaping(PlayerOrderType::FirstPlayer, idFrom, CalculateCellId(idFrom, dices.y)) && dices.y != _lastPerformedTurn;
+			_firstTurnRemovePossible = IsTurnOverlaping(PlayerOrderType::FirstPlayer, idFrom, CalculateCellId(idFrom, dices.x)) && dices.x != _lastPerformedTurn;
+			_secondTurnRemovePossible = IsTurnOverlaping(PlayerOrderType::FirstPlayer, idFrom, CalculateCellId(idFrom, dices.y)) && dices.y != _lastPerformedTurn;
 		}
 
-		if (!firstDiceTurnPossible && !secondDiceTurnPossible)
+		if (!_firstTurnRemovePossible && !_secondTurnRemovePossible)
 		{
-			Debug::LogError("Cannot remove check FROM cell. No such turns possible");
+			if (shouldLog)
+			{
+				Debug::LogError("Cannot remove check FROM cell. No such turns possible");
+			}
 			return false;
 		}
 		break;
 	case CellType::SecondPlayerHome:
 		if (cellStatus != CellStatus::SecondPlayer)
 		{
-			Debug::LogError("Cannot remove check FROM cell. You can only remove your cell");
+			if (shouldLog)
+			{
+				Debug::LogError("Cannot remove check FROM cell. You can only remove your cell");
+			}
 			return false;
 		}
 
-		firstDiceTurnPossible = IsTurnOverlaping(PlayerOrderType::SecondPlayer, idFrom, CalculateCellId(idFrom, dices.x)) && dices.x != _lastPerformedTurn;
-		secondDiceTurnPossible = IsTurnOverlaping(PlayerOrderType::SecondPlayer, idFrom, CalculateCellId(idFrom, dices.y)) && dices.y != _lastPerformedTurn;
+		_firstTurnRemovePossible = IsTurnOverlaping(PlayerOrderType::SecondPlayer, idFrom, CalculateCellId(idFrom, dices.x)) && dices.x != _lastPerformedTurn;
+		_secondTurnRemovePossible = IsTurnOverlaping(PlayerOrderType::SecondPlayer, idFrom, CalculateCellId(idFrom, dices.y)) && dices.y != _lastPerformedTurn;
 
-		if (!firstDiceTurnPossible && !secondDiceTurnPossible)
+		if (!_firstTurnRemovePossible && !_secondTurnRemovePossible)
 		{
-			Debug::LogError("Cannot remove check FROM cell. No such turns possible");
+			if (shouldLog)
+			{
+				Debug::LogError("Cannot remove check FROM cell. No such turns possible");
+			}
 			return false;
 		}
 		break;
 	default:
-		Debug::LogError("Cannot remove check FROM cell. You can only remove cell from home");
+		if (shouldLog)
+		{
+			Debug::LogError("Cannot remove check FROM cell. You can only remove cell from home");
+		}
 		return false;
 		break;
 	}
@@ -360,6 +483,7 @@ bool Board::IsCorrectId(short id)
 
 void Board::HideHints()
 {
+	Debug::Log("Hiding hints");
 	for (auto cell : _cells)
 	{
 		cell->HideHint();
@@ -381,6 +505,8 @@ short Board::CalculateCellId(short fromId, short turnValue)
 
 void Board::ResetTurns()
 {
+	Debug::Log("Game board turns resetted");
+
 	_lastPerformedTurn = -1;
 	_firstPlayerFromHeadTurns = 0;
 	_secondPlayerFromHeadTurns = 0;
@@ -391,9 +517,14 @@ void Board::ResetTurns()
 	}
 }
 
-PossibleTurns Board::GetAllPossibleTurns(PlayerOrderType orderType)
+PossibleTurns Board::GetAllPossibleTurns(PlayerOrderType orderType, bool shouldLog)
 {
+	const bool sholudLogCheck = false;
+
 	_possibleTurns->clear();
+
+	std::string outputMessage = "Possible turns for " + PLAYER_ORDER_TYPE_STRINGS[(char)orderType] + ":\n--------------------\n";
+
 
 	for (auto cell : _cells)
 	{
@@ -401,6 +532,7 @@ PossibleTurns Board::GetAllPossibleTurns(PlayerOrderType orderType)
 
 		if ((short)cellStatus == (short)orderType)
 		{
+
 			auto currentCellId = cell->GetId();
 
 			auto dices = Dice::GetDices();
@@ -408,14 +540,18 @@ PossibleTurns Board::GetAllPossibleTurns(PlayerOrderType orderType)
 			auto firstTurn = CalculateCellId(currentCellId, dices.x);
 			auto secondTurn = CalculateCellId(currentCellId, dices.y);
 
+			std::string turnString = "From cell id: " + std::to_string(currentCellId) + " -> to : ";
+
 			if (!Dice::IsDouble())
 			{
-				if (IsMoveCheckPossible(currentCellId, firstTurn))
+				if (IsMoveCheckPossible(currentCellId, firstTurn, sholudLogCheck))
 				{
+					turnString += std::to_string(firstTurn) + " ";
 					AddToPossibleTurns(currentCellId, firstTurn);
 				}
-				if (IsMoveCheckPossible(currentCellId, secondTurn))
+				if (IsMoveCheckPossible(currentCellId, secondTurn, sholudLogCheck))
 				{
+					turnString += std::to_string(secondTurn) + " ";
 					AddToPossibleTurns(currentCellId, secondTurn);
 				}
 			}
@@ -423,10 +559,19 @@ PossibleTurns Board::GetAllPossibleTurns(PlayerOrderType orderType)
 			{
 				if (IsMoveCheckPossible(currentCellId, firstTurn))
 				{
+					turnString += std::to_string(firstTurn) + " ";
 					AddToPossibleTurns(currentCellId, firstTurn);
 				}
 			}
+			outputMessage += turnString + "\n";
 		}
+	}
+
+	outputMessage += "--------------------";
+
+	if (shouldLog)
+	{
+		Debug::Log(outputMessage);
 	}
 
 	return *_possibleTurns;
@@ -466,6 +611,7 @@ void Board::SetOnEndStage(PlayerOrderType orderType)
 
 void Board::SetOnEndStage(PlayerOrderType orderType, bool value)
 {
+	Debug::LogWarning("Trying to forcibly set end stage");
 	switch (orderType)
 	{
 	case PlayerOrderType::FirstPlayer:
@@ -482,10 +628,10 @@ bool Board::IsOnEndStage(PlayerOrderType orderType)
 	switch (orderType)
 	{
 	case PlayerOrderType::FirstPlayer:
-		return _firstPlayerOnEndStage;
+		return _firstPlayerChecksInHome >= START_CHECKS_AMOUNT;
 		break;
 	case PlayerOrderType::SecondPlayer:
-		return _secondPlayerOnEndStage;
+		return _secondPlayerChecksInHome >= START_CHECKS_AMOUNT;
 		break;
 	}
 	return false;
@@ -518,6 +664,7 @@ PlayerOrderType Board::GetWinner()
 
 void Board::SetMaxChecksOut(PlayerOrderType orderType)
 {
+	Debug::LogWarning("Trying to forcibly set end stage");
 	switch (orderType)
 	{
 	case PlayerOrderType::FirstPlayer:

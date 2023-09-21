@@ -42,8 +42,10 @@ public:
 
 	//Возвращает возможные ходы для данного игрока
 	PossibleTurns CalculatePossibleTurns();
+	PossibleTurns CalculatePossibleTurns(bool shouldLog);
 	//Проверка, есть ли возможные ходы
-	bool IsAnyTurnsPossible() { return !CalculatePossibleTurns().empty(); }
+	bool IsAnyTurnsPossible();
+	bool IsAnyTurnsPossible(bool shouldLog);
 
 	//Вызывает метод GetChecksOut через GameBoard (сделано для уменьшения длины строчки кода))
 	char GetChecksOut() { return GameBoard->GetChecksOut(OrderType); }

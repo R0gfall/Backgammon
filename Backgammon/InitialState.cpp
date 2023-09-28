@@ -70,9 +70,9 @@ InitialState::InitialState(Board* board, IGameStateMachine* stateMachine) : Game
 	//Установка текста
 	_startGameText.setString("Press Space to StartGame");
 	_firstPlayerHint.setString("Press to choose First Player\n\t\tQ - Human \tW - AI");
-	_firstPlayerDifficultyHint.setString("\t\tPress to choose Difficulty\n1 - EASY \t2 - MEDIUM \t3 - HARD");
+	_firstPlayerDifficultyHint.setString("\tPress to choose Difficulty\n\t\tE - EASY \tR - HARD");
 	_secondPlayerHint.setString("Press to choose Second Player\n\t\tA - Human \tS - AI");
-	_secondPlayerDifficultyHint.setString("\t\tPress to choose Difficulty\n4 - EASY \t5 - MEDIUM \t6 - HARD");
+	_secondPlayerDifficultyHint.setString("\tPress to choose Difficulty\n\t\tD - EASY \tF - HARD");
 	UpdateText();
 }
 
@@ -111,11 +111,6 @@ void InitialState::UpdateState()
 	}
 	if (Input::IsKeyDown(Input::Key::R))
 	{
-		_playerDifficulty[0] = AiDifficulty::Medium;
-		UpdateText();
-	}
-	if (Input::IsKeyDown(Input::Key::T))
-	{
 		_playerDifficulty[0] = AiDifficulty::Hard;
 		UpdateText();
 	}
@@ -139,11 +134,6 @@ void InitialState::UpdateState()
 		UpdateText();
 	}
 	if (Input::IsKeyDown(Input::Key::F))
-	{
-		_playerDifficulty[0] = AiDifficulty::Medium;
-		UpdateText();
-	}
-	if (Input::IsKeyDown(Input::Key::G))
 	{
 		_playerDifficulty[0] = AiDifficulty::Hard;
 		UpdateText();

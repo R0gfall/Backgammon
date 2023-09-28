@@ -173,6 +173,11 @@ Check* Cell::RemoveCheck()
 	return returnValue;
 }
 
+size_t Cell::GetChecksAmout()
+{
+	return _checks.size();
+}
+
 void Cell::ShowHint()
 {
 	if (!IsHinted())

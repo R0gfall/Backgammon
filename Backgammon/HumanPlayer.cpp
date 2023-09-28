@@ -1,7 +1,5 @@
 #include "HumanPlayer.h"
 
-const bool SHOULD_LOG = true;
-
 HumanPlayer::HumanPlayer(PlayerOrderType orderType, IGameStateMachine* stateMachine, Board* board) : IPlayer(orderType, stateMachine, board)
 {
 	Debug::LogInfo("Human player was created");
@@ -90,7 +88,10 @@ void HumanPlayer::HandleMouseClick()
 	{
 		if (targetCell->IsFree())
 		{
-			Debug::LogWarning("Cannot chose free cell");
+			if (HUMAN_SHOULD_LOG)
+			{
+				Debug::LogWarning("Cannot chose free cell");
+			}
 			return;
 		}
 		ChooseCell(targetCell);
@@ -134,7 +135,7 @@ void HumanPlayer::MoveCheck(short fromId, short toId)
 		return;
 	}	
 
-	if (!IsAnyTurnsPossible(SHOULD_LOG))
+	if (!IsAnyTurnsPossible(HUMAN_SHOULD_LOG))
 	{
 		NextTurn();
 		return;
@@ -145,11 +146,14 @@ void HumanPlayer::RemoveCheck()
 {
 	if (_chosenCell == nullptr)
 	{
-		Debug::LogError("Cannot remove check. No check chosen");
+		if (HUMAN_SHOULD_LOG)
+		{
+			Debug::LogError("Cannot remove check. No check chosen");
+		}
 		return;
 	}
 
-	if (GameBoard->TryRemoveCheck(_chosenCell->GetId(), SHOULD_LOG))
+	if (GameBoard->TryRemoveCheck(_chosenCell->GetId(), HUMAN_SHOULD_LOG))
 	{
 		// добавлено
 		_performedTurns++;
@@ -174,14 +178,20 @@ void HumanPlayer::ChooseCell(Cell* cell)
 		return;
 
 	_chosenCell = cell;
-	Debug::Log("Chosen cell is: " + std::to_string(_chosenCell->GetId()));
 
+	if (HUMAN_SHOULD_LOG)
+	{
+		Debug::Log("Chosen cell is: " + std::to_string(_chosenCell->GetId()));
+	}
 	ShowPossibleTurns();
 }
 
 void HumanPlayer::CancelCellChoise()
 {
-	Debug::Log("Choise cancelled");
+	if (HUMAN_SHOULD_LOG)
+	{
+		Debug::Log("Choise cancelled");
+	}
 	_chosenCell = nullptr;
 	GameBoard->HideHints();
 }
@@ -190,19 +200,28 @@ bool HumanPlayer::IsCellCanBeChosen(Cell* cell)
 {
 	if (cell == nullptr)
 	{
-		Debug::LogWarning("Cannot choose cell. Incorrect pointer given");
+		if (HUMAN_SHOULD_LOG)
+		{
+			Debug::LogWarning("Cannot choose cell. Incorrect pointer given");
+		}
 		return false;
 	}
 
 	auto cellStatus = cell->GetStatus();
 	if (cellStatus == CellStatus::FirstPlayer && OrderType == PlayerOrderType::SecondPlayer)
 	{
-		Debug::LogWarning("Cannot choose cell with id: " + std::to_string(cell->GetId()) + "\nDifferent types of cell and player order");
+		if (HUMAN_SHOULD_LOG)
+		{
+			Debug::LogWarning("Cannot choose cell with id: " + std::to_string(cell->GetId()) + "\nDifferent types of cell and player order");
+		}
 		return false;
 	}
 	if (cellStatus == CellStatus::SecondPlayer && OrderType == PlayerOrderType::FirstPlayer)
 	{
-		Debug::LogWarning("Cannot choose cell with id: " + std::to_string(cell->GetId()) + "\nDifferent types of cell and player order");
+		if (HUMAN_SHOULD_LOG)
+		{
+			Debug::LogWarning("Cannot choose cell with id: " + std::to_string(cell->GetId()) + "\nDifferent types of cell and player order");
+		}
 		return false;
 	}
 
@@ -213,25 +232,33 @@ void HumanPlayer::ShowPossibleTurns()
 {
 	//Debug::Log("Last performed turn: " + std::to_string(_lastPerformedTurn));
 
-	const bool shouldLog = true;
-	auto possibleTurns = CalculatePossibleTurns(shouldLog);
+	auto possibleTurns = CalculatePossibleTurns(HUMAN_SHOULD_LOG);
 
 	auto chosenCellId = _chosenCell->GetId();
-	Debug::Log("Show hint from chosen cell with id: " + std::to_string(chosenCellId));
+	if (HUMAN_SHOULD_LOG)
+	{
+		Debug::Log("Show hint from chosen cell with id: " + std::to_string(chosenCellId));
+	}
 
 	auto itr = possibleTurns.find(chosenCellId);
 	if (itr != possibleTurns.end())
 	{
 		for (auto turn : possibleTurns.at(chosenCellId))
 		{
-			Debug::Log("Possible turn to id: " + std::to_string(turn));
+			if (HUMAN_SHOULD_LOG)
+			{
+				Debug::Log("Possible turn to id: " + std::to_string(turn));
+			}
 			auto targetCell = GameBoard->GetCellById(turn);
 			targetCell->ShowHint();
 		}
 	}
 	else
 	{
-		Debug::LogWarning("No possible turns from this cell");
+		if (HUMAN_SHOULD_LOG)
+		{
+			Debug::LogWarning("No possible turns from this cell");
+		}
 		if (!IsOnEndStage())
 		{
 			CancelCellChoise();
@@ -261,12 +288,18 @@ void HumanPlayer::HandleInput()
 
 	if (Input::IsKeyDown(Input::Key::Z))
 	{
-		Debug::LogWarning("First player max checks out set");
+		if (HUMAN_SHOULD_LOG)
+		{
+			Debug::LogWarning("First player max checks out set");
+		}
 		GameBoard->SetMaxChecksOut(PlayerOrderType::FirstPlayer);
 	}
 	if (Input::IsKeyDown(Input::Key::X))
 	{
-		Debug::LogWarning("Second player max checks out set");
+		if (HUMAN_SHOULD_LOG)
+		{
+			Debug::LogWarning("Second player max checks out set");
+		}
 		GameBoard->SetMaxChecksOut(PlayerOrderType::SecondPlayer);
 	}
 }

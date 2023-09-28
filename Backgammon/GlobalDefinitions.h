@@ -20,8 +20,13 @@
 
 #define LOG_OUTPUT_FILENAME "../logs.txt"
 
+#define GLOBAL_SHOULD_LOG false
+#define HUMAN_SHOULD_LOG false
+
 const int FIRST_PLAYER_INIT_CELL = 17;
 const int SECOND_PLAYER_INIT_CELL = 5;
+
+
 
 //Перечисление типов состояний
 enum class GameStateType
@@ -54,12 +59,11 @@ const std::string PLAYER_ORDER_TYPE_STRINGS[3] = { "FIRST PLAYER", "SECOND PLAYE
 enum class AiDifficulty
 {
 	Easy,
-	Medium,
 	Hard
 };
 
 //Массив строк, соответствующий перечислению AiDifficulty
-const std::string AI_DIFFICULTY_STRINGS[3] = { "EASY", "MEDIUM", "HARD" };
+const std::string AI_DIFFICULTY_STRINGS[2] = { "EASY", "HARD" };
 
 //Перечисление состояний клетки
 enum class CellStatus

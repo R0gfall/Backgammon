@@ -1,5 +1,6 @@
 #include "Board.h"
 
+
 Board::Board()
 {
 	_backgroundTexture.loadFromFile(BOARD_IMAGE_PATH);
@@ -111,13 +112,19 @@ Cell* Board::GetCellById(short id)
 	if (id >= 0 && id < CELLS_AMOUNT)
 		return _cells[id];
 
-	Debug::LogError("Wrong Cell id given: " + std::to_string(id));
+	if (GLOBAL_SHOULD_LOG)
+	{
+		Debug::LogError("Wrong Cell id given: " + std::to_string(id));
+	}
 	return nullptr;
 }
 
 void Board::MoveCheck(short idFrom, short idTo)
 {
-	Debug::Log("Trying to move check from: " + std::to_string(idFrom) + " to: " + std::to_string(idTo));
+	if (GLOBAL_SHOULD_LOG)
+	{
+		Debug::Log("Trying to move check from: " + std::to_string(idFrom) + " to: " + std::to_string(idTo));
+	}
 	if (!IsMoveCheckPossible(idFrom, idTo))
 		return;
 
@@ -156,7 +163,10 @@ void Board::MoveCheck(short idFrom, short idTo)
 	case CellType::FirstPlayerHome:
 		if (cellFromType != CellType::FirstPlayerHome && cellFromStatus == CellStatus::FirstPlayer)
 		{
-			Debug::Log("++ Increaced first player checks in home");
+			if (GLOBAL_SHOULD_LOG)
+			{
+				Debug::Log("++ Increaced first player checks in home");
+			}
 			++_firstPlayerChecksInHome;
 		}
 		break;
@@ -166,7 +176,10 @@ void Board::MoveCheck(short idFrom, short idTo)
 	case CellType::SecondPlayerHome:
 		if (cellFromType != CellType::SecondPlayerHome && cellFromStatus == CellStatus::SecondPlayer)
 		{
-			Debug::Log("++ Increaced second player checks in home");
+			if (GLOBAL_SHOULD_LOG)
+			{
+				Debug::Log("++ Increaced second player checks in home");
+			}
 			++_secondPlayerChecksInHome;
 		}
 		break;
@@ -177,7 +190,10 @@ void Board::MoveCheck(short idFrom, short idTo)
 	if (!Dice::IsDouble())
 		_lastPerformedTurn = CalculateDeltaId(idFrom, idTo);
 
-	Debug::Log("Successfully to move check from: " + std::to_string(idFrom) + " to: " + std::to_string(idTo) + " by: " + CELL_STATUS_STRINGS[(char)cellFromStatus]);
+	//if (GLOBAL_SHOULD_LOG)
+	//{
+		Debug::Log("Successfully moved check from: " + std::to_string(idFrom) + " to: " + std::to_string(idTo) + " by: " + CELL_STATUS_STRINGS[(char)cellFromStatus]);
+	//}
 }
 
 bool Board::IsMoveCheckPossible(short idFrom, short idTo)
@@ -333,7 +349,10 @@ bool Board::TryRemoveCheck(short idFrom, bool shouldLog)
 
 			if (isRemoved)
 			{
-				Debug::Log("++ Increaced first player checks out");
+				if (shouldLog)
+				{
+					Debug::Log("++ Increaced first player checks out");
+				}
 				_firstPlayerChecksOut++;
 			}
 		}
@@ -360,7 +379,10 @@ bool Board::TryRemoveCheck(short idFrom, bool shouldLog)
 
 			if (isRemoved)
 			{
-				Debug::Log("++ Increaced second player checks out");
+				if (shouldLog)
+				{
+					Debug::Log("++ Increaced second player checks out");
+				}
 				_secondPlayerChecksOut++;
 			}
 		}
@@ -375,10 +397,10 @@ bool Board::TryRemoveCheck(short idFrom, bool shouldLog)
 
 	cell->RemoveCheck();
 
-	//if (shouldLog)
-	//{
+	if (shouldLog)
+	{
 		Debug::Log("Successfully removed check from id: " + std::to_string(idFrom));
-	//}
+	}
 
 	return true;
 }
@@ -485,7 +507,10 @@ bool Board::IsCorrectId(short id)
 
 void Board::HideHints()
 {
-	Debug::Log("Hiding hints");
+	if (GLOBAL_SHOULD_LOG)
+	{
+		Debug::Log("Hiding hints");
+	}
 	for (auto cell : _cells)
 	{
 		cell->HideHint();
@@ -507,8 +532,10 @@ short Board::CalculateCellId(short fromId, short turnValue)
 
 void Board::ResetTurns()
 {
-	Debug::Log("Game board turns resetted");
-
+	if (GLOBAL_SHOULD_LOG)
+	{
+		Debug::Log("Game board turns resetted");
+	}
 	_lastPerformedTurn = -1;
 	_firstPlayerFromHeadTurns = 0;
 	_secondPlayerFromHeadTurns = 0;
@@ -613,7 +640,10 @@ void Board::SetOnEndStage(PlayerOrderType orderType)
 
 void Board::SetOnEndStage(PlayerOrderType orderType, bool value)
 {
-	Debug::LogWarning("Trying to forcibly set end stage");
+	if (GLOBAL_SHOULD_LOG)
+	{
+		Debug::LogWarning("Trying to forcibly set end stage");
+	}
 	switch (orderType)
 	{
 	case PlayerOrderType::FirstPlayer:
@@ -666,7 +696,10 @@ PlayerOrderType Board::GetWinner()
 
 void Board::SetMaxChecksOut(PlayerOrderType orderType)
 {
-	Debug::LogWarning("Trying to forcibly set end stage");
+	if (GLOBAL_SHOULD_LOG)
+	{
+		Debug::LogWarning("Trying to forcibly set end stage");
+	}
 	switch (orderType)
 	{
 	case PlayerOrderType::FirstPlayer:
@@ -676,7 +709,10 @@ void Board::SetMaxChecksOut(PlayerOrderType orderType)
 		_secondPlayerChecksOut = START_CHECKS_AMOUNT;
 		break;
 	default:
-		Debug::LogError("Cannot set max checks out amount. None player order type given");
+		if (GLOBAL_SHOULD_LOG)
+		{
+			Debug::LogError("Cannot set max checks out amount. None player order type given");
+		}
 		break;
 	}
 }
@@ -702,13 +738,19 @@ bool Board::IsTurnOverlaping(PlayerOrderType orderType, short fromId, short toId
 {
 	if (!IsCorrectId(fromId))
 	{
-		Debug::LogError("Incorrect id given: " + std::to_string(fromId));
+		if (GLOBAL_SHOULD_LOG)
+		{
+			Debug::LogError("Incorrect id given: " + std::to_string(fromId));
+		}
 		return false;
 	}
 
 	if (!IsCorrectId(toId))
 	{
-		Debug::LogError("Incorrect id given: " + std::to_string(toId));
+		if (GLOBAL_SHOULD_LOG)
+		{
+			Debug::LogError("Incorrect id given: " + std::to_string(toId));
+		}
 		return false;
 	}
 
@@ -729,7 +771,10 @@ bool Board::IsFirstTurnPossible(PlayerOrderType orderType, short fromHeadTurns)
 {
 	if (IsFirstTurnMade(orderType) && fromHeadTurns > 0)
 	{
-		Debug::LogError("Cannot move check FROM head cell twice. You've already taken check from head at this turn");
+		if (GLOBAL_SHOULD_LOG)
+		{
+			Debug::LogError("Cannot move check FROM head cell twice. You've already taken check from head at this turn");
+		}
 		return false;
 	}
 	
@@ -737,7 +782,10 @@ bool Board::IsFirstTurnPossible(PlayerOrderType orderType, short fromHeadTurns)
 	{
 		if (!Dice::IsDouble() && fromHeadTurns > 0)
 		{
-			Debug::LogError("Cannot move check FROM head cell twice. There's not a double on dices");
+			if (GLOBAL_SHOULD_LOG)
+			{
+				Debug::LogError("Cannot move check FROM head cell twice. There's not a double on dices");
+			}
 			return false;
 		}
 
@@ -745,13 +793,19 @@ bool Board::IsFirstTurnPossible(PlayerOrderType orderType, short fromHeadTurns)
 
 		if ((dices.x == 1 || dices.x == 2 || dices.x == 4) && fromHeadTurns > 0)
 		{
-			Debug::LogError("Cannot move check FROM head cell twice. Double must contain 3, 5 or 6");
+			if (GLOBAL_SHOULD_LOG)
+			{
+				Debug::LogError("Cannot move check FROM head cell twice. Double must contain 3, 5 or 6");
+			}
 			return false;
 		}
 
 		if (!IsValueInBounds(fromHeadTurns, 0, 2))
 		{
-			Debug::LogError("Cannot move check FROM head cell more than twice");
+			if (GLOBAL_SHOULD_LOG)
+			{
+				Debug::LogError("Cannot move check FROM head cell more than twice");
+			}
 			return false;
 		}
 	}

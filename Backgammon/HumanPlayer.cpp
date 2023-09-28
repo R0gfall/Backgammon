@@ -17,7 +17,8 @@ HumanPlayer::HumanPlayer(PlayerOrderType orderType, IGameStateMachine* stateMach
 }
 
 void HumanPlayer::OnTurnEnter()
-{
+{	
+	//printf("%d \n", OrderType);
 	if (!IsAnyTurnsPossible(SHOULD_LOG))
 	{
 		NextTurn();

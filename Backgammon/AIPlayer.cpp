@@ -17,6 +17,7 @@ void AIPlayer::OnTurnEnter()
         printf("3");
     }*/
     //printf("3123123123");
+    //printf("%d \n", OrderType);
     if (!IsAnyTurnsPossible()) {
         NextTurn();
         return;
@@ -179,12 +180,16 @@ void AIPlayer::OnTurnEnter()
                     printf("From id: %d to id: %d \n", q_b_23[0], q_b_23[1]);
                     GameBoard->MoveCheck(q_b_23[0], q_b_23[1]);
                 }
-                else if (q_b == 0) {
+                else if (q_b == 0 && q_a != 0) {
                     printf("Third");
                     printf("From id: %d to id: %d \n", q_a_23[0], q_a_23[1]);
                     GameBoard->MoveCheck(q_a_23[0], q_a_23[1]);
                 }
                 else {
+                    if (!IsAnyTurnsPossible()) {
+                        NextTurn();
+                        return;
+                    }
                     printf("Else\n");
                     int rand_cell = rand() % 24;
                     itr = possibleTurns.find(rand_cell);
@@ -285,12 +290,16 @@ void AIPlayer::OnTurnEnter()
                     printf("From id: %d to id: %d \n", q_b_23[0], q_b_23[1]);
                     GameBoard->MoveCheck(q_b_23[0], q_b_23[1]);
                 }
-                else if (q_b == 0) {
+                else if (q_b == 0 && q_a != 0) {
                     printf("Third");
                     printf("From id: %d to id: %d \n", q_a_23[0], q_a_23[1]);
                     GameBoard->MoveCheck(q_a_23[0], q_a_23[1]);
                 }
                 else {
+                    if (!IsAnyTurnsPossible()) {
+                        NextTurn();
+                        return;
+                    }
                     printf("Else\n");
                     int rand_cell = rand() % 24;
                     itr = possibleTurns.find(rand_cell);
@@ -347,9 +356,9 @@ void AIPlayer::OnTurnEnter()
 void AIPlayer::OnEndTurnEnter()
 {
 
-    printf("3123123123");
+    printf("3123123123 \n\n\n\n\n");
     switch (_difficulty) {
-    case AiDifficulty::Easy:
+    case AiDifficulty::Medium:
 
         if (Dice::IsDouble()) {
             short k = 0, _i = 0, flag = 0;
@@ -457,12 +466,12 @@ void AIPlayer::OnEndTurnEnter()
                     k++;
                     break;
                 }
-                else if (GameBoard->TryRemoveCheck(23 - i)) {
+                /*else if (GameBoard->TryRemoveCheck(23 - i)) {
                     _i = 23 - i;
                     printf("Removed check from cell id: %d\n", _i);
                     k++;
                     break;
-                }
+                }*/
             }
             for (int i = dices.y; i >= 0; i--) {
                 if (GameBoard->TryRemoveCheck(11 - i)) {
@@ -470,12 +479,12 @@ void AIPlayer::OnEndTurnEnter()
                     k++;
                     break;
                 }
-                else if (GameBoard->TryRemoveCheck(23 - i)) {
+                /*else if (GameBoard->TryRemoveCheck(23 - i)) {
                     _i = 23 - i;
                     printf("Removed check from cell id: %d\n", _i);
                     k++;
                     break;
-                }
+                }*/
             }
             for (int i = 0; i < 2 - k; i++) {
                 if (!IsAnyTurnsPossible()) {
@@ -519,7 +528,7 @@ void AIPlayer::OnEndTurnEnter()
             for (int j = 0; j < 4; j++) {
                 auto possibleTurns = CalculatePossibleTurns();
                 short flag = 1;
-                for (int i = 6; i < dices.x; i++) {
+                for (int i = 6; i < 12; i++) {
                     if (possibleTurns.find(i) != possibleTurns.end()) {
                         printf("From id: %d to id: %d\n", i, i + dices.x);
                         GameBoard->MoveCheck(i, i + dices.x);
@@ -552,7 +561,7 @@ void AIPlayer::OnEndTurnEnter()
                 break;
             case 5:
             case 4:
-                for (int i = 6; i < dices.x; i++) {
+                for (int i = 6; i < 12; i++) {
                     auto itr = possibleTurns.find(i);
                     if (itr != possibleTurns.end()) {
                         auto value = (itr)->second;
@@ -579,7 +588,7 @@ void AIPlayer::OnEndTurnEnter()
                     break;
                 }
                 else {
-                    for (int i = 6; i < dices.x; i++) {
+                    for (int i = 6; i < 12; i++) {
                         auto itr = possibleTurns.find(i);
                         if (itr != possibleTurns.end()) {
                             auto value = (itr)->second;
@@ -615,7 +624,7 @@ void AIPlayer::OnEndTurnEnter()
                 break;
             case 5:
             case 4:
-                for (int i = 6; i < dices.y; i++) {
+                for (int i = 6; i < 12; i++) {
                     if (possibleTurns.find(i) != possibleTurns.end()) {
                         printf("From id: %d to id: %d\n", i, i + dices.y);
                         GameBoard->MoveCheck(i, i + dices.y);
@@ -624,7 +633,7 @@ void AIPlayer::OnEndTurnEnter()
                     }
                 }
                 if (flag == 1) {
-                    for (int i = 12 - dices.x; i < 12; i++) {
+                    for (int i = 12 - dices.y; i < 12; i++) {
                         if (GameBoard->TryRemoveCheck(i)) {
                             printf("Removed check from cell id: %d\n", i);
                             break;
@@ -633,21 +642,21 @@ void AIPlayer::OnEndTurnEnter()
                 }
                 break;
             default:
-                if (GameBoard->TryRemoveCheck(12 - dices.x)) {
-                    printf("Removed check from cell id: %d\n", 12 - dices.x);
+                if (GameBoard->TryRemoveCheck(12 - dices.y)) {
+                    printf("Removed check from cell id: %d\n", 12 - dices.y);
                     break;
                 }
                 else {
-                    for (int i = 6; i < dices.x; i++) {
+                    for (int i = 6; i < 12; i++) {
                         if (possibleTurns.find(i) != possibleTurns.end()) {
-                            printf("From id: %d to id: %d\n", i, i + dices.x);
-                            GameBoard->MoveCheck(i, i + dices.x);
+                            printf("From id: %d to id: %d\n", i, i + dices.y);
+                            GameBoard->MoveCheck(i, i + dices.y);
                             flag = 0;
                             break;
                         }
                     }
                     if (flag == 1) {
-                        for (int i = 12 - dices.x; i < 12; i++) {
+                        for (int i = 12 - dices.y; i < 12; i++) {
                             if (GameBoard->TryRemoveCheck(i)) {
                                 printf("Removed check from cell id: %d\n", i);
                                 break;

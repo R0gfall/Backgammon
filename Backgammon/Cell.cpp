@@ -61,7 +61,10 @@ bool Cell::IsAddCheckPossible(CellStatus fromCellStatus)
 	switch (fromCellStatus)
 	{
 	case CellStatus::Free:
-		Debug::LogWarning("Cannot move check from free cell");
+		if (GLOBAL_SHOULD_LOG)
+		{
+			Debug::LogWarning("Cannot move check from free cell");
+		}
 		return false;
 		break;
 	case CellStatus::FirstPlayer:
@@ -78,19 +81,28 @@ bool Cell::IsAddCheckPossible(CheckType checkType)
 {
 	if (IsHinted())
 	{
-		Debug::LogError("Cannot add check to Cell with id: " + std::to_string(_id) + "\nHint is shown");
+		if (GLOBAL_SHOULD_LOG)
+		{
+			Debug::LogError("Cannot add check to Cell with id: " + std::to_string(_id) + "\nHint is shown");
+		}
 		return false;
 	}
 
 	if (checkType == CheckType::FirstPlayer && _status == CellStatus::SecondPlayer)
 	{
-		Debug::LogError("Cannot add check to Cell with id: " + std::to_string(_id) + "\nDifferent type of cell status and check type");
+		if (GLOBAL_SHOULD_LOG)
+		{
+			Debug::LogError("Cannot add check to Cell with id: " + std::to_string(_id) + "\nDifferent type of cell status and check type");
+		}
 		return false;
 	}
 
 	if (checkType == CheckType::SecondPlayer && _status == CellStatus::FirstPlayer)
 	{
-		Debug::LogError("Cannot add check to Cell with id: " + std::to_string(_id) + "\nDifferent type of cell status and check type");
+		if (GLOBAL_SHOULD_LOG)
+		{
+			Debug::LogError("Cannot add check to Cell with id: " + std::to_string(_id) + "\nDifferent type of cell status and check type");
+		}
 		return false;
 	}
 
@@ -101,7 +113,10 @@ bool Cell::IsAddCheckPossible(Check* check)
 {
 	if (check == nullptr)
 	{
-		Debug::LogError("Cannot add check to Cell with id: " + std::to_string(_id) + "\n Incorrect pointer given");
+		if (GLOBAL_SHOULD_LOG)
+		{
+			Debug::LogError("Cannot add check to Cell with id: " + std::to_string(_id) + "\n Incorrect pointer given");
+		}
 		return false;
 	}
 
@@ -112,12 +127,18 @@ bool Cell::IsRemoveCheckPossible()
 {
 	if (IsHinted())
 	{
-		Debug::LogError("Cannot remove check from Cell with id: " + std::to_string(_id) + "\n Hint is shown");
+		if (GLOBAL_SHOULD_LOG)
+		{
+			Debug::LogError("Cannot remove check from Cell with id: " + std::to_string(_id) + "\n Hint is shown");
+		}
 		return false;
 	}
 	if (_checks.empty())
 	{
-		Debug::LogError("Cannot remove check from Cell with id: " + std::to_string(_id) + "\nContainer is empty");
+		if (GLOBAL_SHOULD_LOG)
+		{
+			Debug::LogError("Cannot remove check from Cell with id: " + std::to_string(_id) + "\nContainer is empty");
+		}
 		return false;
 	}
 	return true;
@@ -212,7 +233,10 @@ void Cell::RemoveHint(std::list<Check*>::iterator itr)
 		_checks.erase(itr);
 		return;
 	}
-	Debug::LogError("Cannot remove Hint from Cell with id: " + std::to_string(_id) + "\nContainer is empty");
+	if (GLOBAL_SHOULD_LOG)
+	{
+		Debug::LogError("Cannot remove Hint from Cell with id: " + std::to_string(_id) + "\nContainer is empty");
+	}
 	return;
 }
  

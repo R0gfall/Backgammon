@@ -18,10 +18,12 @@
 #define FONT_PATH "../Assets/Montserrat-Black.ttf"
 #define CHECK_IMAGE_PATH "../Assets/checks.png"
 
-#define LOG_OUTPUT_FILENAME "../logs.txt"
+#define LOG_OUTPUT_FILENAME_START "../game_log_"
+#define LOG_OUTPUT_FILENAME_END ".txt"
 
 #define GLOBAL_SHOULD_LOG false
 #define HUMAN_SHOULD_LOG false
+#define AI_SHOULD_LOG false
 
 const int FIRST_PLAYER_INIT_CELL = 0;
 const int SECOND_PLAYER_INIT_CELL = 12;

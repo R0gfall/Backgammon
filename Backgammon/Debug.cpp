@@ -4,10 +4,11 @@ HANDLE Debug::handle = GetStdHandle(STD_OUTPUT_HANDLE);
 Window* Debug::_window = nullptr;
 std::ofstream Debug::_outputFile;
 
-void Debug::Initialize(Window* window, const std::string& outputFilename)
+void Debug::Initialize(Window* window)
 {
 	_window = window;
-	_outputFile.open(outputFilename);
+	auto logNumber = time(NULL);
+	_outputFile.open(LOG_OUTPUT_FILENAME_START + std::to_string(logNumber) + LOG_OUTPUT_FILENAME_END);
 	if (!_outputFile.is_open())
 	{
 		std::cout << "CANNOT OPEN OUTPUT LOG FILE\n";

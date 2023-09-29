@@ -2,7 +2,7 @@
 #include <time.h>
 
 struct list_move {
-    int array_of_moves[8];
+    char array_of_moves[8];
     struct list_move* p_next_list;
 };
 
@@ -474,13 +474,13 @@ int* algoritm(int(&backgrammon)[24], short dice_x, short dice_y, short enterPlay
     }
 
     short dice[2] = { dice_x, dice_y }; // ×èñëà ñ áðîñêà êóáèêà	
-    int moves_and_grade[10000][8];
+    char moves_and_grade[10000][8];
     for (int i = 0; i < 10000; i++) {
         for (int j = 0; j < 8; j++) {
             moves_and_grade[i][j] = -1;
         }
     }
-    double grade_of_moves[10000];
+    float grade_of_moves[10000];
     int quantity_moves, quantity_grades = 0;
     quantity_moves = get_all_possible_moves(backgrammon, dice[0], dice[1], enterPlayer);
     printf("%d do it \n", quantity_moves);
@@ -639,7 +639,7 @@ void AIPlayer::OnTurnEnter()
     //printf("%d \n", OrderType);
     int j = 0;
     auto dices = Dice::GetDices();
-    if (!IsAnyTurnsPossible()) {
+    if (!IsAnyTurnsPossible(AI_SHOULD_LOG)) {
         NextTurn();
         return;
     }
@@ -698,13 +698,13 @@ void AIPlayer::OnTurnEnter()
                 k++;
             }
             for (int j = 0; j < 4 - k; j++) {
-                if (!IsAnyTurnsPossible()) {
+                if (!IsAnyTurnsPossible(AI_SHOULD_LOG)) {
                     NextTurn();
                     return;
                 }
                 short quantity_before_23 = 0, quantity_after_23 = 0, q_b = 0, q_a = 0;
                 int q_b_23[100], q_a_23[100];
-                possibleTurns = CalculatePossibleTurns();
+                possibleTurns = CalculatePossibleTurns(AI_SHOULD_LOG);
                 for (int i = 12; i < 24; i++) {
                     if (possibleTurns.find(i) != possibleTurns.end()) {
                         quantity_before_23++;
@@ -761,7 +761,7 @@ void AIPlayer::OnTurnEnter()
                     GameBoard->MoveCheck(q_a_23[0], q_a_23[1]);
                 }
                 else {
-                    if (!IsAnyTurnsPossible()) {
+                    if (!IsAnyTurnsPossible(AI_SHOULD_LOG)) {
                         NextTurn();
                         return;
                     }
@@ -792,7 +792,7 @@ void AIPlayer::OnTurnEnter()
         else {
             //TODO ïðè ñõîäå ñ áàøíè ëó÷øå õîäèòü íà íå çàíÿòóþ êëåòêó
             int k = 0;
-            auto possibleTurns = CalculatePossibleTurns();
+            auto possibleTurns = CalculatePossibleTurns(AI_SHOULD_LOG);
             auto itr = possibleTurns.find(12);
             if (itr != possibleTurns.end()) {
                 auto value = (itr)->second;
@@ -808,13 +808,13 @@ void AIPlayer::OnTurnEnter()
                 k++;
             }
             for (int j = 0; j < 2 - k; j++) {
-                if (!IsAnyTurnsPossible()) {
+                if (!IsAnyTurnsPossible(AI_SHOULD_LOG)) {
                     NextTurn();
                     return;
                 }
                 short quantity_before_23 = 0, quantity_after_23 = 0, q_b = 0, q_a = 0;
                 int q_b_23[100], q_a_23[100];
-                possibleTurns = CalculatePossibleTurns();
+                possibleTurns = CalculatePossibleTurns(AI_SHOULD_LOG);
                 for (int i = 12; i < 24; i++) {
                     if (possibleTurns.find(i) != possibleTurns.end()) {
                         quantity_before_23++;
@@ -871,7 +871,7 @@ void AIPlayer::OnTurnEnter()
                     GameBoard->MoveCheck(q_a_23[0], q_a_23[1]);
                 }
                 else {
-                    if (!IsAnyTurnsPossible()) {
+                    if (!IsAnyTurnsPossible(AI_SHOULD_LOG)) {
                         NextTurn();
                         return;
                     }
@@ -962,7 +962,7 @@ void AIPlayer::OnEndTurnEnter()
     default:*/
     if (Dice::IsDouble()) {
         for (int j = 0; j < 4; j++) {
-            auto possibleTurns = CalculatePossibleTurns();
+            auto possibleTurns = CalculatePossibleTurns(AI_SHOULD_LOG);
             short flag = 1;
             if (OrderType == PlayerOrderType::SecondPlayer) {
                 for (int i = 6; i < 12; i++) {
@@ -1003,7 +1003,7 @@ void AIPlayer::OnEndTurnEnter()
         }
     }
     else {
-        auto possibleTurns = CalculatePossibleTurns();
+        auto possibleTurns = CalculatePossibleTurns(AI_SHOULD_LOG);
         short flag = 1;
         switch (dices.x) {
         case 6:
@@ -1130,7 +1130,7 @@ void AIPlayer::OnEndTurnEnter()
             }
             break;
         }
-        possibleTurns = CalculatePossibleTurns();
+        possibleTurns = CalculatePossibleTurns(AI_SHOULD_LOG);
         flag = 1;
         switch (dices.y) {
         case 6:

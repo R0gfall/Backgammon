@@ -41,7 +41,7 @@ const std::string LOG_ERROR_PREFIX = "ERROR";
 class Debug
 {
 public:
-	static void Initialize(Window* window, const std::string& outputFilename);
+	static void Initialize(Window* window);
 	static void Destroy();
 
 	//Белое сообщение

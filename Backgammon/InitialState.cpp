@@ -130,12 +130,12 @@ void InitialState::UpdateState()
 	//Second player ai difficulty
 	if (Input::IsKeyDown(Input::Key::D))
 	{
-		_playerDifficulty[0] = AiDifficulty::Easy;
+		_playerDifficulty[1] = AiDifficulty::Easy;
 		UpdateText();
 	}
 	if (Input::IsKeyDown(Input::Key::F))
 	{
-		_playerDifficulty[0] = AiDifficulty::Hard;
+		_playerDifficulty[1] = AiDifficulty::Hard;
 		UpdateText();
 	}
 }

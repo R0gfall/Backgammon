@@ -193,6 +193,7 @@ void Board::MoveCheck(short idFrom, short idTo)
 	//if (GLOBAL_SHOULD_LOG)
 	//{
 		Debug::LogSuccess("Successfully moved check from: " + std::to_string(idFrom) + " to: " + std::to_string(idTo) + " by: " + CELL_STATUS_STRINGS[(char)cellFromStatus]);
+		PrintToConsole();
 	//}
 }
 
@@ -715,6 +716,66 @@ void Board::SetMaxChecksOut(PlayerOrderType orderType)
 		}
 		break;
 	}
+}
+
+void Board::PrintToConsole()
+{
+	std::string outputLine = "\n-------------------------------------------------------------------------------------------------------\n";
+	for (size_t i = 23; i >= 12; i--)
+	{
+		outputLine += std::to_string(i) + "\t";
+	}
+	outputLine += "\n\n";
+	for (size_t i = 23; i >= 12; i--)
+	{
+		Cell* cell = _cells[i];
+		auto checksAmount = cell->GetChecksAmout();
+		auto cellStatus = cell->GetStatus();
+
+		switch (cellStatus)
+		{
+		case CellStatus::FirstPlayer:
+			outputLine += "F" + std::to_string(checksAmount) + "\t";
+			break;
+		case CellStatus::SecondPlayer:
+			outputLine += "S" + std::to_string(checksAmount) + "\t";
+			break;
+		case CellStatus::Free:
+			outputLine += "-\t";
+			break;
+		default:
+			break;
+		}
+	}
+	outputLine += "\n\n";
+	for (size_t i = 0; i < 12; i++)
+	{
+		Cell* cell = _cells[i];
+		auto checksAmount = cell->GetChecksAmout();
+		auto cellStatus = cell->GetStatus();
+
+		switch (cellStatus)
+		{
+		case CellStatus::FirstPlayer:
+			outputLine += "F" + std::to_string(checksAmount) + "\t";
+			break;
+		case CellStatus::SecondPlayer:
+			outputLine += "S" + std::to_string(checksAmount) + "\t";
+			break;
+		case CellStatus::Free:
+			outputLine += "-\t";
+			break;
+		default:
+			break;
+		}
+	}
+	outputLine += "\n\n";
+	for (size_t i = 0; i < 12; i++)
+	{
+		outputLine += std::to_string(i) + "\t";
+	}
+	outputLine += "\n-------------------------------------------------------------------------------------------------------\n";
+	Debug::LogInfo(outputLine);
 }
 
 void Board::SetWinner()

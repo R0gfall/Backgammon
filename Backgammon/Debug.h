@@ -33,6 +33,7 @@ const int DEBUG_TYPE_SIZE = 10;
 
 const std::string LOG_PREFIX = "LOG";
 const std::string LOG_INFO_PREFIX = "INFO";
+const std::string LOG_SUCCESS_PREFIX = "SUCCESS";
 const std::string LOG_WARNING_PREFIX = "WARNING";
 const std::string LOG_ERROR_PREFIX = "ERROR";
 

@@ -12,7 +12,11 @@ public:
 	AIPlayer(PlayerOrderType orderType, AiDifficulty difficulty, IGameStateMachine* stateMachine, Board* board);
 
 	void OnTurnEnter() override;
+
 	void OnEndTurnEnter() override;
+
+
+
 	void OnUpdate() override;
 	void OnEndUpdate() override;
 	void OnTurnExit() override;

@@ -1,4 +1,4 @@
-#include "AIPlayer.h"
+п»ї#include "AIPlayer.h"
 #include <time.h>
 
 struct list_move {
@@ -9,10 +9,10 @@ struct list_move {
 struct list_move* start_list_move = NULL;
 
 void nm_24_16(int(&array)[24]) {
-    //изменения начальной позиции доски
+    //ГЁГ§Г¬ГҐГ­ГҐГ­ГЁГї Г­Г Г·Г Г«ГјГ­Г®Г© ГЇГ®Г§ГЁГ¶ГЁГЁ Г¤Г®Г±ГЄГЁ
     for (int j = 0; j < 16; j++) {
-        array[0] = 15; //1 = черные
-        array[12] = -15; //2 = белые
+        array[0] = 15; //1 = Г·ГҐГ°Г­Г»ГҐ
+        array[12] = -15; //2 = ГЎГҐГ«Г»ГҐ
     }
 
     //for (int j = 0; j < 16; j++) {
@@ -32,8 +32,8 @@ void print_out(int(&array)[24][16]) {
 }
 
 int grade_for_game_1(int(&array)[24]) {
-    //Подсчет шашек ТОЛЬКО для оценки ситуации в игре БЕЗ УЧЕТА КОНЦА ИГРЫ
-    //Пункт 1, подпункт А в отчете
+    //ГЏГ®Г¤Г±Г·ГҐГІ ГёГ ГёГҐГЄ Г’ГЋГ‹ГњГЉГЋ Г¤Г«Гї Г®Г¶ГҐГ­ГЄГЁ Г±ГЁГІГіГ Г¶ГЁГЁ Гў ГЁГЈГ°ГҐ ГЃГ…Г‡ Г“Г—Г…Г’ГЂ ГЉГЋГЌГ–ГЂ Г€ГѓГђГ›
+    //ГЏГіГ­ГЄГІ 1, ГЇГ®Г¤ГЇГіГ­ГЄГІ ГЂ Гў Г®ГІГ·ГҐГІГҐ
 
     int first_player_points = 0, second_player_points = 0;
 
@@ -59,7 +59,7 @@ int grade_for_game_1(int(&array)[24]) {
 
 int grade_for_game_2(int(&array)[24]) {
 
-    //Нужно решить оценку для полей!
+    //ГЌГіГ¦Г­Г® Г°ГҐГёГЁГІГј Г®Г¶ГҐГ­ГЄГі Г¤Г«Гї ГЇГ®Г«ГҐГ©!
 
     // !!! FOR 1 PLAYER:
     //0-5 - *2 point
@@ -113,7 +113,7 @@ int grade_for_game_2(int(&array)[24]) {
 }
 
 void random_dice(int* dice) {
-    //Рандомный бросок кубиков
+    //ГђГ Г­Г¤Г®Г¬Г­Г»Г© ГЎГ°Г®Г±Г®ГЄ ГЄГіГЎГЁГЄГ®Гў
     srand(time(NULL));
     dice[0] = rand() % 5 + 1;
     dice[1] = rand() % 5 + 1;
@@ -368,7 +368,7 @@ double grade_of_position(int(&array)[24], short depht, short enterPlayer) {
                 struct list_move* rollback_start = start_list_move;
                 int quantity_of_array_of_moves = 0;
                 for (int l = 0; l < 8; l += 2) {
-                    //TODO правильный ли if
+                    //TODO ГЇГ°Г ГўГЁГ«ГјГ­Г»Г© Г«ГЁ if
                     //printf("%d \n", start_list_move->array_of_moves[l] >= 0);
                     if (start_list_move->array_of_moves[l] >= 0 && start_list_move->array_of_moves[l] <= 23 && start_list_move->array_of_moves[l] != start_list_move->array_of_moves[l + 1]) {
                         //printf("3123123123 jopassss99999999\n");
@@ -389,17 +389,17 @@ double grade_of_position(int(&array)[24], short depht, short enterPlayer) {
                 rollback_start = start_list_move;
                 //printf("3123123123 jopassss77777777\n");
                 if (enterPlayer == 1 && depht == 1) {
-                    //долго
+                    //РґРѕР»РіРѕ
                     //all_grade += grade_of_position(array_temp, depht + 1, 2);
-                    // быстро
+                    // Р±С‹СЃС‚СЂРѕ
                     all_grade += grade_for_game_1(array_temp) + grade_for_game_2(array_temp);
                     quantity_of_grade++;
                 }
                 else if (enterPlayer == 2 && depht == 1) {
                     //printf("3123123123 jopassss8888888\n");
-                    //долго
+                    //РґРѕР»РіРѕ
                     //all_grade += grade_of_position(array_temp, depht + 1, 1);
-                    // быстро
+                    // Р±С‹СЃС‚СЂРѕ
                     all_grade += grade_for_game_1(array_temp) + grade_for_game_2(array_temp);
                     //printf("%f \n", all_grade);
                     quantity_of_grade++;
@@ -414,24 +414,24 @@ double grade_of_position(int(&array)[24], short depht, short enterPlayer) {
                 }
                 //printf("3123123123 jopa\n");
             }
-            // все норм
-            //сука пиздец нужно сделать чтобы они ходы из разных не брали
+            // ГўГ±ГҐ Г­Г®Г°Г¬
+            //Г±ГіГЄГ  ГЇГЁГ§Г¤ГҐГ¶ Г­ГіГ¦Г­Г® Г±Г¤ГҐГ«Г ГІГј Г·ГІГ®ГЎГ» Г®Г­ГЁ ГµГ®Г¤Г» ГЁГ§ Г°Г Г§Г­Г»Гµ Г­ГҐ ГЎГ°Г Г«ГЁ
         }
     }
     //printf("%f \n", all_grade / (double)quantity_of_grade);
     return all_grade / (double)quantity_of_grade;
 }
 
-int* algoritm(int (&backgrammon)[24], short dice_x, short dice_y, short enterPlayer) {
+int* algoritm(int(&backgrammon)[24], short dice_x, short dice_y, short enterPlayer) {
 
-    //передаваемые параметры: доска boad(backgrammon), dice_x, dice_y, enterPlayer - 1 - белый 2 - черный
+    //ГЇГҐГ°ГҐГ¤Г ГўГ ГҐГ¬Г»ГҐ ГЇГ Г°Г Г¬ГҐГІГ°Г»: Г¤Г®Г±ГЄГ  boad(backgrammon), dice_x, dice_y, enterPlayer - 1 - ГЎГҐГ«Г»Г© 2 - Г·ГҐГ°Г­Г»Г©
     int grade = 0;
     /*int backgrammon[24];
     for (int i = 0; i < 24; i++) {
         backgrammon[i] = 0;
     }*/
 
-    //Добавить enterPlayer
+    //Г„Г®ГЎГ ГўГЁГІГј enterPlayer
     //int enterPlayer = 1;
     /*backgrammon[0] = 9;
     backgrammon[4] = 2;
@@ -444,10 +444,10 @@ int* algoritm(int (&backgrammon)[24], short dice_x, short dice_y, short enterPla
     backgrammon[22] = 0;*/
     //backgrammon[0] = 15;
     //backgrammon[12] = -15;
-    //nm_24_16(backgrammon); // Постановка шашек
+    //nm_24_16(backgrammon); // ГЏГ®Г±ГІГ Г­Г®ГўГЄГ  ГёГ ГёГҐГЄ
 
     //printf("\n%d 1241241414184141089249\n", grade_for_game_2(backgrammon) + grade_for_game_1(backgrammon));
-    //дубликат доски
+    //Г¤ГіГЎГ«ГЁГЄГ ГІ Г¤Г®Г±ГЄГЁ
     int temp_backgrammon[24];
     for (int i = 0; i < 24; i++) {
         temp_backgrammon[i] = 0;
@@ -456,14 +456,18 @@ int* algoritm(int (&backgrammon)[24], short dice_x, short dice_y, short enterPla
         temp_backgrammon[i] = backgrammon[i];
     }
 
-    short dice[2] = { dice_x, dice_y }; // Числа с броска кубика	
+    short dice[2] = { dice_x, dice_y }; // Р§РёСЃР»Р° СЃ Р±СЂРѕСЃРєР° РєСѓР±РёРєР°	
     int moves_and_grade[1000][8];
     for (int i = 0; i < 1000; i++) {
+    short dice[2] = { dice_x, dice_y }; // Г—ГЁГ±Г«Г  Г± ГЎГ°Г®Г±ГЄГ  ГЄГіГЎГЁГЄГ 	
+    int moves_and_grade[3000][8];
+    for (int i = 0; i < 3000; i++) {
         for (int j = 0; j < 8; j++) {
             moves_and_grade[i][j] = -1;
         }
     }
     double grade_of_moves[1000];
+    double grade_of_moves[3000];
     int quantity_moves, quantity_grades = 0;
     quantity_moves = get_all_possible_moves(backgrammon, dice[0], dice[1], enterPlayer);
     printf("%d do it \n", quantity_moves);
@@ -513,7 +517,7 @@ int* algoritm(int (&backgrammon)[24], short dice_x, short dice_y, short enterPla
     /*for (int i = 0; i < 8; i++) {
         best_move[i] = -1;
     }*/
-    //Вывод всех ходов
+    //Г‚Г»ГўГ®Г¤ ГўГ±ГҐГµ ГµГ®Г¤Г®Гў
     for (int i = 0; i < quantity_grades; i++) {
         printf("Grade: %f \n", grade_of_moves[i]);
         j = 0;
@@ -576,7 +580,7 @@ int* algoritm(int (&backgrammon)[24], short dice_x, short dice_y, short enterPla
 
     return best_move;
 
-    //grade_for_game_1(backgrammon); // Оценка текущей ситуации
+    //grade_for_game_1(backgrammon); // ГЋГ¶ГҐГ­ГЄГ  ГІГҐГЄГіГ№ГҐГ© Г±ГЁГІГіГ Г¶ГЁГЁ
 
     //grade = grade_for_game_2(backgrammon) + grade_for_game_1(backgrammon);
     //printf("%d\n", grade);
@@ -699,7 +703,7 @@ void AIPlayer::OnTurnEnter()
                     printf("First\n");
                     printf("From id: %d to id: %d \n", q_b_23[q_b - 2], q_b_23[q_b - 1]);
                     GameBoard->MoveCheck(q_b_23[q_b - 2], q_b_23[q_b - 1]);
-                    //Было
+                    //ГЃГ»Г«Г®
                     //printf("From id: %d to id: %d \n", q_b_23[0], q_b_23[1]);
                     //GameBoard->MoveCheck(q_b_23[0], q_b_23[1]);
                 }
@@ -710,10 +714,10 @@ void AIPlayer::OnTurnEnter()
                 }*/
                 else if (q_a != 0 && q_b != 0) {
                     printf("Second\n");
-                    //Было
+                    //ГЃГ»Г«Г®
                     //printf("From id: %d to id: %d \n", q_a_23[0], q_a_23[1]);
                     //GameBoard->MoveCheck(q_a_23[0], q_a_23[1]);
-                    //Может быть
+                    //ГЊГ®Г¦ГҐГІ ГЎГ»ГІГј
                     printf("From id: %d to id: %d \n", q_b_23[0], q_b_23[1]);
                     GameBoard->MoveCheck(q_b_23[0], q_b_23[1]);
                 }
@@ -749,10 +753,10 @@ void AIPlayer::OnTurnEnter()
                     GameBoard->MoveCheck(rand_cell, right_cell);
                 }
             }
-            //TODO количество до 23 и количество после 23 и принадлежит ли клетка шашке
+            //TODO ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г¤Г® 23 ГЁ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГЇГ®Г±Г«ГҐ 23 ГЁ ГЇГ°ГЁГ­Г Г¤Г«ГҐГ¦ГЁГІ Г«ГЁ ГЄГ«ГҐГІГЄГ  ГёГ ГёГЄГҐ
         }
         else {
-            //TODO при сходе с башни лучше ходить на не занятую клетку
+            //TODO ГЇГ°ГЁ Г±ГµГ®Г¤ГҐ Г± ГЎГ ГёГ­ГЁ Г«ГіГ·ГёГҐ ГµГ®Г¤ГЁГІГј Г­Г  Г­ГҐ Г§Г Г­ГїГІГіГѕ ГЄГ«ГҐГІГЄГі
             int k = 0;
             auto possibleTurns = CalculatePossibleTurns();
             auto itr = possibleTurns.find(12);
@@ -809,7 +813,7 @@ void AIPlayer::OnTurnEnter()
                     printf("First\n");
                     printf("From id: %d to id: %d \n", q_b_23[q_b - 2], q_b_23[q_b - 1]);
                     GameBoard->MoveCheck(q_b_23[q_b - 2], q_b_23[q_b - 1]);
-                    //Было
+                    //ГЃГ»Г«Г®
                     //printf("From id: %d to id: %d \n", q_b_23[0], q_b_23[1]);
                     //GameBoard->MoveCheck(q_b_23[0], q_b_23[1]);
                 }
@@ -820,10 +824,10 @@ void AIPlayer::OnTurnEnter()
                 }*/
                 else if (q_a != 0 && q_b != 0) {
                     printf("Second\n");
-                    //Было
+                    //ГЃГ»Г«Г®
                     //printf("From id: %d to id: %d \n", q_a_23[0], q_a_23[1]);
                     //GameBoard->MoveCheck(q_a_23[0], q_a_23[1]);
-                    //Может быть
+                    //ГЊГ®Г¦ГҐГІ ГЎГ»ГІГј
                     printf("From id: %d to id: %d \n", q_b_23[0], q_b_23[1]);
                     GameBoard->MoveCheck(q_b_23[0], q_b_23[1]);
                 }
@@ -863,7 +867,7 @@ void AIPlayer::OnTurnEnter()
         NextTurn();
         return;
     }
-    //// получить все возможные ходы
+    //// ГЇГ®Г«ГіГ·ГЁГІГј ГўГ±ГҐ ГўГ®Г§Г¬Г®Г¦Г­Г»ГҐ ГµГ®Г¤Г»
     //// auto possibleTurns = GameBoard->GetAllPossibleTurns(OrderType);
     //auto possibleTurns = CalculatePossibleTurns();
 
@@ -879,14 +883,14 @@ void AIPlayer::OnTurnEnter()
     //        element;
     //    }
     //}
-    //// получить клетку по айди
+    //// ГЇГ®Г«ГіГ·ГЁГІГј ГЄГ«ГҐГІГЄГі ГЇГ® Г Г©Г¤ГЁ
     //auto cell = GameBoard->GetCellById(0);
-    //// свободная клетка или нет
+    //// Г±ГўГ®ГЎГ®Г¤Г­Г Гї ГЄГ«ГҐГІГЄГ  ГЁГ«ГЁ Г­ГҐГІ
     //cell->IsFree();
     ////CellStatus;
-    //// передвинуть пешку с клетки на клетку
+    //// ГЇГҐГ°ГҐГ¤ГўГЁГ­ГіГІГј ГЇГҐГёГЄГі Г± ГЄГ«ГҐГІГЄГЁ Г­Г  ГЄГ«ГҐГІГЄГі
     //GameBoard->MoveCheck(0, 1);
-    //// передать ход аппоненту
+    //// ГЇГҐГ°ГҐГ¤Г ГІГј ГµГ®Г¤ Г ГЇГЇГ®Г­ГҐГ­ГІГі
     //NextTurn();
 }
 
@@ -917,59 +921,25 @@ void AIPlayer::OnEndTurnEnter()
         while (move[j] != -1 && j < 8) {
             GameBoard->MoveCheck(move[j], move[j + 1]);
             j += 2;
-        }     
+        }
         NextTurn();
         return;
 
     default:*/
-        if (Dice::IsDouble()) {
-            for (int j = 0; j < 4; j++) {
-                auto possibleTurns = CalculatePossibleTurns();
-                short flag = 1;
-                if (OrderType == PlayerOrderType::SecondPlayer) {
-                    for (int i = 6; i < 12; i++) {
-                        if (possibleTurns.find(i) != possibleTurns.end()) {
-                            printf("From id: %d to id: %d\n", i, i + dices.x);
-                            GameBoard->MoveCheck(i, i + dices.x);
-                            flag = 0;
-                            break;
-                        }
-                    }
-                    if (flag == 1) {
-                        for (int i = 12 - dices.x; i < 12; i++) {
-                            if (GameBoard->TryRemoveCheck(i)) {
-                                printf("Removed check from cell id: %d\n", i);
-                                break;
-                            }
-                        }
-                    }
-                }
-                else {
-                    for (int i = 18; i < 24; i++) {
-                        if (possibleTurns.find(i) != possibleTurns.end()) {
-                            printf("From id: %d to id: %d\n", i, i + dices.x);
-                            GameBoard->MoveCheck(i, i + dices.x);
-                            flag = 0;
-                            break;
-                        }
-                    }
-                    if (flag == 1) {
-                        for (int i = 24 - dices.x; i < 24; i++) {
-                            if (GameBoard->TryRemoveCheck(i)) {
-                                printf("Removed check from cell id: %d\n", i);
-                                break;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        else {
+    if (Dice::IsDouble()) {
+        for (int j = 0; j < 4; j++) {
             auto possibleTurns = CalculatePossibleTurns();
             short flag = 1;
-            switch (dices.x) {
-            case 6:
-                if (OrderType == PlayerOrderType::SecondPlayer) {
+            if (OrderType == PlayerOrderType::SecondPlayer) {
+                for (int i = 6; i < 12; i++) {
+                    if (possibleTurns.find(i) != possibleTurns.end()) {
+                        printf("From id: %d to id: %d\n", i, i + dices.x);
+                        GameBoard->MoveCheck(i, i + dices.x);
+                        flag = 0;
+                        break;
+                    }
+                }
+                if (flag == 1) {
                     for (int i = 12 - dices.x; i < 12; i++) {
                         if (GameBoard->TryRemoveCheck(i)) {
                             printf("Removed check from cell id: %d\n", i);
@@ -977,7 +947,17 @@ void AIPlayer::OnEndTurnEnter()
                         }
                     }
                 }
-                else {
+            }
+            else {
+                for (int i = 18; i < 24; i++) {
+                    if (possibleTurns.find(i) != possibleTurns.end()) {
+                        printf("From id: %d to id: %d\n", i, i + dices.x);
+                        GameBoard->MoveCheck(i, i + dices.x);
+                        flag = 0;
+                        break;
+                    }
+                }
+                if (flag == 1) {
                     for (int i = 24 - dices.x; i < 24; i++) {
                         if (GameBoard->TryRemoveCheck(i)) {
                             printf("Removed check from cell id: %d\n", i);
@@ -985,10 +965,85 @@ void AIPlayer::OnEndTurnEnter()
                         }
                     }
                 }
-                break;
-            case 5:
-            case 4:
-                if (OrderType == PlayerOrderType::SecondPlayer) {
+            }
+        }
+    }
+    else {
+        auto possibleTurns = CalculatePossibleTurns();
+        short flag = 1;
+        switch (dices.x) {
+        case 6:
+            if (OrderType == PlayerOrderType::SecondPlayer) {
+                for (int i = 12 - dices.x; i < 12; i++) {
+                    if (GameBoard->TryRemoveCheck(i)) {
+                        printf("Removed check from cell id: %d\n", i);
+                        break;
+                    }
+                }
+            }
+            else {
+                for (int i = 24 - dices.x; i < 24; i++) {
+                    if (GameBoard->TryRemoveCheck(i)) {
+                        printf("Removed check from cell id: %d\n", i);
+                        break;
+                    }
+                }
+            }
+            break;
+        case 5:
+        case 4:
+            if (OrderType == PlayerOrderType::SecondPlayer) {
+                for (int i = 6; i < 12; i++) {
+                    auto itr = possibleTurns.find(i);
+                    if (itr != possibleTurns.end()) {
+                        auto value = (itr)->second;
+                        if (value.front() == i + dices.x || value.back() == i + dices.x) {
+                            printf("From id: %d to id: %d\n", i, i + dices.x);
+                            GameBoard->MoveCheck(i, i + dices.x);
+                            flag = 0;
+                            break;
+                        }
+                    }
+                }
+                if (flag == 1) {
+                    for (int i = 12 - dices.x; i < 12; i++) {
+                        if (GameBoard->TryRemoveCheck(i)) {
+                            printf("Removed check from cell id: %d\n", i);
+                            break;
+                        }
+                    }
+                }
+            }
+            else {
+                for (int i = 18; i < 24; i++) {
+                    auto itr = possibleTurns.find(i);
+                    if (itr != possibleTurns.end()) {
+                        auto value = (itr)->second;
+                        if (value.front() == i + dices.x || value.back() == i + dices.x) {
+                            printf("From id: %d to id: %d\n", i, i + dices.x);
+                            GameBoard->MoveCheck(i, i + dices.x);
+                            flag = 0;
+                            break;
+                        }
+                    }
+                }
+                if (flag == 1) {
+                    for (int i = 24 - dices.x; i < 24; i++) {
+                        if (GameBoard->TryRemoveCheck(i)) {
+                            printf("Removed check from cell id: %d\n", i);
+                            break;
+                        }
+                    }
+                }
+            }
+            break;
+        default:
+            if (OrderType == PlayerOrderType::SecondPlayer) {
+                if (GameBoard->TryRemoveCheck(12 - dices.x)) {
+                    printf("Removed check from cell id: %d\n", 12 - dices.x);
+                    break;
+                }
+                else {
                     for (int i = 6; i < 12; i++) {
                         auto itr = possibleTurns.find(i);
                         if (itr != possibleTurns.end()) {
@@ -1009,6 +1064,12 @@ void AIPlayer::OnEndTurnEnter()
                             }
                         }
                     }
+                }
+            }
+            else {
+                if (GameBoard->TryRemoveCheck(24 - dices.x)) {
+                    printf("Removed check from cell id: %d\n", 24 - dices.x);
+                    break;
                 }
                 else {
                     for (int i = 18; i < 24; i++) {
@@ -1032,71 +1093,42 @@ void AIPlayer::OnEndTurnEnter()
                         }
                     }
                 }
-                break;
-            default:
-                if (OrderType == PlayerOrderType::SecondPlayer) {
-                    if (GameBoard->TryRemoveCheck(12 - dices.x)) {
-                        printf("Removed check from cell id: %d\n", 12 - dices.x);
-                        break;
-                    }
-                    else {
-                        for (int i = 6; i < 12; i++) {
-                            auto itr = possibleTurns.find(i);
-                            if (itr != possibleTurns.end()) {
-                                auto value = (itr)->second;
-                                if (value.front() == i + dices.x || value.back() == i + dices.x) {
-                                    printf("From id: %d to id: %d\n", i, i + dices.x);
-                                    GameBoard->MoveCheck(i, i + dices.x);
-                                    flag = 0;
-                                    break;
-                                }
-                            }
-                        }
-                        if (flag == 1) {
-                            for (int i = 12 - dices.x; i < 12; i++) {
-                                if (GameBoard->TryRemoveCheck(i)) {
-                                    printf("Removed check from cell id: %d\n", i);
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-                else {
-                    if (GameBoard->TryRemoveCheck(24 - dices.x)) {
-                        printf("Removed check from cell id: %d\n", 24 - dices.x);
-                        break;
-                    }
-                    else {
-                        for (int i = 18; i < 24; i++) {
-                            auto itr = possibleTurns.find(i);
-                            if (itr != possibleTurns.end()) {
-                                auto value = (itr)->second;
-                                if (value.front() == i + dices.x || value.back() == i + dices.x) {
-                                    printf("From id: %d to id: %d\n", i, i + dices.x);
-                                    GameBoard->MoveCheck(i, i + dices.x);
-                                    flag = 0;
-                                    break;
-                                }
-                            }
-                        }
-                        if (flag == 1) {
-                            for (int i = 24 - dices.x; i < 24; i++) {
-                                if (GameBoard->TryRemoveCheck(i)) {
-                                    printf("Removed check from cell id: %d\n", i);
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-                break;
             }
-            possibleTurns = CalculatePossibleTurns();
-            flag = 1;
-            switch (dices.y) {
-            case 6:
-                if (OrderType == PlayerOrderType::SecondPlayer) {
+            break;
+        }
+        possibleTurns = CalculatePossibleTurns();
+        flag = 1;
+        switch (dices.y) {
+        case 6:
+            if (OrderType == PlayerOrderType::SecondPlayer) {
+                for (int i = 12 - dices.y; i < 12; i++) {
+                    if (GameBoard->TryRemoveCheck(i)) {
+                        printf("Removed check from cell id: %d\n", i);
+                        break;
+                    }
+                }
+            }
+            else {
+                for (int i = 24 - dices.y; i < 24; i++) {
+                    if (GameBoard->TryRemoveCheck(i)) {
+                        printf("Removed check from cell id: %d\n", i);
+                        break;
+                    }
+                }
+            }
+            break;
+        case 5:
+        case 4:
+            if (OrderType == PlayerOrderType::SecondPlayer) {
+                for (int i = 6; i < 12; i++) {
+                    if (possibleTurns.find(i) != possibleTurns.end()) {
+                        printf("From id: %d to id: %d\n", i, i + dices.y);
+                        GameBoard->MoveCheck(i, i + dices.y);
+                        flag = 0;
+                        break;
+                    }
+                }
+                if (flag == 1) {
                     for (int i = 12 - dices.y; i < 12; i++) {
                         if (GameBoard->TryRemoveCheck(i)) {
                             printf("Removed check from cell id: %d\n", i);
@@ -1104,7 +1136,17 @@ void AIPlayer::OnEndTurnEnter()
                         }
                     }
                 }
-                else {
+            }
+            else {
+                for (int i = 18; i < 24; i++) {
+                    if (possibleTurns.find(i) != possibleTurns.end()) {
+                        printf("From id: %d to id: %d\n", i, i + dices.y);
+                        GameBoard->MoveCheck(i, i + dices.y);
+                        flag = 0;
+                        break;
+                    }
+                }
+                if (flag == 1) {
                     for (int i = 24 - dices.y; i < 24; i++) {
                         if (GameBoard->TryRemoveCheck(i)) {
                             printf("Removed check from cell id: %d\n", i);
@@ -1112,10 +1154,15 @@ void AIPlayer::OnEndTurnEnter()
                         }
                     }
                 }
-                break;
-            case 5:
-            case 4:
-                if (OrderType == PlayerOrderType::SecondPlayer) {
+            }
+            break;
+        default:
+            if (OrderType == PlayerOrderType::SecondPlayer) {
+                if (GameBoard->TryRemoveCheck(12 - dices.y)) {
+                    printf("Removed check from cell id: %d\n", 12 - dices.y);
+                    break;
+                }
+                else {
                     for (int i = 6; i < 12; i++) {
                         if (possibleTurns.find(i) != possibleTurns.end()) {
                             printf("From id: %d to id: %d\n", i, i + dices.y);
@@ -1132,6 +1179,12 @@ void AIPlayer::OnEndTurnEnter()
                             }
                         }
                     }
+                }
+            }
+            else {
+                if (GameBoard->TryRemoveCheck(24 - dices.y)) {
+                    printf("Removed check from cell id: %d\n", 24 - dices.y);
+                    break;
                 }
                 else {
                     for (int i = 18; i < 24; i++) {
@@ -1151,62 +1204,13 @@ void AIPlayer::OnEndTurnEnter()
                         }
                     }
                 }
-                break;
-            default:
-                if (OrderType == PlayerOrderType::SecondPlayer) {
-                    if (GameBoard->TryRemoveCheck(12 - dices.y)) {
-                        printf("Removed check from cell id: %d\n", 12 - dices.y);
-                        break;
-                    }
-                    else {
-                        for (int i = 6; i < 12; i++) {
-                            if (possibleTurns.find(i) != possibleTurns.end()) {
-                                printf("From id: %d to id: %d\n", i, i + dices.y);
-                                GameBoard->MoveCheck(i, i + dices.y);
-                                flag = 0;
-                                break;
-                            }
-                        }
-                        if (flag == 1) {
-                            for (int i = 12 - dices.y; i < 12; i++) {
-                                if (GameBoard->TryRemoveCheck(i)) {
-                                    printf("Removed check from cell id: %d\n", i);
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-                else {
-                    if (GameBoard->TryRemoveCheck(24 - dices.y)) {
-                        printf("Removed check from cell id: %d\n", 24 - dices.y);
-                        break;
-                    }
-                    else {
-                        for (int i = 18; i < 24; i++) {
-                            if (possibleTurns.find(i) != possibleTurns.end()) {
-                                printf("From id: %d to id: %d\n", i, i + dices.y);
-                                GameBoard->MoveCheck(i, i + dices.y);
-                                flag = 0;
-                                break;
-                            }
-                        }
-                        if (flag == 1) {
-                            for (int i = 24 - dices.y; i < 24; i++) {
-                                if (GameBoard->TryRemoveCheck(i)) {
-                                    printf("Removed check from cell id: %d\n", i);
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-                break;
             }
-
+            break;
         }
-        NextTurn();
-        return;
+
+    }
+    NextTurn();
+    return;
 
     //}
 

@@ -192,7 +192,7 @@ void Board::MoveCheck(short idFrom, short idTo)
 
 	//if (GLOBAL_SHOULD_LOG)
 	//{
-		Debug::Log("Successfully moved check from: " + std::to_string(idFrom) + " to: " + std::to_string(idTo) + " by: " + CELL_STATUS_STRINGS[(char)cellFromStatus]);
+		Debug::LogSuccess("Successfully moved check from: " + std::to_string(idFrom) + " to: " + std::to_string(idTo) + " by: " + CELL_STATUS_STRINGS[(char)cellFromStatus]);
 	//}
 }
 

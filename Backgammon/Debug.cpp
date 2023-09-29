@@ -38,6 +38,16 @@ void Debug::LogInfo(const std::string& message, const std::string& from)
 	DisplayLog(LOG_INFO_PREFIX, message, from, ConsoleColor::CYAN);
 }
 
+void Debug::LogSuccess(const std::string& message)
+{
+	DisplayLog(LOG_INFO_PREFIX, message, ConsoleColor::GREEN);
+}
+
+void Debug::LogSuccess(const std::string& message, const std::string& from)
+{
+	DisplayLog(LOG_INFO_PREFIX, message, from, ConsoleColor::GREEN);
+}
+
 void Debug::LogWarning(const std::string& message)
 {
 	DisplayLog(LOG_WARNING_PREFIX, message, ConsoleColor::YELLOW);

@@ -49,6 +49,9 @@ public:
 	//Голубое сообщение
 	static void LogInfo(const std::string& message);
 	static void LogInfo(const std::string& message, const std::string& from);
+	//Зеленое сообщение
+	static void LogSuccess(const std::string& message);
+	static void LogSuccess(const std::string& message, const std::string& from);
 	//Желтое сообщение
 	static void LogWarning(const std::string& message);
 	static void LogWarning(const std::string& message, const std::string& from);

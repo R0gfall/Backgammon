@@ -23,8 +23,8 @@
 #define GLOBAL_SHOULD_LOG false
 #define HUMAN_SHOULD_LOG false
 
-const int FIRST_PLAYER_INIT_CELL = 17;
-const int SECOND_PLAYER_INIT_CELL = 5;
+const int FIRST_PLAYER_INIT_CELL = 0;
+const int SECOND_PLAYER_INIT_CELL = 12;
 
 
 

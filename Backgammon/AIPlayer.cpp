@@ -389,12 +389,18 @@ double grade_of_position(int(&array)[24], short depht, short enterPlayer) {
                 rollback_start = start_list_move;
                 //printf("3123123123 jopassss77777777\n");
                 if (enterPlayer == 1 && depht == 1) {
-                    all_grade += grade_of_position(array_temp, depht + 1, 2);
+                    //долго
+                    //all_grade += grade_of_position(array_temp, depht + 1, 2);
+                    // быстро
+                    all_grade += grade_for_game_1(array_temp) + grade_for_game_2(array_temp);
                     quantity_of_grade++;
                 }
                 else if (enterPlayer == 2 && depht == 1) {
                     //printf("3123123123 jopassss8888888\n");
-                    all_grade += grade_of_position(array_temp, depht + 1, 1);
+                    //долго
+                    //all_grade += grade_of_position(array_temp, depht + 1, 1);
+                    // быстро
+                    all_grade += grade_for_game_1(array_temp) + grade_for_game_2(array_temp);
                     //printf("%f \n", all_grade);
                     quantity_of_grade++;
                 }
@@ -451,13 +457,13 @@ int* algoritm(int (&backgrammon)[24], short dice_x, short dice_y, short enterPla
     }
 
     short dice[2] = { dice_x, dice_y }; // Числа с броска кубика	
-    int moves_and_grade[100][8];
-    for (int i = 0; i < 100; i++) {
+    int moves_and_grade[1000][8];
+    for (int i = 0; i < 1000; i++) {
         for (int j = 0; j < 8; j++) {
             moves_and_grade[i][j] = -1;
         }
     }
-    double grade_of_moves[100];
+    double grade_of_moves[1000];
     int quantity_moves, quantity_grades = 0;
     quantity_moves = get_all_possible_moves(backgrammon, dice[0], dice[1], enterPlayer);
     printf("%d do it \n", quantity_moves);

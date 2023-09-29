@@ -1,4 +1,4 @@
-#include "HumanPlayer.h"
+ï»¿#include "HumanPlayer.h"
 
 HumanPlayer::HumanPlayer(PlayerOrderType orderType, IGameStateMachine* stateMachine, Board* board) : IPlayer(orderType, stateMachine, board)
 {
@@ -15,9 +15,8 @@ HumanPlayer::HumanPlayer(PlayerOrderType orderType, IGameStateMachine* stateMach
 }
 
 void HumanPlayer::OnTurnEnter()
-{	
-	//printf("%d \n", OrderType);
-	if (!IsAnyTurnsPossible(SHOULD_LOG))
+{
+	if (!IsAnyTurnsPossible(HUMAN_SHOULD_LOG))
 	{
 		NextTurn();
 	}
@@ -133,7 +132,7 @@ void HumanPlayer::MoveCheck(short fromId, short toId)
 	{
 		NextTurn();
 		return;
-	}	
+	}
 
 	if (!IsAnyTurnsPossible(HUMAN_SHOULD_LOG))
 	{
@@ -155,7 +154,7 @@ void HumanPlayer::RemoveCheck()
 
 	if (GameBoard->TryRemoveCheck(_chosenCell->GetId(), HUMAN_SHOULD_LOG))
 	{
-		// äîáàâëåíî
+		// Ã¤Ã®Ã¡Ã Ã¢Ã«Ã¥Ã­Ã®
 		_performedTurns++;
 		if (_performedTurns >= Dice::GetPossibleTurnsAmount())
 		{

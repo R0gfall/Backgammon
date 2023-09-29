@@ -15,7 +15,7 @@ InitialState::InitialState(Board* board, IGameStateMachine* stateMachine) : Game
 
 	_font.loadFromFile(FONT_PATH);
 
-	//Установка шрифта
+	//????????? ??????
 	_startGameText.setFont(_font);
 
 	_firstPlayerText.setFont(_font);
@@ -28,7 +28,7 @@ InitialState::InitialState(Board* board, IGameStateMachine* stateMachine) : Game
 	_secondPlayerDifficulty.setFont(_font);
 	_secondPlayerDifficultyHint.setFont(_font);
 
-	//Размер шрифта
+	//?????? ??????
 	_startGameText.setCharacterSize(40);
 
 	_firstPlayerText.setCharacterSize(20);
@@ -41,7 +41,7 @@ InitialState::InitialState(Board* board, IGameStateMachine* stateMachine) : Game
 	_secondPlayerDifficulty.setCharacterSize(20);
 	_secondPlayerDifficultyHint.setCharacterSize(20);
 
-	//Позиция текста
+	//??????? ??????
 	_startGameTextPosition = sf::Vector2f(400.f, 600.f);
 
 	_firstPlayerTextPosition = sf::Vector2f(200.f + 80.f, 200.f);
@@ -54,7 +54,7 @@ InitialState::InitialState(Board* board, IGameStateMachine* stateMachine) : Game
 	_secondPlayerDifficultyPosition = sf::Vector2f(800.f + 50.f, 200.f + 100.f + 80.f);
 	_secondPlayerDifficultyHintPosition = sf::Vector2f(800.f, 200.f + 100.f + 80.f + 50.f);
 
-	//Установка позиции текста
+	//????????? ??????? ??????
 	_startGameText.setPosition(_startGameTextPosition);
 
 	_firstPlayerText.setPosition(_firstPlayerTextPosition);
@@ -67,7 +67,7 @@ InitialState::InitialState(Board* board, IGameStateMachine* stateMachine) : Game
 	_secondPlayerDifficulty.setPosition(_secondPlayerDifficultyPosition);
 	_secondPlayerDifficultyHint.setPosition(_secondPlayerDifficultyHintPosition);
 
-	//Установка текста
+	//????????? ??????
 	_startGameText.setString("Press Space to StartGame");
 	_firstPlayerHint.setString("Press to choose First Player\n\t\tQ - Human \tW - AI");
 	_firstPlayerDifficultyHint.setString("\tPress to choose Difficulty\n\t\tE - EASY \tR - HARD");
@@ -91,7 +91,7 @@ void InitialState::UpdateState()
 	{
 		StartGame();
 	}
-	
+
 	//First player status
 	if (Input::IsKeyDown(Input::Key::Q))
 	{

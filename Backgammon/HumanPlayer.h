@@ -1,75 +1,318 @@
-#pragma once
+#include "HumanPlayer.h"
 
-#include "IPlayer.h"
-
-#include "Debug.h"
-
-#include "Input.h"
-#include "Mouse.h"
-
-#include "Dice.h"
-
-const std::string CHOSEN_CELL_PLACEHOLDER = "Chosen cell: ";
-const std::string NOT_CHOSEN_CELL_PLACEHOLDER = "No cell chosen";
-
-//Конкретный класс игрока
-class HumanPlayer : public IPlayer
+HumanPlayer::HumanPlayer(PlayerOrderType orderType, IGameStateMachine* stateMachine, Board* board) : IPlayer(orderType, stateMachine, board)
 {
-public:
-	//Конструктор
-	HumanPlayer(PlayerOrderType orderType, IGameStateMachine* stateMachine, Board* board);
+	Debug::LogInfo("Human player was created");
+
+	_font.loadFromFile(FONT_PATH);
+
+	_chosenCellText.setFont(_font);
+	_chosenCellText.setCharacterSize(20);
+	_chosenCellText.setFillColor(sf::Color::Black);
+	UpdateChosenCellText();
+
+	_chosenCellText.setPosition(sf::Vector2f(1200.f, 100.f));
+}
+
+void HumanPlayer::OnTurnEnter()
+{
+	//printf("%d \n", OrderType);
+	if (!IsAnyTurnsPossible(HUMAN_SHOULD_LOG))
+	{
+		NextTurn();
+	}
+}
+
+void HumanPlayer::OnEndTurnEnter()
+{
+}
+
+void HumanPlayer::OnUpdate()
+{
+	HandleInput();
+
+	//Test nend game
+	if (Input::IsKeyDown(Input::Key::E))
+	{
+		DebugSetEndStage(true);
+	}
+}
+
+void HumanPlayer::OnEndUpdate()
+{
+	HandleInput();
+
+	//Test nend game
+	if (Input::IsKeyDown(Input::Key::E))
+	{
+		DebugSetEndStage(false);
+	}
+
+	//Test nend game
+	if (Input::IsKeyDown(Input::Key::C))
+	{
+		RemoveCheck();
+	}
+}
+
+void HumanPlayer::OnTurnExit()
+{
+	CancelCellChoise();
+
+	_firstPossibleCellId = -1;
+	_secondPossibleCellId = -1;
+
+	_lastPerformedTurn = -1;
+
+	_performedTurns = 0;
+}
+
+void HumanPlayer::Draw(Window* window)
+{
+	UpdateChosenCellText();
+	window->Draw(_chosenCellText);
+
+	IPlayer::Draw(window);
+}
+
+void HumanPlayer::HandleMouseClick()
+{
+	auto targetCell = GameBoard->GetCellByPosition(Mouse::GetRelativePosition());
+	if (targetCell == nullptr)
+	{
+		CancelCellChoise();
+		return;
+	}
+
+	if (!IsCellChosen())
+	{
+		if (targetCell->IsFree())
+		{
+			if (HUMAN_SHOULD_LOG)
+			{
+				Debug::LogWarning("Cannot chose free cell");
+			}
+			return;
+		}
+		ChooseCell(targetCell);
+
+	}
+	else
+	{
+		HandleCheckMove(targetCell);
+	}
+
+}
+
+void HumanPlayer::HandleCheckMove(Cell* targetCell)
+{
+	GameBoard->HideHints();
+	auto taregetCellId = targetCell->GetId();
+
+	if (GameBoard->IsMoveCheckPossible(_chosenCell->GetId(), targetCell->GetId()))
+	{
+		MoveCheck(_chosenCell->GetId(), targetCell->GetId());
+		CancelCellChoise();
+		return;
+	}
+	CancelCellChoise();
+	Debug::LogWarning("Cannot move check. Impossible variant was chosen");
+
+}
+
+void HumanPlayer::MoveCheck(short fromId, short toId)
+{
+	short deltaId = Board::CalculateDeltaId(fromId, toId);
+
+	if (!Dice::IsDouble())
+		_lastPerformedTurn = deltaId;
+
+	GameBoard->MoveCheck(fromId, toId);
+	++_performedTurns;
+	if (_performedTurns >= Dice::GetPossibleTurnsAmount())
+	{
+		NextTurn();
+		return;
+	}
+
+	if (!IsAnyTurnsPossible(HUMAN_SHOULD_LOG))
+	{
+		NextTurn();
+		return;
+	}
+}
+
+void HumanPlayer::RemoveCheck()
+{
+	if (_chosenCell == nullptr)
+	{
+		if (HUMAN_SHOULD_LOG)
+		{
+			Debug::LogError("Cannot remove check. No check chosen");
+		}
+		return;
+	}
+
+	if (GameBoard->TryRemoveCheck(_chosenCell->GetId(), HUMAN_SHOULD_LOG))
+	{
+		// ?????????
+		_performedTurns++;
+		if (_performedTurns >= Dice::GetPossibleTurnsAmount())
+		{
+			NextTurn();
+			return;
+		}
+	}
+
+	if (GameBoard->IsGameEnded())
+	{
+		NextTurn();
+		return;
+	}
+}
 
 
-	void OnTurnEnter() override;	
-	void OnEndTurnEnter() override;
-	void OnUpdate() override;
-	void OnEndUpdate() override;
-	void OnTurnExit() override;
+void HumanPlayer::ChooseCell(Cell* cell)
+{
+	if (!IsCellCanBeChosen(cell))
+		return;
 
-	void Draw(Window* window) override;
+	_chosenCell = cell;
 
-private:
-	//Метод обработки клика мыши
-	void HandleMouseClick();
+	if (HUMAN_SHOULD_LOG)
+	{
+		Debug::Log("Chosen cell is: " + std::to_string(_chosenCell->GetId()));
+	}
+	ShowPossibleTurns();
+}
 
-	//Метод обработки перемещения шашки на указанную клетку
-	void HandleCheckMove(Cell* targetCell);
-	//Метод перемещения шашки 
-	void MoveCheck(short fromId, short toId);
+void HumanPlayer::CancelCellChoise()
+{
+	if (HUMAN_SHOULD_LOG)
+	{
+		Debug::Log("Choise cancelled");
+	}
+	_chosenCell = nullptr;
+	GameBoard->HideHints();
+}
 
-	//Метод сброса шашки с доски (в финальной стадии игры, когда все шашки в доме)
-	void RemoveCheck();
+bool HumanPlayer::IsCellCanBeChosen(Cell* cell)
+{
+	if (cell == nullptr)
+	{
+		if (HUMAN_SHOULD_LOG)
+		{
+			Debug::LogWarning("Cannot choose cell. Incorrect pointer given");
+		}
+		return false;
+	}
 
-	//Метод выбора клетки
-	void ChooseCell(Cell* cell);
-	//Метод отмены выбора клетки
-	void CancelCellChoise();
-	//Проверка, может ли клетка быть выбрана
-	bool IsCellCanBeChosen(Cell* cell);
+	auto cellStatus = cell->GetStatus();
+	if (cellStatus == CellStatus::FirstPlayer && OrderType == PlayerOrderType::SecondPlayer)
+	{
+		if (HUMAN_SHOULD_LOG)
+		{
+			Debug::LogWarning("Cannot choose cell with id: " + std::to_string(cell->GetId()) + "\nDifferent types of cell and player order");
+		}
+		return false;
+	}
+	if (cellStatus == CellStatus::SecondPlayer && OrderType == PlayerOrderType::FirstPlayer)
+	{
+		if (HUMAN_SHOULD_LOG)
+		{
+			Debug::LogWarning("Cannot choose cell with id: " + std::to_string(cell->GetId()) + "\nDifferent types of cell and player order");
+		}
+		return false;
+	}
 
-	//Метод для отображения шашек-подсказок
-	void ShowPossibleTurns();
+	return true;
+}
 
-	//Проверка, выбрана ли клетка
-	bool IsCellChosen() { return _chosenCell != nullptr; }
+void HumanPlayer::ShowPossibleTurns()
+{
+	//Debug::Log("Last performed turn: " + std::to_string(_lastPerformedTurn));
 
-	//Метод обработки ввода
-	void HandleInput();
-	//Метод обновления текста
-	void UpdateChosenCellText();
+	auto possibleTurns = CalculatePossibleTurns(HUMAN_SHOULD_LOG);
 
-	sf::Font _font;
-	sf::Text _chosenCellText;
+	auto chosenCellId = _chosenCell->GetId();
+	if (HUMAN_SHOULD_LOG)
+	{
+		Debug::Log("Show hint from chosen cell with id: " + std::to_string(chosenCellId));
+	}
 
-	Cell* _chosenCell = nullptr;
+	auto itr = possibleTurns.find(chosenCellId);
+	if (itr != possibleTurns.end())
+	{
+		for (auto turn : possibleTurns.at(chosenCellId))
+		{
+			if (HUMAN_SHOULD_LOG)
+			{
+				Debug::Log("Possible turn to id: " + std::to_string(turn));
+			}
+			auto targetCell = GameBoard->GetCellById(turn);
+			targetCell->ShowHint();
+		}
+	}
+	else
+	{
+		if (HUMAN_SHOULD_LOG)
+		{
+			Debug::LogWarning("No possible turns from this cell");
+		}
+		if (!IsOnEndStage())
+		{
+			CancelCellChoise();
+		}
+	}
 
-	short _firstPossibleCellId = -1;
-	short _secondPossibleCellId = -1;
+}
 
-	short _lastPerformedTurn = -1;
+void HumanPlayer::HandleInput()
+{
+	if (Mouse::IsLMBDown(Mouse::Key::LMouseButton))
+	{
+		HandleMouseClick();
+	}
 
-	short _performedTurns = 0;
+	if (Input::IsKeyDown(Input::Key::Space))
+	{
+		CancelCellChoise();
+	}
 
-	bool _debugEndMode = false;
-};
+	//Reroll 
+	if (Input::IsKeyDown(Input::Key::R))
+	{
+		CancelCellChoise();
+		Dice::Roll();
+	}
 
+	if (Input::IsKeyDown(Input::Key::Z))
+	{
+		if (HUMAN_SHOULD_LOG)
+		{
+			Debug::LogWarning("First player max checks out set");
+		}
+		GameBoard->SetMaxChecksOut(PlayerOrderType::FirstPlayer);
+	}
+	if (Input::IsKeyDown(Input::Key::X))
+	{
+		if (HUMAN_SHOULD_LOG)
+		{
+			Debug::LogWarning("Second player max checks out set");
+		}
+		GameBoard->SetMaxChecksOut(PlayerOrderType::SecondPlayer);
+	}
+}
+
+void HumanPlayer::UpdateChosenCellText()
+{
+	if (IsCellChosen())
+	{
+		_chosenCellText.setString(CHOSEN_CELL_PLACEHOLDER + std::to_string(_chosenCell->GetId()));
+	}
+	else
+	{
+		_chosenCellText.setString(NOT_CHOSEN_CELL_PLACEHOLDER);
+	}
+
+}

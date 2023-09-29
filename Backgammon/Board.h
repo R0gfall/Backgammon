@@ -95,6 +95,8 @@ public:
 	void SetMaxChecksOut(PlayerOrderType orderType);
 
 private:
+	void PrintToConsole();
+
 	//Устанавливает победителя игры
 	void SetWinner();
 	//Устанавливает победителя игры

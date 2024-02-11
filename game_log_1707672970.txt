@@ -1,0 +1,7 @@
+INFO: Entered INITIAL_STATE
+INFO: Human player was created
+INFO: AI player was created
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 5
+WARNING: Destroyed PlayerFirst ptr
+WARNING: Destroyed PlayerSecond ptr

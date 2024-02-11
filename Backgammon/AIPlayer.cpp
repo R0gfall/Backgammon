@@ -360,10 +360,10 @@ double grade_of_position(int(&array)[24], short depht, short enterPlayer) {
         for (int j = 1; j < 7; j++) {
             int number_of_moves = 0;
             if (enterPlayer == 1) {
-                number_of_moves = get_all_possible_moves(array_temp, i, j, 1);
+                number_of_moves = get_all_possible_moves(array, i, j, 1);
             }
             else {
-                number_of_moves = get_all_possible_moves(array_temp, i, j, 2);
+                number_of_moves = get_all_possible_moves(array, i, j, 2);
             }
             //printf("%d 12312312312321312\n", number_of_moves);
             for (int k = 0; k < number_of_moves; k++) {
@@ -474,73 +474,129 @@ int* algoritm(int(&backgrammon)[24], short dice_x, short dice_y, short enterPlay
     }
 
     short dice[2] = { dice_x, dice_y }; // ×èñëà ñ áðîñêà êóáèêà	
-    int moves_and_grade[10000][8];
-    for (int i = 0; i < 10000; i++) {
-        for (int j = 0; j < 8; j++) {
-            moves_and_grade[i][j] = -1;
-        }
+    int moves_and_grade[8];
+    for (int i = 0; i < 8; i++) {
+        moves_and_grade[i] = -1;
     }
-    double grade_of_moves[10000];
+    double grade_of_moves = -1000;
+    double grade_of_moves_1_2 = -1000;
     int quantity_moves, quantity_grades = 0;
     quantity_moves = get_all_possible_moves(backgrammon, dice[0], dice[1], enterPlayer);
     printf("%d do it \n", quantity_moves);
-    for (int i = 0; i < quantity_moves; i++) {
-        struct list_move* rollback_start = start_list_move;
-        int quantity_of_array_of_moves = 0;
-        for (int j = 0; j < 8; j += 2) {
-            if (start_list_move->array_of_moves[j] >= 0 && start_list_move->array_of_moves[j] <= 23 && start_list_move->array_of_moves[j] != start_list_move->array_of_moves[j + 1]) {
-                moves_and_grade[i][j] = start_list_move->array_of_moves[j];
-                moves_and_grade[i][j + 1] = start_list_move->array_of_moves[j + 1];
-                //printf("Move %d %d \n", moves_and_grade[i][j], moves_and_grade[i][j + 1]);
-                if (enterPlayer == 1) {
+    if (enterPlayer == 1) {
+        for (int i = 0; i < quantity_moves; i++) {
+            struct list_move* rollback_start = start_list_move;
+            int quantity_of_array_of_moves = 0;
+            double temp_grade_of_moves = 0;
+            int temp_moves_and_grade[8];
+            for (int h = 0; h < 8; h++) {
+                temp_moves_and_grade[h] = -1;
+            }
+            for (int j = 0; j < 8; j += 2) {
+                if (start_list_move->array_of_moves[j] >= 0 && start_list_move->array_of_moves[j] <= 23 && start_list_move->array_of_moves[j] != start_list_move->array_of_moves[j + 1]) {
+                    temp_moves_and_grade[j] = start_list_move->array_of_moves[j];
+                    temp_moves_and_grade[j + 1] = start_list_move->array_of_moves[j + 1];
+                    //printf("Move %d %d \n", moves_and_grade[i][j], moves_and_grade[i][j + 1]);
                     temp_backgrammon[start_list_move->array_of_moves[j]]--;
                     temp_backgrammon[start_list_move->array_of_moves[j + 1]]++;
+                    quantity_of_array_of_moves += 2;
                 }
                 else {
-                    temp_backgrammon[start_list_move->array_of_moves[j]]++;
-                    temp_backgrammon[start_list_move->array_of_moves[j + 1]]--;
+                    break;
                 }
-                quantity_of_array_of_moves += 2;
+            }
+            start_list_move = start_list_move->p_next_list;
+            free(rollback_start);
+            rollback_start = start_list_move;
+            if (grade_of_moves == -1000) {
+                grade_of_moves = grade_of_position(temp_backgrammon, 1, 2);
+                grade_of_moves_1_2 = grade_for_game_1(temp_backgrammon) + grade_for_game_2(temp_backgrammon);
+                for (int h = 0; h < 8; h++) {
+                    moves_and_grade[h] = temp_moves_and_grade[h];
+                }
             }
             else {
-                break;
+                temp_grade_of_moves = grade_for_game_1(temp_backgrammon) + grade_for_game_2(temp_backgrammon);
+                if (grade_of_moves_1_2 < temp_grade_of_moves) {
+                    double extra_grade_of_moves = 0;
+                    extra_grade_of_moves = grade_of_position(temp_backgrammon, 1, 2);
+                    if (extra_grade_of_moves > grade_of_moves) {
+                        grade_of_moves = extra_grade_of_moves;
+                        grade_of_moves_1_2 = temp_grade_of_moves;
+                        for (int h = 0; h < 8; h++) {
+                            moves_and_grade[h] = temp_moves_and_grade[h];
+                        }
+                    }
+                }
             }
-        }
-        start_list_move = start_list_move->p_next_list;
-        free(rollback_start);
-        rollback_start = start_list_move;
-        if (enterPlayer == 1) {
-            //printf("ass\n");
-            grade_of_moves[i] = grade_of_position(temp_backgrammon, 1, 2);
-            //printf("ass\n");
-        }
-        else {
-            grade_of_moves[i] = grade_of_position(temp_backgrammon, 1, 1);
-        }
-        //printf("asssssssssss\n");
-        if (enterPlayer == 1) {
             for (int j = 0; j < quantity_of_array_of_moves; j += 2) {
-                temp_backgrammon[moves_and_grade[i][j]] ++;
-                temp_backgrammon[moves_and_grade[i][j + 1]] --;
+                temp_backgrammon[moves_and_grade[j]] ++;
+                temp_backgrammon[moves_and_grade[j + 1]] --;
             }
+                //printf("ass\n");
         }
-        else {
-            for (int j = 0; j < quantity_of_array_of_moves; j += 2) {
-                temp_backgrammon[moves_and_grade[i][j]] --;
-                temp_backgrammon[moves_and_grade[i][j + 1]] ++;
-            }
-        }
-        //printf("asssssssssss\n");
-        //printf("%d\n", quantity_grades);
-        quantity_grades++;
     }
-    int j = 0;
+    else {
+        for (int i = 0; i < quantity_moves; i++) {
+            struct list_move* rollback_start = start_list_move;
+            int quantity_of_array_of_moves = 0;
+            double temp_grade_of_moves = 0;
+            int temp_moves_and_grade[8];
+            for (int h = 0; h < 8; h++) {
+                temp_moves_and_grade[h] = -1;
+            }
+            for (int j = 0; j < 8; j += 2) {
+                if (start_list_move->array_of_moves[j] >= 0 && start_list_move->array_of_moves[j] <= 23 && start_list_move->array_of_moves[j] != start_list_move->array_of_moves[j + 1]) {
+                    temp_moves_and_grade[j] = start_list_move->array_of_moves[j];
+                    temp_moves_and_grade[j + 1] = start_list_move->array_of_moves[j + 1];
+                    //printf("Move %d %d \n", moves_and_grade[i][j], moves_and_grade[i][j + 1]);
+                    temp_backgrammon[start_list_move->array_of_moves[j]]++;
+                    temp_backgrammon[start_list_move->array_of_moves[j + 1]]--;
+                    quantity_of_array_of_moves += 2;
+                }
+                else {
+                    break;
+                }
+            }
+            start_list_move = start_list_move->p_next_list;
+            free(rollback_start);
+            rollback_start = start_list_move;
+            if (grade_of_moves == -1000) {
+                grade_of_moves = grade_of_position(temp_backgrammon, 1, 1);
+                grade_of_moves_1_2 = grade_for_game_1(temp_backgrammon) + grade_for_game_2(temp_backgrammon);
+                for (int h = 0; h < 8; h++) {
+                    moves_and_grade[h] = temp_moves_and_grade[h];
+                }
+            }
+            else {
+                temp_grade_of_moves = grade_for_game_1(temp_backgrammon) + grade_for_game_2(temp_backgrammon);
+                if (grade_of_moves_1_2 > temp_grade_of_moves) {
+                    double extra_grade_of_moves = 0;
+                    extra_grade_of_moves = grade_of_position(temp_backgrammon, 1, 1);
+                    if (extra_grade_of_moves < grade_of_moves) {
+                        grade_of_moves = extra_grade_of_moves;
+                        grade_of_moves_1_2 = temp_grade_of_moves;
+                        for (int h = 0; h < 8; h++) {
+                            moves_and_grade[h] = temp_moves_and_grade[h];
+                        }
+                    }
+                }
+            }
+            for (int j = 0; j < quantity_of_array_of_moves; j += 2) {
+                temp_backgrammon[moves_and_grade[j]] --;
+                temp_backgrammon[moves_and_grade[j + 1]] ++;
+            }
+        }
+    }
+    
+
+    /*int j = 0;
     double max_grade = grade_of_moves[0];
     int * best_move = new int[8];
     while (moves_and_grade[0][j] != -1 && j < 8) {
         best_move[j] = moves_and_grade[0][j];
         j++;
-    }
+    }*/
     /*for (int i = 0; i < 8; i++) {
         best_move[i] = -1;
     }*/
@@ -566,52 +622,52 @@ int* algoritm(int(&backgrammon)[24], short dice_x, short dice_y, short enterPlay
         }
         printf("\n");
     }*/
-    if (enterPlayer == 1) {
-        for (int i = 0; i < quantity_grades; i++) {
-            j = 0;
-            bool flag = false;
-            if (max_grade <= grade_of_moves[i]) {
-                max_grade = grade_of_moves[i];
-                for (int i = 0; i < 8; i++) {
-                    best_move[i] = -1;
-                }
-                flag = true;
-            }
-            if (flag) {
-                while (moves_and_grade[i][j] != -1 && j < 8) {
-                    best_move[j] = moves_and_grade[i][j];
-                    j++;
-                }
-            }
-        }
-    }
-    else {
-        for (int i = 0; i < quantity_grades; i++) {
-            j = 0;
-            bool flag = false;
-            if (max_grade >= grade_of_moves[i]) {
-                max_grade = grade_of_moves[i];
-                for (int i = 0; i < 8; i++) {
-                    best_move[i] = -1;
-                }
-                flag = true;
-            }
-            if (flag) {
-                while (moves_and_grade[i][j] != -1 && j < 8) {
-                    best_move[j] = moves_and_grade[i][j];
-                    j++;
-                }
-            }
-        }
-    }
-    j = 0;
+    //if (enterPlayer == 1) {
+    //    for (int i = 0; i < quantity_grades; i++) {
+    //        j = 0;
+    //        bool flag = false;
+    //        if (max_grade <= grade_of_moves[i]) {
+    //            max_grade = grade_of_moves[i];
+    //            for (int i = 0; i < 8; i++) {
+    //                best_move[i] = -1;
+    //            }
+    //            flag = true;
+    //        }
+    //        if (flag) {
+    //            while (moves_and_grade[i][j] != -1 && j < 8) {
+    //                best_move[j] = moves_and_grade[i][j];
+    //                j++;
+    //            }
+    //        }
+    //    }
+    //}
+    //else {
+    //    for (int i = 0; i < quantity_grades; i++) {
+    //        j = 0;
+    //        bool flag = false;
+    //        if (max_grade >= grade_of_moves[i]) {
+    //            max_grade = grade_of_moves[i];
+    //            for (int i = 0; i < 8; i++) {
+    //                best_move[i] = -1;
+    //            }
+    //            flag = true;
+    //        }
+    //        if (flag) {
+    //            while (moves_and_grade[i][j] != -1 && j < 8) {
+    //                best_move[j] = moves_and_grade[i][j];
+    //                j++;
+    //            }
+    //        }
+    //    }
+    //}
+    int j = 0;
     printf("BEST\n");
-    while (best_move[j] != -1 && j < 8) {
-        printf("\n%d %d\n", best_move[j], best_move[j + 1]);
+    while (moves_and_grade[j] != -1 && j < 8) {
+        printf("\n%d %d\n", moves_and_grade[j], moves_and_grade[j + 1]);
         j += 2;
     }
 
-    return best_move;
+    return moves_and_grade;
 
     //grade_for_game_1(backgrammon); // Îöåíêà òåêóùåé ñèòóàöèè
 
@@ -646,6 +702,7 @@ void AIPlayer::OnTurnEnter()
     switch (_difficulty) {
 
     case (AiDifficulty::Hard):
+        printf("assssssssssssssssssssssssssssssssssssssssssssssssssss\n");
         int board[24];
         for (int i = 0; i < 24; i++) {
             auto cell_curr = GameBoard->GetCellById(i);

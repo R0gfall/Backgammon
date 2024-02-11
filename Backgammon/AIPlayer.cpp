@@ -9,17 +9,11 @@ struct list_move {
 struct list_move* start_list_move = NULL;
 
 void nm_24_16(int(&array)[24]) {
-    //èçìåíåíèÿ íà÷àëüíîé ïîçèöèè äîñêè
     for (int j = 0; j < 16; j++) {
         array[0] = 15; //1 = ÷åðíûå
         array[12] = -15; //2 = áåëûå
     }
 
-    //for (int j = 0; j < 16; j++) {
-    //	//array[2][j] = 1;
-    //	array[14] = 2;
-
-    //}
 }
 
 void print_out(int(&array)[24][16]) {
@@ -32,88 +26,51 @@ void print_out(int(&array)[24][16]) {
 }
 
 int grade_for_game_1(int(&array)[24]) {
-    //Ïîäñ÷åò øàøåê ÒÎËÜÊÎ äëÿ îöåíêè ñèòóàöèè â èãðå ÁÅÇ Ó×ÅÒÀ ÊÎÍÖÀ ÈÃÐÛ
-    //Ïóíêò 1, ïîäïóíêò À â îò÷åòå
-
     int first_player_points = 0, second_player_points = 0;
-
-    for (int i = 0; i < 24; i++) {
+    for (int i = 0; i < 12; i++) {
         if (array[i] >= 1) {
             first_player_points += i * array[i];
         }
-        else if (array[i] <= -1) {
-            if (i >= 12) {
-                second_player_points += (i - 12) * (-array[i]);
-            }
-            else {
-                second_player_points += (i + 12) * (-array[i]);
-            }
+        if (array[i + 12] <= -1) {
+            second_player_points += (i + 12) * (-array[i + 12]);
         }
     }
-
-    //printf("%d\n%d\n", first_player_points, second_player_points);
-    //printf("\n%d\n%d\n", first_player_points, second_player_points);
     return first_player_points - second_player_points;
-
 }
 
+
+//table to get points for grade position gammon
+
+   // !!! FOR 1 PLAYER:
+   //0-5 - *2 point
+   //6-11 - *4 point
+   //12-17 - *6 point
+   //18-23 - *8 point
+
+   // !!! FOR 2 PLAYER:
+   //0-5 - *6 point
+   //6-11 - *8 point
+   //12-17 - *4 point
+   //18-23 - *2 point
+
 int grade_for_game_2(int(&array)[24]) {
-
-    //Íóæíî ðåøèòü îöåíêó äëÿ ïîëåé!
-
-    // !!! FOR 1 PLAYER:
-    //0-5 - *2 point
-    //6-11 - *4 point
-    //12-17 - *6 point
-    //18-23 - *8 point
-
-    // !!! FOR 2 PLAYER:
-    //0-5 - *6 point
-    //6-11 - *8 point
-    //12-17 - *4 point
-    //18-23 - *2 point
 
     int first_player_points = 0, second_player_points = 0;
 
     for (int i = 0; i < 24; i++) {
-
-        if (array[i] >= 1) {
-            if (0 <= i && i <= 5) {
-                first_player_points += 2 + 0;
-            }
-            else if (6 <= i && i <= 11) {
-                first_player_points += 2 + 2;
-            }
-            else if (12 <= i && i <= 17) {
-                first_player_points += 2 + 4;
-            }
-            else if (18 <= i && i <= 23) {
-                first_player_points += 2 + 6;
-            }
-        }
-        else if (array[i] <= -1) {
-            if (0 <= i && i <= 5) {
-                second_player_points += 4 + 2;
-            }
-            else if (6 <= i && i <= 11) {
-                second_player_points += 6 + 2;
-            }
-            else if (12 <= i && i <= 17) {
-                second_player_points += 0 + 2;
-            }
-            else if (18 <= i && i <= 23) {
-                second_player_points += 2 + 2;
-            }
-        }
+        if (array[i] >= 1)      first_player_points += 2 + (i / 6) * 2;
+        else if (array[i] <= -1)    second_player_points += 2 + ((i - 12) / 6) * 2;
     }
-    //printf("\n%d\n%d\n", first_player_points, second_player_points);
-    //printf("%d\n%d\n", first_player_points, second_player_points);
+
     return first_player_points - second_player_points;
 
 }
 
 void random_dice(int* dice) {
-    //Ðàíäîìíûé áðîñîê êóáèêîâ
+ 
+
+
+
     srand(time(NULL));
     dice[0] = rand() % 5 + 1;
     dice[1] = rand() % 5 + 1;
@@ -356,86 +313,68 @@ double grade_of_position(int(&array)[24], short depht, short enterPlayer) {
     for (int i = 0; i < 24; i++) {
         array_temp[i] = array[i];
     }
-    for (int i = 1; i < 7; i++) {
-        for (int j = 1; j < 7; j++) {
-            int number_of_moves = 0;
-            if (enterPlayer == 1) {
-                number_of_moves = get_all_possible_moves(array_temp, i, j, 1);
-            }
-            else {
-                number_of_moves = get_all_possible_moves(array_temp, i, j, 2);
-            }
-            //printf("%d 12312312312321312\n", number_of_moves);
-            for (int k = 0; k < number_of_moves; k++) {
-                //printf("3123123123 jopas\n");
-                struct list_move* rollback_start = start_list_move;
-                int quantity_of_array_of_moves = 0;
-                for (int l = 0; l < 8; l += 2) {
-                    //TODO ïðàâèëüíûé ëè if
-                    //printf("%d \n", start_list_move->array_of_moves[l] >= 0);
-                    if (start_list_move->array_of_moves[l] >= 0 && start_list_move->array_of_moves[l] <= 23 && start_list_move->array_of_moves[l] != start_list_move->array_of_moves[l + 1]) {
-                        //printf("3123123123 jopassss99999999\n");
-                        rollback[l] = start_list_move->array_of_moves[l];
-                        rollback[l + 1] = start_list_move->array_of_moves[l + 1];
-                        if (enterPlayer == 1) {
-                            array_temp[start_list_move->array_of_moves[l]]--;
-                            array_temp[start_list_move->array_of_moves[l + 1]]++;
-                        }
-                        else {
-                            array_temp[start_list_move->array_of_moves[l]]++;
-                            array_temp[start_list_move->array_of_moves[l + 1]]--;
-                        }
-                        quantity_of_array_of_moves += 2;
+    for (int row = 0; row < 36; row++) {
+        int i = row / 6 + 1;
+        int j = row % 6 + 1;
+        
+        int number_of_moves = 0;
+        if (enterPlayer == 1) {
+            number_of_moves = get_all_possible_moves(array_temp, i, j, 1);
+        }
+        else {
+            number_of_moves = get_all_possible_moves(array_temp, i, j, 2);
+        }
+
+        for (int k = 0; k < number_of_moves; k++) {
+            struct list_move* rollback_start = start_list_move;
+            int quantity_of_array_of_moves = 0;
+
+            for (int l = 0; l < 8; l += 2) {
+                
+                int start = start_list_move->array_of_moves[l];
+                int end = start_list_move->array_of_moves[l + 1];
+
+                if (start >= 0 && start <= 23 && start != end) {
+                    
+                    rollback[l] = start;
+                    rollback[l + 1] = end;
+                    if (enterPlayer == 1) {
+                        array_temp[start]--;
+                        array_temp[end]++;
                     }
                     else {
-                        break;
+                        array_temp[start]++;
+                        array_temp[end]--;
                     }
-                }
-                //printf("%d \n", quantity_of_array_of_moves);
-                start_list_move = start_list_move->p_next_list;
-                free(rollback_start);
-                //printf("3123123123 jopassss77777777\n");
-                rollback_start = start_list_move;
-                //printf("3123123123 jopassss77777777\n");
-                if (enterPlayer == 1 && depht == 1) {
-                    //долго
-                    //all_grade += grade_of_position(array_temp, depht + 1, 2);
-                    // быстро
-                    all_grade += grade_for_game_1(array_temp) + grade_for_game_2(array_temp);
-                    quantity_of_grade++;
-                }
-                else if (enterPlayer == 2 && depht == 1) {
-                    //printf("3123123123 jopassss8888888\n");
-                    //долго
-                    //all_grade += grade_of_position(array_temp, depht + 1, 1);
-                    // быстро
-                    all_grade += grade_for_game_1(array_temp) + grade_for_game_2(array_temp);
-                    //printf("%f \n", all_grade);
-                    quantity_of_grade++;
+                    quantity_of_array_of_moves += 2;
                 }
                 else {
-                    all_grade += grade_for_game_1(array_temp) + grade_for_game_2(array_temp);
-                    quantity_of_grade++;
+                    break;
                 }
-                if (enterPlayer == 1) {
-                    for (int l = 0; l < quantity_of_array_of_moves; l += 2) {
-                        array_temp[rollback[l]] ++;
-                        array_temp[rollback[l + 1]] --;
-                    }
-                }
-                else {
-                    for (int l = 0; l < quantity_of_array_of_moves; l += 2) {
-                        array_temp[rollback[l]] --;
-                        array_temp[rollback[l + 1]] ++;
-                    }
-                }
-                //printf("3123123123 jopa\n");
             }
-            // âñå íîðì
-            //ñóêà ïèçäåö íóæíî ñäåëàòü ÷òîáû îíè õîäû èç ðàçíûõ íå áðàëè
+           
+            start_list_move = start_list_move->p_next_list;
+            free(rollback_start);
+           
+            if (depht == 1) {
+                all_grade += grade_for_game_1(array_temp) + grade_for_game_2(array_temp);
+                quantity_of_grade++;
+            }         
+
+            if (enterPlayer == 1) {
+                for (int l = 0; l < quantity_of_array_of_moves; l += 2) {
+                    array_temp[rollback[l]] ++;
+                    array_temp[rollback[l + 1]] --;
+                }
+            }
+            else {
+                for (int l = 0; l < quantity_of_array_of_moves; l += 2) {
+                    array_temp[rollback[l]] --;
+                    array_temp[rollback[l + 1]] ++;
+                }
+            }
         }
     }
-    //printf("%f \n", all_grade / (double)quantity_of_grade);
     return all_grade / (double)quantity_of_grade;
 }
 
@@ -466,9 +405,6 @@ int* algoritm(int(&backgrammon)[24], short dice_x, short dice_y, short enterPlay
     //printf("\n%d 1241241414184141089249\n", grade_for_game_2(backgrammon) + grade_for_game_1(backgrammon));
     //äóáëèêàò äîñêè
     int temp_backgrammon[24];
-    for (int i = 0; i < 24; i++) {
-        temp_backgrammon[i] = 0;
-    }
     for (int i = 0; i < 24; i++) {
         temp_backgrammon[i] = backgrammon[i];
     }
@@ -931,7 +867,7 @@ void AIPlayer::OnTurnEnter()
 void AIPlayer::OnEndTurnEnter()
 {
 
-    printf("3123123123 \n\n\n\n\n");
+    //printf("3123123123 \n\n\n\n\n");
     int j = 0;
     auto dices = Dice::GetDices();
     /*switch (_difficulty) {

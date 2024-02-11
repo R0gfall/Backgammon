@@ -134,28 +134,35 @@ int  get_all_possible_moves(int(&array)[24], short dice_x, short dice_y, short e
         array_temp[i] = array[i];
         //printf("%d \n", array_temp[i]);
     }
+    int flag2 = 0, flag3 = 0, flag4 = 0;
     if (enterPlayer == 1) {
         if (dice_x == dice_y) {
             for (int i = 0; i < 24 - dice_x; i++) {
                 if (array_temp[i] >= 1 && array_temp[i + dice_x] >= 0) {
+                    flag2 = 0;
                     rollback[0] = i;
                     rollback[1] = i + dice_x;
                     array_temp[i] --;
                     array_temp[i + dice_x] ++;
                     for (int j = 1; j < 24 - dice_x; j++) {
                         if (array_temp[j] >= 1 && array_temp[j + dice_x] >= 0) {
+                            flag3 = 0;
+                            flag2 = 1;
                             rollback[2] = j;
                             rollback[3] = j + dice_x;
                             array_temp[j] --;
                             array_temp[j + dice_x] ++;
                             for (int k = 1; k < 24 - dice_x; k++) {
                                 if (array_temp[k] >= 1 && array_temp[k + dice_x] >= 0) {
+                                    flag4 = 0;
+                                    flag3 = 1;
                                     rollback[4] = k;
                                     rollback[5] = k + dice_x;
                                     array_temp[k] --;
                                     array_temp[k + dice_x] ++;
                                     for (int l = 1; l < 24 - dice_x; l++) {
                                         if (array_temp[l] >= 1 && array_temp[l + dice_x] >= 0) {
+                                            flag4 = 1;
                                             struct list_move* new_list = (struct list_move*)malloc(sizeof(struct list_move));
                                             new_list->array_of_moves[0] = rollback[0];
                                             new_list->array_of_moves[1] = rollback[1];
@@ -164,20 +171,61 @@ int  get_all_possible_moves(int(&array)[24], short dice_x, short dice_y, short e
                                             new_list->array_of_moves[4] = rollback[4];
                                             new_list->array_of_moves[5] = rollback[5];
                                             new_list->array_of_moves[6] = l;
-                                            new_list->array_of_moves[7] = l + dice_x;;
+                                            new_list->array_of_moves[7] = l + dice_x;
                                             new_list->p_next_list = start_list_move;
                                             start_list_move = new_list;
                                             number_of_moves++;
-                                            return number_of_moves;
                                         }
+                                    }
+                                    if (flag4 == 0) {
+                                        struct list_move* new_list = (struct list_move*)malloc(sizeof(struct list_move));
+                                        new_list->array_of_moves[0] = rollback[0];
+                                        new_list->array_of_moves[1] = rollback[1];
+                                        new_list->array_of_moves[2] = rollback[2];
+                                        new_list->array_of_moves[3] = rollback[3];
+                                        new_list->array_of_moves[4] = rollback[4];
+                                        new_list->array_of_moves[5] = rollback[5];
+                                        new_list->array_of_moves[6] = -1;
+                                        new_list->array_of_moves[7] = -1;
+                                        new_list->p_next_list = start_list_move;
+                                        start_list_move = new_list;
+                                        number_of_moves++;
                                     }
                                     array_temp[rollback[4]]++;
                                     array_temp[rollback[5]]--;
                                 }
                             }
+                            if (flag3 == 0) {
+                                struct list_move* new_list = (struct list_move*)malloc(sizeof(struct list_move));
+                                new_list->array_of_moves[0] = rollback[0];
+                                new_list->array_of_moves[1] = rollback[1];
+                                new_list->array_of_moves[2] = rollback[2];
+                                new_list->array_of_moves[3] = rollback[3];
+                                new_list->array_of_moves[4] = -1;
+                                new_list->array_of_moves[5] = -1;
+                                new_list->array_of_moves[6] = -1;
+                                new_list->array_of_moves[7] = -1;
+                                new_list->p_next_list = start_list_move;
+                                start_list_move = new_list;
+                                number_of_moves++;
+                            }
                             array_temp[rollback[2]]++;
                             array_temp[rollback[3]]--;
                         }
+                    }
+                    if (flag2 == 0) {
+                        struct list_move* new_list = (struct list_move*)malloc(sizeof(struct list_move));
+                        new_list->array_of_moves[0] = rollback[0];
+                        new_list->array_of_moves[1] = rollback[1];
+                        new_list->array_of_moves[2] = -1;
+                        new_list->array_of_moves[3] = -1;
+                        new_list->array_of_moves[4] = -1;
+                        new_list->array_of_moves[5] = -1;
+                        new_list->array_of_moves[6] = -1;
+                        new_list->array_of_moves[7] = -1;
+                        new_list->p_next_list = start_list_move;
+                        start_list_move = new_list;
+                        number_of_moves++;
                     }
                     array_temp[rollback[0]]++;
                     array_temp[rollback[1]]--;
@@ -185,14 +233,17 @@ int  get_all_possible_moves(int(&array)[24], short dice_x, short dice_y, short e
             }
         }
         else {
+            flag2 = 0;
             for (int i = 0; i < 24 - dice_y; i++) {
                 if (array_temp[i] >= 1 && array_temp[i + dice_y] >= 0) {
+                    flag2 = 0;
                     rollback[0] = i;
                     rollback[1] = i + dice_y;
                     array_temp[i] --;
                     array_temp[i + dice_y] ++;
                     for (int j = 1; j < 24 - dice_x; j++) {
                         if (array_temp[j] >= 1 && array_temp[j + dice_x] >= 0) {
+                            flag2 = 1;
                             struct list_move* new_list = (struct list_move*)malloc(sizeof(struct list_move));
                             new_list->array_of_moves[0] = rollback[0];
                             new_list->array_of_moves[1] = rollback[1];
@@ -207,11 +258,26 @@ int  get_all_possible_moves(int(&array)[24], short dice_x, short dice_y, short e
                             number_of_moves++;
                         }
                     }
+                    if (flag2 == 0) {
+                        struct list_move* new_list = (struct list_move*)malloc(sizeof(struct list_move));
+                        new_list->array_of_moves[0] = rollback[0];
+                        new_list->array_of_moves[1] = rollback[1];
+                        new_list->array_of_moves[2] = -1;
+                        new_list->array_of_moves[3] = -1;
+                        new_list->array_of_moves[4] = -1;
+                        new_list->array_of_moves[5] = -1;
+                        new_list->array_of_moves[6] = -1;
+                        new_list->array_of_moves[7] = -1;
+                        new_list->p_next_list = start_list_move;
+                        start_list_move = new_list;
+                        number_of_moves++;
+                    }
                     array_temp[rollback[0]]++;
                     array_temp[rollback[1]]--;
                 }
             }
             for (int i = 0; i < 24 - dice_x; i++) {
+                flag2 = 0;
                 if (array_temp[i] >= 1 && array_temp[i + dice_x] >= 0) {
                     rollback[0] = i;
                     rollback[1] = i + dice_x;
@@ -219,6 +285,7 @@ int  get_all_possible_moves(int(&array)[24], short dice_x, short dice_y, short e
                     array_temp[i + dice_x] ++;
                     for (int j = 1; j < 24 - dice_y; j++) {
                         if (array_temp[j] >= 1 && array_temp[j + dice_y] >= 0) {
+                            flag2 = 1;
                             struct list_move* new_list = (struct list_move*)malloc(sizeof(struct list_move));
                             new_list->array_of_moves[0] = rollback[0];
                             new_list->array_of_moves[1] = rollback[1];
@@ -233,6 +300,20 @@ int  get_all_possible_moves(int(&array)[24], short dice_x, short dice_y, short e
                             number_of_moves++;
                         }
                     }
+                    if (flag2 == 0) {
+                        struct list_move* new_list = (struct list_move*)malloc(sizeof(struct list_move));
+                        new_list->array_of_moves[0] = rollback[0];
+                        new_list->array_of_moves[1] = rollback[1];
+                        new_list->array_of_moves[2] = -1;
+                        new_list->array_of_moves[3] = -1;
+                        new_list->array_of_moves[4] = -1;
+                        new_list->array_of_moves[5] = -1;
+                        new_list->array_of_moves[6] = -1;
+                        new_list->array_of_moves[7] = -1;
+                        new_list->p_next_list = start_list_move;
+                        start_list_move = new_list;
+                        number_of_moves++;
+                    }
                     array_temp[rollback[0]]++;
                     array_temp[rollback[1]]--;
                 }
@@ -242,6 +323,7 @@ int  get_all_possible_moves(int(&array)[24], short dice_x, short dice_y, short e
     else {
         if (dice_x == dice_y) {
             for (int i = 0; i < 24 - dice_x; i++) {
+                flag2 = 0;
                 if (array_temp[(12 + i) % 24] <= -1 && array_temp[(12 + i + dice_x) % 24] <= 0) {
                     rollback[0] = (12 + i) % 24;
                     rollback[1] = (12 + i + dice_x) % 24;
@@ -249,18 +331,23 @@ int  get_all_possible_moves(int(&array)[24], short dice_x, short dice_y, short e
                     array_temp[(12 + i + dice_x) % 24] --;
                     for (int j = 1; j < 24 - dice_x; j++) {
                         if (array_temp[(12 + j) % 24] <= -1 && array_temp[(12 + j + dice_x) % 24] <= 0) {
+                            flag2 = 1;
+                            flag3 = 0;
                             rollback[2] = (12 + j) % 24;
                             rollback[3] = (12 + j + dice_x) % 24;
                             array_temp[(12 + j) % 24] ++;
                             array_temp[(12 + j + dice_x) % 24] --;
                             for (int k = 1; k < 24 - dice_x; k++) {
                                 if (array_temp[(12 + k) % 24] <= -1 && array_temp[(12 + k + dice_x) % 24] <= 0) {
+                                    flag3 = 1;
+                                    flag4 = 0;
                                     rollback[4] = (12 + k) % 24;
                                     rollback[5] = (12 + k + dice_x) % 24;
                                     array_temp[(12 + k) % 24] ++;
                                     array_temp[(12 + k + dice_x) % 24] --;
                                     for (int l = 1; l < 24 - dice_x; l++) {
                                         if (array_temp[(12 + l) % 24] <= -1 && array_temp[(12 + l + dice_x) % 24] <= 0) {
+                                            flag4 = 1;
                                             struct list_move* new_list = (struct list_move*)malloc(sizeof(struct list_move));
                                             new_list->array_of_moves[0] = rollback[0];
                                             new_list->array_of_moves[1] = rollback[1];
@@ -273,16 +360,57 @@ int  get_all_possible_moves(int(&array)[24], short dice_x, short dice_y, short e
                                             new_list->p_next_list = start_list_move;
                                             start_list_move = new_list;
                                             number_of_moves++;
-                                            return number_of_moves;
                                         }
+                                    }
+                                    if (flag4 == 0) {
+                                        struct list_move* new_list = (struct list_move*)malloc(sizeof(struct list_move));
+                                        new_list->array_of_moves[0] = rollback[0];
+                                        new_list->array_of_moves[1] = rollback[1];
+                                        new_list->array_of_moves[2] = rollback[2];
+                                        new_list->array_of_moves[3] = rollback[3];
+                                        new_list->array_of_moves[4] = rollback[4];
+                                        new_list->array_of_moves[5] = rollback[5];
+                                        new_list->array_of_moves[6] = -1;
+                                        new_list->array_of_moves[7] = -1;
+                                        new_list->p_next_list = start_list_move;
+                                        start_list_move = new_list;
+                                        number_of_moves++;
                                     }
                                     array_temp[rollback[4]]--;
                                     array_temp[rollback[5]]++;
                                 }
                             }
+                            if (flag3 == 0) {
+                                struct list_move* new_list = (struct list_move*)malloc(sizeof(struct list_move));
+                                new_list->array_of_moves[0] = rollback[0];
+                                new_list->array_of_moves[1] = rollback[1];
+                                new_list->array_of_moves[2] = rollback[2];
+                                new_list->array_of_moves[3] = rollback[3];
+                                new_list->array_of_moves[4] = -1;
+                                new_list->array_of_moves[5] = -1;
+                                new_list->array_of_moves[6] = -1;
+                                new_list->array_of_moves[7] = -1;
+                                new_list->p_next_list = start_list_move;
+                                start_list_move = new_list;
+                                number_of_moves++;
+                            }
                             array_temp[rollback[2]]--;
                             array_temp[rollback[3]]++;
                         }
+                    }
+                    if (flag2 == 0) {
+                        struct list_move* new_list = (struct list_move*)malloc(sizeof(struct list_move));
+                        new_list->array_of_moves[0] = rollback[0];
+                        new_list->array_of_moves[1] = rollback[1];
+                        new_list->array_of_moves[2] = -1;
+                        new_list->array_of_moves[3] = -1;
+                        new_list->array_of_moves[4] = -1;
+                        new_list->array_of_moves[5] = -1;
+                        new_list->array_of_moves[6] = -1;
+                        new_list->array_of_moves[7] = -1;
+                        new_list->p_next_list = start_list_move;
+                        start_list_move = new_list;
+                        number_of_moves++;
                     }
                     array_temp[rollback[0]]--;
                     array_temp[rollback[1]]++;
@@ -291,6 +419,7 @@ int  get_all_possible_moves(int(&array)[24], short dice_x, short dice_y, short e
         }
         else {
             for (int i = 0; i < 24 - dice_y; i++) {
+                flag2 = 0;
                 if (array_temp[(12 + i) % 24] <= -1 && array_temp[(12 + i + dice_y) % 24] <= 0) {
                     rollback[0] = (12 + i) % 24;
                     rollback[1] = (12 + i + dice_y) % 24;
@@ -299,6 +428,7 @@ int  get_all_possible_moves(int(&array)[24], short dice_x, short dice_y, short e
                     for (int j = 1; j < 24 - dice_x; j++) {
                         //printf("\n%d \n%d\n", array_temp[(12 + j) % 24], array_temp[(12 + j + dice_x) % 24]);
                         if (array_temp[(12 + j) % 24] <= -1 && array_temp[(12 + j + dice_x) % 24] <= 0) {
+                            flag2 = 1;
                             struct list_move* new_list = (struct list_move*)malloc(sizeof(struct list_move));
                             new_list->array_of_moves[0] = rollback[0];
                             new_list->array_of_moves[1] = rollback[1];
@@ -313,11 +443,26 @@ int  get_all_possible_moves(int(&array)[24], short dice_x, short dice_y, short e
                             number_of_moves++;
                         }
                     }
+                    if (flag2 == 0) {
+                        struct list_move* new_list = (struct list_move*)malloc(sizeof(struct list_move));
+                        new_list->array_of_moves[0] = rollback[0];
+                        new_list->array_of_moves[1] = rollback[1];
+                        new_list->array_of_moves[2] = -1;
+                        new_list->array_of_moves[3] = -1;
+                        new_list->array_of_moves[4] = -1;
+                        new_list->array_of_moves[5] = -1;
+                        new_list->array_of_moves[6] = -1;
+                        new_list->array_of_moves[7] = -1;
+                        new_list->p_next_list = start_list_move;
+                        start_list_move = new_list;
+                        number_of_moves++;
+                    }
                     array_temp[rollback[0]]--;
                     array_temp[rollback[1]]++;
                 }
             }
             for (int i = 0; i < 24 - dice_x; i++) {
+                flag2 = 0;
                 if (array_temp[(12 + i) % 24] <= -1 && array_temp[(12 + i + dice_x) % 24] <= 0) {
                     rollback[0] = (12 + i) % 24;
                     rollback[1] = (12 + i + dice_x) % 24;
@@ -325,6 +470,7 @@ int  get_all_possible_moves(int(&array)[24], short dice_x, short dice_y, short e
                     array_temp[(12 + i + dice_x) % 24] --;
                     for (int j = 1; j < 24 - dice_y; j++) {
                         if (array_temp[(12 + j) % 24] <= -1 && array_temp[(12 + j + dice_y) % 24] <= 0) {
+                            flag2 = 1;
                             struct list_move* new_list = (struct list_move*)malloc(sizeof(struct list_move));
                             new_list->array_of_moves[0] = rollback[0];
                             new_list->array_of_moves[1] = rollback[1];
@@ -338,6 +484,20 @@ int  get_all_possible_moves(int(&array)[24], short dice_x, short dice_y, short e
                             start_list_move = new_list;
                             number_of_moves++;
                         }
+                    }
+                    if (flag2 == 0) {
+                        struct list_move* new_list = (struct list_move*)malloc(sizeof(struct list_move));
+                        new_list->array_of_moves[0] = rollback[0];
+                        new_list->array_of_moves[1] = rollback[1];
+                        new_list->array_of_moves[2] = -1;
+                        new_list->array_of_moves[3] = -1;
+                        new_list->array_of_moves[4] = -1;
+                        new_list->array_of_moves[5] = -1;
+                        new_list->array_of_moves[6] = -1;
+                        new_list->array_of_moves[7] = -1;
+                        new_list->p_next_list = start_list_move;
+                        start_list_move = new_list;
+                        number_of_moves++;
                     }
                     array_temp[rollback[0]]--;
                     array_temp[rollback[1]]++;
@@ -395,7 +555,7 @@ double grade_of_position(int(&array)[24], short depht, short enterPlayer) {
                 start_list_move = start_list_move->p_next_list;
                 free(rollback_start);
                 //printf("3123123123 jopassss77777777\n");
-                rollback_start = start_list_move;
+                //rollback_start = start_list_move;
                 //printf("3123123123 jopassss77777777\n");
                 if (enterPlayer == 1 && depht == 1) {
                     //долго
@@ -497,14 +657,8 @@ int* algoritm(int(&backgrammon)[24], short dice_x, short dice_y, short enterPlay
                     temp_moves_and_grade[j] = start_list_move->array_of_moves[j];
                     temp_moves_and_grade[j + 1] = start_list_move->array_of_moves[j + 1];
                     //printf("Move %d %d \n", moves_and_grade[i][j], moves_and_grade[i][j + 1]);
-                    if (enterPlayer == 1) {
-                        temp_backgrammon[start_list_move->array_of_moves[j]]--;
-                        temp_backgrammon[start_list_move->array_of_moves[j + 1]]++;
-                    }
-                    else {
-                        temp_backgrammon[start_list_move->array_of_moves[j]]++;
-                        temp_backgrammon[start_list_move->array_of_moves[j + 1]]--;
-                    }
+                    temp_backgrammon[start_list_move->array_of_moves[j]]--;
+                    temp_backgrammon[start_list_move->array_of_moves[j + 1]]++;
                     quantity_of_array_of_moves += 2;
                 }
                 else {
@@ -513,7 +667,7 @@ int* algoritm(int(&backgrammon)[24], short dice_x, short dice_y, short enterPlay
             }
             start_list_move = start_list_move->p_next_list;
             free(rollback_start);
-            rollback_start = start_list_move;
+            //rollback_start = start_list_move;
             if (grade_of_moves == -1000) {
                 grade_of_moves = grade_of_position(temp_backgrammon, 1, 2);
                 grade_of_moves_1_2 = grade_for_game_1(temp_backgrammon) + grade_for_game_2(temp_backgrammon);
@@ -523,10 +677,12 @@ int* algoritm(int(&backgrammon)[24], short dice_x, short dice_y, short enterPlay
             }
             else {
                 temp_grade_of_moves = grade_for_game_1(temp_backgrammon) + grade_for_game_2(temp_backgrammon);
-                if (grade_of_moves_1_2 < temp_grade_of_moves) {
+                if (grade_of_moves_1_2 - temp_grade_of_moves < -5) {
                     double extra_grade_of_moves = 0;
+                    //printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                     extra_grade_of_moves = grade_of_position(temp_backgrammon, 1, 2);
                     if (extra_grade_of_moves > grade_of_moves) {
+                        printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                         grade_of_moves = extra_grade_of_moves;
                         grade_of_moves_1_2 = temp_grade_of_moves;
                         for (int h = 0; h < 8; h++) {
@@ -576,10 +732,12 @@ int* algoritm(int(&backgrammon)[24], short dice_x, short dice_y, short enterPlay
             }
             else {
                 temp_grade_of_moves = grade_for_game_1(temp_backgrammon) + grade_for_game_2(temp_backgrammon);
-                if (grade_of_moves_1_2 > temp_grade_of_moves) {
+                if (grade_of_moves_1_2 - temp_grade_of_moves > -5) {
                     double extra_grade_of_moves = 0;
+                    //printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                     extra_grade_of_moves = grade_of_position(temp_backgrammon, 1, 1);
                     if (extra_grade_of_moves < grade_of_moves) {
+                        printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                         grade_of_moves = extra_grade_of_moves;
                         grade_of_moves_1_2 = temp_grade_of_moves;
                         for (int h = 0; h < 8; h++) {

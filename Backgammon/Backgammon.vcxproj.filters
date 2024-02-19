@@ -185,5 +185,8 @@
     <ClInclude Include="SecondPlayerEndState.h">
       <Filter>Файлы заголовков\StateMachine\States</Filter>
     </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Файлы заголовков\StateMachine\States</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -184,6 +184,7 @@
     <ClInclude Include="Mouse.h" />
     <ClInclude Include="SecondPlayerEndState.h" />
     <ClInclude Include="SecondPlayerState.h" />
+    <ClInclude Include="Timer.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

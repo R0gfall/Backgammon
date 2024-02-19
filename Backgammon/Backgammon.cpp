@@ -4,7 +4,7 @@
 
 int main()
 {
-	srand(time(0));
+	srand(NULL);
 	Game game;
 
 	game.Initialize();

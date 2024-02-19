@@ -1,4 +1,6 @@
 #include "EndGameState.h"
+#include <time.h>
+#include "Timer.h"
 
 EndGameState::EndGameState(Board* board, IGameStateMachine* stateMachine) : GameBaseState(board, stateMachine, GameStateType::EndGame)
 {
@@ -17,6 +19,9 @@ void EndGameState::Initialize()
 
 void EndGameState::EnterState()
 {
+	//end
+	END_GAME = clock();
+	printf("Time, seconds: %f ", (double)(END_GAME - START_GAME)/CLOCKS_PER_SEC);
 	LogEnter();
 	UpdateWinnerText();
 }

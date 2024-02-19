@@ -1,0 +1,2200 @@
+INFO: Entered INITIAL_STATE
+INFO: AI player was created
+INFO: AI player was created
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 1
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 3
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 6 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 2
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 3
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 4 / 5
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 2
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 6
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 3 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 1 / 4
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 4 / 6
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 3 / 1
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rol

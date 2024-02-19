@@ -1,4 +1,6 @@
 #include "InitialState.h"
+#include "Timer.h"
+#include <time.h>
 
 InitialState::InitialState(Board* board, IGameStateMachine* stateMachine) : GameBaseState(board, stateMachine, GameStateType::Initial)
 {
@@ -142,6 +144,8 @@ void InitialState::UpdateState()
 
 void InitialState::LeaveState()
 {
+	// start
+	START_GAME = clock();
 }
 
 void InitialState::StartGame()

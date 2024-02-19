@@ -4,7 +4,9 @@
 
 int main()
 {
-	srand(time(0));
+	srand(NULL);
+	//srand(time(0));
+	// это строка
 	Game game;
 
 	game.Initialize();

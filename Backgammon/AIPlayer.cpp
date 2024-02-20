@@ -555,10 +555,7 @@ int* algoritm(int(&backgrammon)[24], short dice_x, short dice_y, short enterPlay
 
 
 
-    end_time = __rdtsc();
 
-    printf(">>>>>>>%lu\n", end_time - start_time);
-    //printf("1310391309103910391039103910391039130");
     return best_move;
 
     //grade_for_game_1(backgrammon); // Îöåíêà òåêóùåé ñèòóàöèè

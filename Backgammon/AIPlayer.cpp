@@ -1,6 +1,8 @@
 ﻿#include "AIPlayer.h"
 #include <time.h>
 
+
+
 struct list_move {
     char array_of_moves[8];
     struct list_move* p_next_list;
@@ -9,7 +11,6 @@ struct list_move {
 struct list_move* start_list_move = NULL;
 
 void nm_24_16(int(&array)[24]) {
-    //èçìåíåíèÿ íà÷àëüíîé ïîçèöèè äîñêè
     for (int j = 0; j < 16; j++) {
         array[0] = 15; //1 = ÷åðíûå
         array[12] = -15; //2 = áåëûå
@@ -466,9 +467,6 @@ int* algoritm(int(&backgrammon)[24], short dice_x, short dice_y, short enterPlay
     //printf("\n%d 1241241414184141089249\n", grade_for_game_2(backgrammon) + grade_for_game_1(backgrammon));
     //äóáëèêàò äîñêè
     int temp_backgrammon[24];
-    for (int i = 0; i < 24; i++) {
-        temp_backgrammon[i] = 0;
-    }
     for (int i = 0; i < 24; i++) {
         temp_backgrammon[i] = backgrammon[i];
     }

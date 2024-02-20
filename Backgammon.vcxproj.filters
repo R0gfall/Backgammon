@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков\StateMachine">
+      <UniqueIdentifier>{aaf7bbfe-2b69-40c3-87d0-215857496233}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\StateMachine">
+      <UniqueIdentifier>{2acbbe14-81ae-4525-9f41-278c061fcebd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\StateMachine\States">
+      <UniqueIdentifier>{b2b02c09-5d1a-4d18-9cd4-cd64b3ab9a42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\StateMachine\States">
+      <UniqueIdentifier>{c3a29ff4-abe6-4f66-88a9-f37e58fca325}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Utils">
+      <UniqueIdentifier>{149a6326-b8c7-4c9e-a5ac-e7f5f235e93c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Utils">
+      <UniqueIdentifier>{07cadfdc-9d85-4c0d-8369-abd2be531867}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\GameObjects">
+      <UniqueIdentifier>{86cf0075-4593-4098-abc4-7881175a40c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\GameObjects">
+      <UniqueIdentifier>{92d1c523-90f2-45b8-a7a3-9ad3805bf3ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Players">
+      <UniqueIdentifier>{4724d48a-363a-4e2b-8072-b6e2da536869}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Players">
+      <UniqueIdentifier>{7f51ebd0-bacc-4ed7-915b-c95366d41371}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Backgammon.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="GameStateMachine.cpp">
+      <Filter>Исходные файлы\StateMachine</Filter>
+    </ClCompile>
+    <ClCompile Include="SecondPlayerState.cpp">
+      <Filter>Исходные файлы\StateMachine\States</Filter>
+    </ClCompile>
+    <ClCompile Include="GameBaseState.cpp">
+      <Filter>Исходные файлы\StateMachine\States</Filter>
+    </ClCompile>
+    <ClCompile Include="FirstPlayerState.cpp">
+      <Filter>Исходные файлы\StateMachine\States</Filter>
+    </ClCompile>
+    <ClCompile Include="InitialState.cpp">
+      <Filter>Исходные файлы\StateMachine\States</Filter>
+    </ClCompile>
+    <ClCompile Include="EndGameState.cpp">
+      <Filter>Исходные файлы\StateMachine\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug.cpp">
+      <Filter>Исходные файлы\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Исходные файлы\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Board.cpp">
+      <Filter>Исходные файлы\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Исходные файлы\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Bitmask.cpp">
+      <Filter>Исходные файлы\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Cell.cpp">
+      <Filter>Исходные файлы\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Dice.cpp">
+      <Filter>Исходные файлы\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="IPlayer.cpp">
+      <Filter>Исходные файлы\Players</Filter>
+    </ClCompile>
+    <ClCompile Include="HumanPlayer.cpp">
+      <Filter>Исходные файлы\Players</Filter>
+    </ClCompile>
+    <ClCompile Include="AIPlayer.cpp">
+      <Filter>Исходные файлы\Players</Filter>
+    </ClCompile>
+    <ClCompile Include="Mouse.cpp">
+      <Filter>Исходные файлы\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Check.cpp">
+      <Filter>Исходные файлы\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalDefinitions.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="FirstPlayerEndState.cpp">
+      <Filter>Исходные файлы\StateMachine\States</Filter>
+    </ClCompile>
+    <ClCompile Include="SecondPlayerEndState.cpp">
+      <Filter>Исходные файлы\StateMachine\States</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GlobalDefinitions.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="GameStateMachine.h">
+      <Filter>Файлы заголовков\StateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="SecondPlayerState.h">
+      <Filter>Файлы заголовков\StateMachine\States</Filter>
+    </ClInclude>
+    <ClInclude Include="FirstPlayerState.h">
+      <Filter>Файлы заголовков\StateMachine\States</Filter>
+    </ClInclude>
+    <ClInclude Include="GameBaseState.h">
+      <Filter>Файлы заголовков\StateMachine\States</Filter>
+    </ClInclude>
+    <ClInclude Include="IGameStateMachine.h">
+      <Filter>Файлы заголовков\StateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="InitialState.h">
+      <Filter>Файлы заголовков\StateMachine\States</Filter>
+    </ClInclude>
+    <ClInclude Include="EndGameState.h">
+      <Filter>Файлы заголовков\StateMachine\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>Файлы заголовков\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug.h">
+      <Filter>Файлы заголовков\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Board.h">
+      <Filter>Файлы заголовков\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Bitmask.h">
+      <Filter>Файлы заголовков\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>Файлы заголовков\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Cell.h">
+      <Filter>Файлы заголовков\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Dice.h">
+      <Filter>Файлы заголовков\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="IPlayer.h">
+      <Filter>Файлы заголовков\Players</Filter>
+    </ClInclude>
+    <ClInclude Include="HumanPlayer.h">
+      <Filter>Файлы заголовков\Players</Filter>
+    </ClInclude>
+    <ClInclude Include="AIPlayer.h">
+      <Filter>Файлы заголовков\Players</Filter>
+    </ClInclude>
+    <ClInclude Include="Mouse.h">
+      <Filter>Файлы заголовков\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Check.h">
+      <Filter>Файлы заголовков\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="FirstPlayerEndState.h">
+      <Filter>Файлы заголовков\StateMachine\States</Filter>
+    </ClInclude>
+    <ClInclude Include="SecondPlayerEndState.h">
+      <Filter>Файлы заголовков\StateMachine\States</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,10 +1,12 @@
 ﻿#include <iostream>
-
 #include "Game.h"
+
+
 
 int main()
 {
-	srand(time(0));
+	srand(time(NULL));
+	//srand(NULL);
 	Game game;
 
 	game.Initialize();
@@ -14,4 +16,5 @@ int main()
 		game.Update();
 		game.Draw();
 	}
+	
 }

@@ -775,7 +775,7 @@ void Board::PrintToConsole()
 		outputLine += std::to_string(i) + "\t";
 	}
 	outputLine += "\n-------------------------------------------------------------------------------------------------------\n";
-	Debug::LogInfo(outputLine);
+	//Debug::LogInfo(outputLine);
 }
 
 void Board::SetWinner()

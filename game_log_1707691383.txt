@@ -1,0 +1,451 @@
+INFO: Entered INITIAL_STATE
+INFO: AI player was created
+INFO: AI player was created
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 6 / 4
+SUCCESS: Successfully moved check from: 0 to: 6 by: FirstPlayer
+SUCCESS: Successfully moved check from: 6 to: 10 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 12 to: 17 by: SecondPlayer
+SUCCESS: Successfully moved check from: 17 to: 19 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 0 to: 5 by: FirstPlayer
+SUCCESS: Successfully moved check from: 5 to: 7 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 12 to: 17 by: SecondPlayer
+SUCCESS: Successfully moved check from: 19 to: 21 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 0 to: 5 by: FirstPlayer
+SUCCESS: Successfully moved check from: 7 to: 9 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 12 to: 17 by: SecondPlayer
+SUCCESS: Successfully moved check from: 17 to: 19 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 0 to: 5 by: FirstPlayer
+SUCCESS: Successfully moved check from: 5 to: 7 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 12 to: 14 by: SecondPlayer
+SUCCESS: Successfully moved check from: 17 to: 22 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 0 to: 5 by: FirstPlayer
+SUCCESS: Successfully moved check from: 9 to: 11 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 12 to: 17 by: SecondPlayer
+SUCCESS: Successfully moved check from: 21 to: 23 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 0 to: 5 by: FirstPlayer
+SUCCESS: Successfully moved check from: 7 to: 9 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 14 to: 19 by: SecondPlayer
+SUCCESS: Successfully moved check from: 19 to: 21 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 0 to: 5 by: FirstPlayer
+SUCCESS: Successfully moved check from: 5 to: 7 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 12 to: 17 by: SecondPlayer
+SUCCESS: Successfully moved check from: 17 to: 19 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 0 to: 5 by: FirstPlayer
+SUCCESS: Successfully moved check from: 5 to: 7 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 12 to: 17 by: SecondPlayer
+SUCCESS: Successfully moved check from: 17 to: 19 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 0 to: 5 by: FirstPlayer
+SUCCESS: Successfully moved check from: 5 to: 7 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 12 to: 17 by: SecondPlayer
+SUCCESS: Successfully moved check from: 17 to: 19 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 0 to: 5 by: FirstPlayer
+SUCCESS: Successfully moved check from: 5 to: 7 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 12 to: 17 by: SecondPlayer
+SUCCESS: Successfully moved check from: 17 to: 19 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 0 to: 5 by: FirstPlayer
+SUCCESS: Successfully moved check from: 5 to: 7 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 12 to: 17 by: SecondPlayer
+SUCCESS: Successfully moved check from: 17 to: 19 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 0 to: 5 by: FirstPlayer
+SUCCESS: Successfully moved check from: 5 to: 7 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 12 to: 17 by: SecondPlayer
+SUCCESS: Successfully moved check from: 17 to: 19 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 0 to: 5 by: FirstPlayer
+SUCCESS: Successfully moved check from: 5 to: 7 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 12 to: 17 by: SecondPlayer
+SUCCESS: Successfully moved check from: 17 to: 19 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 0 to: 5 by: FirstPlayer
+SUCCESS: Successfully moved check from: 5 to: 7 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 12 to: 17 by: SecondPlayer
+SUCCESS: Successfully moved check from: 17 to: 19 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 0 to: 5 by: FirstPlayer
+SUCCESS: Successfully moved check from: 5 to: 7 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 12 to: 17 by: SecondPlayer
+SUCCESS: Successfully moved check from: 17 to: 19 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 5 to: 10 by: FirstPlayer
+SUCCESS: Successfully moved check from: 5 to: 7 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 12 to: 17 by: SecondPlayer
+SUCCESS: Successfully moved check from: 17 to: 19 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 5 to: 10 by: FirstPlayer
+SUCCESS: Successfully moved check from: 7 to: 9 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 17 to: 22 by: SecondPlayer
+SUCCESS: Successfully moved check from: 19 to: 21 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 7 to: 12 by: FirstPlayer
+SUCCESS: Successfully moved check from: 7 to: 9 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 19 to: 0 by: SecondPlayer
+SUCCESS: Successfully moved check from: 19 to: 21 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 12 to: 17 by: FirstPlayer
+SUCCESS: Successfully moved check from: 7 to: 9 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 0 to: 5 by: SecondPlayer
+SUCCESS: Successfully moved check from: 19 to: 21 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 7 to: 12 by: FirstPlayer
+SUCCESS: Successfully moved check from: 7 to: 9 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 19 to: 0 by: SecondPlayer
+SUCCESS: Successfully moved check from: 19 to: 21 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 7 to: 12 by: FirstPlayer
+SUCCESS: Successfully moved check from: 12 to: 14 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 0 to: 5 by: SecondPlayer
+SUCCESS: Successfully moved check from: 19 to: 21 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 10 to: 15 by: FirstPlayer
+SUCCESS: Successfully moved check from: 7 to: 9 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 19 to: 0 by: SecondPlayer
+SUCCESS: Successfully moved check from: 19 to: 21 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 5 / 2
+SUCCESS: Successfully moved check from: 15 to: 20 by: FirstPlayer
+SUCCESS: Successfully moved check from: 7 to: 9 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 19 to: 23 by: SecondPlayer
+SUCCESS: Successfully moved check from: 21 to: 23 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 14 to: 18 by: FirstPlayer
+SUCCESS: Successfully moved check from: 9 to: 11 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 0 to: 4 by: SecondPlayer
+SUCCESS: Successfully moved check from: 21 to: 23 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 12 to: 16 by: FirstPlayer
+SUCCESS: Successfully moved check from: 9 to: 11 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 4 to: 8 by: SecondPlayer
+SUCCESS: Successfully moved check from: 21 to: 23 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 7 to: 11 by: FirstPlayer
+SUCCESS: Successfully moved check from: 9 to: 11 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 19 to: 23 by: SecondPlayer
+SUCCESS: Successfully moved check from: 21 to: 23 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 9 to: 13 by: FirstPlayer
+SUCCESS: Successfully moved check from: 9 to: 11 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 21 to: 1 by: SecondPlayer
+SUCCESS: Successfully moved check from: 21 to: 23 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 13 to: 17 by: FirstPlayer
+SUCCESS: Successfully moved check from: 17 to: 19 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 1 to: 5 by: SecondPlayer
+SUCCESS: Successfully moved check from: 5 to: 7 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 10 to: 14 by: FirstPlayer
+SUCCESS: Successfully moved check from: 9 to: 11 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 22 to: 2 by: SecondPlayer
+SUCCESS: Successfully moved check from: 2 to: 4 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 14 to: 18 by: FirstPlayer
+SUCCESS: Successfully moved check from: 18 to: 20 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 4 to: 8 by: SecondPlayer
+SUCCESS: Successfully moved check from: 5 to: 7 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 11 to: 15 by: FirstPlayer
+SUCCESS: Successfully moved check from: 11 to: 13 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 23 to: 3 by: SecondPlayer
+SUCCESS: Successfully moved check from: 3 to: 5 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 13 to: 17 by: FirstPlayer
+SUCCESS: Successfully moved check from: 17 to: 19 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 23 to: 3 by: SecondPlayer
+SUCCESS: Successfully moved check from: 3 to: 5 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 11 to: 15 by: FirstPlayer
+SUCCESS: Successfully moved check from: 15 to: 17 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 23 to: 3 by: SecondPlayer
+SUCCESS: Successfully moved check from: 3 to: 5 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 15 to: 19 by: FirstPlayer
+SUCCESS: Successfully moved check from: 17 to: 19 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 23 to: 3 by: SecondPlayer
+SUCCESS: Successfully moved check from: 3 to: 5 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 11 to: 15 by: FirstPlayer
+SUCCESS: Successfully moved check from: 11 to: 13 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 23 to: 3 by: SecondPlayer
+SUCCESS: Successfully moved check from: 3 to: 5 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 13 to: 17 by: FirstPlayer
+SUCCESS: Successfully moved check from: 17 to: 19 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 23 to: 3 by: SecondPlayer
+SUCCESS: Successfully moved check from: 3 to: 5 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 11 to: 15 by: FirstPlayer
+SUCCESS: Successfully moved check from: 15 to: 17 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 23 to: 3 by: SecondPlayer
+SUCCESS: Successfully moved check from: 3 to: 5 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 15 to: 19 by: FirstPlayer
+SUCCESS: Successfully moved check from: 17 to: 19 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 21 to: 1 by: SecondPlayer
+SUCCESS: Successfully moved check from: 1 to: 3 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 16 to: 20 by: FirstPlayer
+SUCCESS: Successfully moved check from: 19 to: 21 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 3 to: 7 by: SecondPlayer
+SUCCESS: Successfully moved check from: 5 to: 7 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 17 to: 21 by: FirstPlayer
+SUCCESS: Successfully moved check from: 19 to: 21 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 22 to: 2 by: SecondPlayer
+SUCCESS: Successfully moved check from: 2 to: 4 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 18 to: 22 by: FirstPlayer
+SUCCESS: Successfully moved check from: 19 to: 21 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 4 to: 8 by: SecondPlayer
+SUCCESS: Successfully moved check from: 5 to: 7 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 9 to: 13 by: FirstPlayer
+SUCCESS: Successfully moved check from: 13 to: 15 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 5 to: 9 by: SecondPlayer
+SUCCESS: Successfully moved check from: 5 to: 7 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 15 to: 19 by: FirstPlayer
+SUCCESS: Successfully moved check from: 19 to: 21 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 5 to: 9 by: SecondPlayer
+SUCCESS: Successfully moved check from: 5 to: 7 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 10 to: 14 by: FirstPlayer
+SUCCESS: Successfully moved check from: 14 to: 16 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 5 to: 9 by: SecondPlayer
+SUCCESS: Successfully moved check from: 8 to: 10 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 16 to: 20 by: FirstPlayer
+SUCCESS: Successfully moved check from: 19 to: 21 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 5 to: 9 by: SecondPlayer
+SUCCESS: Successfully moved check from: 7 to: 9 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 11 to: 15 by: FirstPlayer
+SUCCESS: Successfully moved check from: 15 to: 17 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 7 to: 11 by: SecondPlayer
+SUCCESS: Successfully moved check from: 7 to: 9 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 17 to: 21 by: FirstPlayer
+SUCCESS: Successfully moved check from: 19 to: 21 by: FirstPlayer
+INFO: Leaved FIRST_PLAYER_STATE
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 7 to: 11 by: SecondPlayer
+SUCCESS: Successfully moved check from: 7 to: 9 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_END_STATE
+LOG: rolled dices: 2 / 4
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 7 to: 11 by: SecondPlayer
+SUCCESS: Successfully moved check from: 8 to: 10 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_END_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 19 to: 21 by: FirstPlayer
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 7 to: 11 by: SecondPlayer
+SUCCESS: Successfully moved check from: 9 to: 11 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_END_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 19 to: 21 by: FirstPlayer
+INFO: Entered SECOND_PLAYER_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 23 to: 3 by: SecondPlayer
+SUCCESS: Successfully moved check from: 3 to: 5 by: SecondPlayer
+INFO: Entered FIRST_PLAYER_END_STATE
+LOG: rolled dices: 2 / 4
+SUCCESS: Successfully moved check from: 20 to: 22 by: FirstPlayer
+INFO: Entered SECOND_PLAYER_STATE
+LOG

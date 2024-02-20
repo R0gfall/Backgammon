@@ -8,15 +8,24 @@ EndGameState::EndGameState(Board* board, IGameStateMachine* stateMachine) : Game
 	_winnerText.setCharacterSize(30);
 	_winnerText.setFillColor(sf::Color::White);
 	_winnerText.setPosition(sf::Vector2f(500.f, 350.f));
+	printf("______________________\n");
 	UpdateWinnerText();
+	
 }
 
 void EndGameState::Initialize()
 {
+	//change
+	//START_GAME = clock();
 }
 
 void EndGameState::EnterState()
 {
+	//change
+	//END_GAME = clock();
+	//printf("time: %f", (double)(END_GAME - START_GAME) / CLOCKS_PER_SEC);
+
+
 	LogEnter();
 	UpdateWinnerText();
 }

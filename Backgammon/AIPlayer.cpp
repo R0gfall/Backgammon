@@ -1,5 +1,8 @@
 ﻿#include "AIPlayer.h"
 #include <time.h>
+#include <intrin.h>
+
+#pragma intrinsic(__rdtsc)
 
 struct list_move {
     char array_of_moves[8];
@@ -67,10 +70,6 @@ int grade_for_game_2(int(&array)[24]) {
 }
 
 void random_dice(int* dice) {
- 
-
-
-
     srand(time(NULL));
     dice[0] = rand() % 5 + 1;
     dice[1] = rand() % 5 + 1;
@@ -380,6 +379,13 @@ double grade_of_position(int(&array)[24], short depht, short enterPlayer) {
 
 int* algoritm(int(&backgrammon)[24], short dice_x, short dice_y, short enterPlayer) {
 
+
+    srand(time(0));
+    unsigned __int64 start_time, end_time, spent_time;
+    unsigned __int64 __rdtsc();
+    start_time = __rdtsc();
+
+
     //ïåðåäàâàåìûå ïàðàìåòðû: äîñêà boad(backgrammon), dice_x, dice_y, enterPlayer - 1 - áåëûé 2 - ÷åðíûé
     int grade = 0;
     /*int backgrammon[24];
@@ -547,6 +553,12 @@ int* algoritm(int(&backgrammon)[24], short dice_x, short dice_y, short enterPlay
         j += 2;
     }
 
+
+
+    end_time = __rdtsc();
+
+    printf(">>>>>>>%lu\n", end_time - start_time);
+    //printf("1310391309103910391039103910391039130");
     return best_move;
 
     //grade_for_game_1(backgrammon); // Îöåíêà òåêóùåé ñèòóàöèè
